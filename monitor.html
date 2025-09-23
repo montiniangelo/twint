@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LyberCode | Monitoraggio Contratti ICT e Green per la PA</title>
-    <meta name="description" content="LyberCode è la società di consulenza che presidia il monitoraggio dei contratti ICT e green della Pubblica Amministrazione, secondo il modello AGID e gli obiettivi della twin transition.">
-    <meta name="keywords" content="LyberCode, monitoraggio contratti, AGID, consulenza PA, contratti ICT, green public procurement, twin transition, controllo esecuzione, KPI contratti">
+    <title>LyberCode | Soluzioni strategiche</title>
+    <meta name="description" content="Soluzioni strategiche: sviluppo web, cloud (Google Cloud Platform), AI/ML, formazione, web marketing sostenibile, assistenza tecnica e trasformazione digitale per imprese e PA.">
+    <meta name="keywords" content="LyberCode, sviluppo web, cloud computing, Google Cloud Platform, intelligenza artificiale, machine learning, formazione digitale, web marketing sostenibile, assistenza tecnica, trasformazione digitale, PA">
     <meta name="author" content="LyberCode di Angelo Montini">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LyberCode">
-    <meta property="og:title" content="LyberCode | Consulenza monitoraggio contratti ICT per la PA">
-    <meta property="og:description" content="Accompagniamo amministrazioni e in house nel monitoraggio dei contratti ICT e green: governance, KPI e reportistica in linea con le linee guida AGID.">
+    <meta property="og:title" content="LyberCode | Soluzioni strategiche digitali">
+    <meta property="og:description" content="Sviluppo web, cloud (GCP), AI/ML, formazione, web marketing sostenibile, assistenza tecnica e trasformazione digitale per imprese e PA.">
     <meta property="og:url" content="https://lybercode.com/">
     <meta property="og:image" content="https://lybercode.com/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LyberCode | Monitoraggio contratti ICT e green">
-    <meta name="twitter:description" content="Consulenza specializzata nel presidio del ciclo di vita dei contratti ICT della PA e nel reporting twin transition.">
+    <meta name="twitter:title" content="LyberCode | Soluzioni strategiche digitali">
+    <meta name="twitter:description" content="Sviluppo web, cloud (GCP), AI/ML, formazione, web marketing sostenibile, assistenza tecnica e trasformazione digitale per imprese e PA.">
     <meta name="twitter:image" content="https://lybercode.it/4.jpg">
     <meta name="twitter:site" content="@LyberCode">
     <meta name="twitter:creator" content="@LyberCode">
@@ -141,6 +141,32 @@
 
         nav .menu a:hover {
             opacity: 0.8;
+        }
+
+        /* Secondary subnav */
+        .subnav {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+        }
+        .subnav a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(16, 30, 46, 0.35);
+            transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+        .subnav a:hover {
+            opacity: 1;
+            border-color: rgba(35, 165, 177, 0.5);
+            background: rgba(35, 165, 177, 0.15);
         }
 
         .hero {
@@ -458,6 +484,7 @@
         }
 
         @media (max-width: 720px) {
+            header { overflow: visible; background: #000; }
             nav {
                 gap: 14px;
             }
@@ -466,6 +493,7 @@
                 display: inline-flex;
             }
 
+            nav { position: relative; z-index: 1001; }
             nav .menu {
                 position: absolute;
                 top: calc(100% + 14px);
@@ -474,7 +502,7 @@
                 align-items: stretch;
                 gap: 18px;
                 padding: 22px;
-                background: rgba(6, 9, 13, 0.96);
+                background: #000;
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 border-radius: 18px;
                 min-width: 220px;
@@ -484,6 +512,7 @@
                 transform: translateY(-12px);
                 pointer-events: none;
                 transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+                z-index: 1000;
             }
 
             nav .menu li {
@@ -525,6 +554,68 @@
                 font-size: 2.4rem;
             }
         }
+        /* Scroll-to-top button */
+        #scrollTop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(16, 30, 46, 0.6);
+            color: #fff;
+            cursor: pointer;
+            display: none; /* hidden by default */
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            z-index: 999;
+        }
+        #scrollTop.show { display: inline-flex; opacity: 1; }
+        #scrollTop:hover { transform: translateY(-2px); }
+        @media (max-width: 768px) { #scrollTop { right: 14px; bottom: 14px; } }
+
+        /* Icon spacing inside buttons */
+        .btn .icon-left { margin-right: 10px; display: inline-flex; align-items: center; }
+
+        /* Soluzioni: elegant feature list */
+        #soluzioni .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin-top: 18px;
+        }
+        #soluzioni .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 18px;
+            border: 1px solid rgba(124, 138, 164, 0.22);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.03);
+            transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+        }
+        #soluzioni .feature-list li:hover {
+            border-color: rgba(35, 165, 177, 0.55);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(35, 165, 177, 0.15);
+        }
+        #soluzioni .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.3), rgba(35, 165, 177, 0.65));
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: #041821;
+            flex-shrink: 0;
+        }
+        #soluzioni .feature-text { color: var(--muted); }
     </style>
 
     <script type="application/ld+json">
@@ -545,17 +636,21 @@
         "addressCountry": "IT"
     },
     "sameAs": [
-        "https://angelomontini.com",
+        "https://lybercode.com/",
         "https://github.com/lybercode",
         "https://www.linkedin.com/company/lybercode"
     ],
-    "description": "LyberCode supporta la Pubblica Amministrazione nel monitoraggio dei contratti ICT e green, fornendo governance, KPI e reportistica in linea con le indicazioni AGID e gli obiettivi della twin transition."
+    "description": "Soluzioni strategiche per imprese e PA: sviluppo web, cloud (Google Cloud Platform), AI/ML, formazione, web marketing sostenibile, assistenza tecnica e trasformazione digitale."
 }
     </script>
 </head>
 <body>
     <header>
         <div class="container">
+            <div class="subnav" aria-label="Secondaria" >
+                <a href="/">Home</a>
+                <a href="#">Sviluppo</a>
+            </div>
             <nav>
                 <div class="logo"><a href="/"><img src="logo.png" alt="LyberCode" style="height: 48px; width: auto;"></a><span>LyberCode</span></div>
                 <button class="menu-toggle" aria-expanded="false" aria-label="Apri il menu">
@@ -564,7 +659,9 @@
                     <span></span>
                 </button>
                 <ul class="menu">
-                    <li><a href="#metodo">Metodo</a></li>
+                  
+                    <li><a href="#soluzioni">Soluzioni</a></li>
+                    <li><a href="#metodo">Approccio</a></li>
                     <li><a href="#competenze">Competenze</a></li>
                     <li><a href="#ambiti">Ambiti</a></li>
                     <li><a href="#servizi">Servizi</a></li>
@@ -573,54 +670,72 @@
                     <li><a href="#contatti">Contatti</a></li>
                 </ul>
             </nav>
-            <div class="hero">
-                <div>
-                    <h1>Monitoraggio dei contratti ICT e green per la PA</h1>
-                    <p>LyberCode è la società di consulenza che presidia l'intero ciclo di vita dei contratti ICT nella Pubblica Amministrazione, assicurando trasparenza, performance e sostenibilità secondo il modello di monitoraggio AGID e gli obiettivi della twin transition.</p>
-                    <div class="cta-group">
-                        <a class="btn btn-primary" href="#contatti">Richiedi un assessment</a>
-                        <a class="btn btn-outline" href="#metodo">Scopri il metodo AGID</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Governance dei contratti, risultati alla luce del sole</h3>
-                    <p>Cruscotti unificati, indicatori di servizio e controlli di conformità per ogni affidamento ICT e iniziativa legata alla transizione digitale ed ecologica.</p>
-                    <div class="metrics">
-                        <div class="metric">
-                            <strong>100%</strong>
-                            <span>Contratti tracciati lungo tutto il ciclo di vita</span>
-                        </div>
-                        <div class="metric">
-                            <strong>14 giorni</strong>
-                            <span>Per avviare il cruscotto di monitoraggio</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </header>
 
+    <section id="soluzioni">
+        <div class="container" style="z-index: 0;">
+            <span class="section-title">Servizi</span>
+            <h2>Soluzioni strategiche</h2>
+            <ul class="feature-list">
+                <li>
+                    <div class="feature-icon">WEB</div>
+                    <div class="feature-text">Sviluppo di applicazioni web  con strumenti innovativi.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">CLOUD</div>
+                    <div class="feature-text">Consulenza sull'adozione del Cloud Computing e servizi correlati come Google Cloud Platform.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">AI</div>
+                    <div class="feature-text">Integrazione di soluzioni di Intelligenza Artificiale e Machine Learning per migliorare strategie digitali e operazioni di business.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">EDU</div>
+                    <div class="feature-text">Formazione su Cloud e tecnologie digitali per potenziare la capacità innovativa delle imprese.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">MKT</div>
+                    <div class="feature-text">Strategie e supporto per il web marketing sostenibile e la digitalizzazione dei processi aziendali.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">SUP</div>
+                    <div class="feature-text">Servizi di assistenza tecnica e supporto per sistemi digitali.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">DX</div>
+                    <div class="feature-text">Servizi di trasformazione digitale, supporto all'elaborazione di piani di transizione digitale  </div>
+                </li>
+                <li>
+                    <div class="feature-icon">PA</div>
+                    <div class="feature-text">Coordinamento e gestione di progetti di innovazione e implementazione di nuove tecnologie come Cloud Computing e AI</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
     <section id="metodo">
         <div class="container">
-            <span class="section-title">Metodo AGID</span>
-            <h2>Un monitoraggio aderente alle linee guida nazionali</h2>
-            <p>Adottiamo il framework AGID per il monitoraggio dei contratti: presidiamo programmazione, affidamento ed esecuzione, con indicatori che misurano qualità del servizio, rispetto degli SLA, impatti ambientali e adempimenti di trasparenza. Ogni fase è documentata e condivisa con il Responsabile della transizione digitale e con i referenti di progetto.</p>
+            <span class="section-title">Approccio</span>
+            <h2>Dal bisogno alla soluzione: un framework per l’innovazione</h2>
+            <p>Affrontiamo le sfide digitali con un approccio end‑to‑end: analisi del contesto, prototipazione rapida, implementazione cloud‑native e misurazione dei risultati.</p>
             <div class="process">
                 <div class="process-step">
-                    <h4>1. Perimetrazione e raccolta atti</h4>
-                    <p>Mappiamo contratti, capitolati e SAL, analizziamo impegni economici e documentazione tecnica per costruire la base dati certificata.</p>
+                    <h4>1. Scoping e Roadmap</h4>
+                    <p>Raccogliamo requisiti, priorità e KPI di business; definiamo un piano incrementale e sostenibile.</p>
                 </div>
                 <div class="process-step">
-                    <h4>2. Analisi di conformità</h4>
-                    <p>Verifichiamo coerenza con CAD, Linee Guida AGID e policy di green public procurement, identificando rischi e gap documentali.</p>
+                    <h4>2. Architetture e Cloud</h4>
+                    <p>Disegniamo soluzioni su GCP e multi‑cloud, con best practice di sicurezza, cost‑control e automazione.</p>
                 </div>
                 <div class="process-step">
-                    <h4>3. KPI e controllo dell'esecuzione</h4>
-                    <p>Costruiamo indicatori su SLA, milestone progettuali, oneri economici e performance ESG, alimentati da dati aggiornati.</p>
+                    <h4>3. AI e Sviluppo</h4>
+                    <p>Integrazione AI/ML e sviluppo web moderno per accelerare processi e decisioni data‑driven.</p>
                 </div>
                 <div class="process-step">
-                    <h4>4. Reporting e azioni correttive</h4>
-                    <p>Consegniamo report periodici, cruscotti interattivi e piani di miglioramento condivisi con fornitori, RUP e organi di controllo.</p>
+                    <h4>4. Change e Formazione</h4>
+                    <p>Onboarding team, formazione mirata e metriche di adozione per massimizzare il valore nel tempo.</p>
                 </div>
             </div>
         </div>
@@ -628,39 +743,39 @@
 
     <section id="competenze">
         <div class="container">
-            <span class="section-title">Competenze integrate</span>
-            <h2>Un team multidisciplinare per governance, dati e sostenibilità</h2>
-            <p>Affianchiamo la PA con consulenti dedicati al monitoraggio dei contratti ICT: competenze legali, economiche, tecnologiche ed ESG lavorano in parallelo per garantire continuità amministrativa e qualità del servizio.</p>
+            <span class="section-title">Competenze</span>
+            <h2>Specialisti in cloud, AI e sviluppo web</h2>
+            <p>Supportiamo imprese e PA con competenze su architetture cloud (GCP), sviluppo web moderno, integrazione AI/ML, data engineering, formazione e change management. </p>
             <div class="ai-team-grid">
                 <div class="ai-agent">
-                    <img src="2.png" alt="Consulente di strategia contrattuale">
-                    <h4>Advisor Strategico</h4>
-                    <span>Programmazione</span>
-                    <p>Allinea PIAO, PNRR e fabbisogni digitali definendo priorità e metriche di monitoraggio per ogni contratto attivo.</p>
+                    <img src="2.png" alt="Architetto Cloud">
+                    <h4>Cloud Architect</h4>
+                    <span>GCP · Multi‑cloud</span>
+                    <p>Progetta workload sicuri, resilienti e ottimizzati sui costi con IaC e CI/CD.</p>
                 </div>
                 <div class="ai-agent">
-                    <img src="3.png" alt="Esperto di procurement ICT">
-                    <h4>Procurement Specialist</h4>
-                    <span>Affidamento</span>
-                    <p>Verifica capitolati, check list AGID e clausole green assicurando conformità normativa e coerenza con gli obiettivi del bando.</p>
+                    <img src="3.png" alt="ML Engineer">
+                    <h4>ML Engineer</h4>
+                    <span>AI/ML</span>
+                    <p>Integra modelli, pipeline dati e servizi AI per automazione e insight.</p>
                 </div>
                 <div class="ai-agent">
-                    <img src="4.png" alt="Analista documentale e knowledge manager">
-                    <h4>Knowledge Manager</h4>
-                    <span>Documentazione</span>
-                    <p>Organizza registri contrattuali, versioni degli atti e verbali di collaudo, mantenendo trasparenza e tracciabilità totale.</p>
+                    <img src="4.png" alt="Web Engineer">
+                    <h4>Web Engineer</h4>
+                    <span>Frontend · Backend</span>
+                    <p>Realizza applicazioni performanti e accessibili con stack moderno.</p>
                 </div>
                 <div class="ai-agent">
-                    <img src="5.png" alt="Analista di performance e qualità">
-                    <h4>Performance Analyst</h4>
-                    <span>Controllo</span>
-                    <p>Monitora SLA, indicatori di servizio e milestone progettuali con alert proattivi e report comparativi tra fornitori.</p>
+                    <img src="5.png" alt="Data Engineer">
+                    <h4>Data Engineer</h4>
+                    <span>Dati</span>
+                    <p>Costruisce pipeline e modelli dati per analytics e decisioni data‑driven.</p>
                 </div>
                 <div class="ai-agent">
-                    <img src="6.png" alt="Consulente ESG per la twin transition">
-                    <h4>ESG Lead</h4>
-                    <span>Twin transition</span>
-                    <p>Integra KPI ambientali ed energetici, valuta impatti sociali e digitali, redige schede di monitoraggio green per la PA.</p>
+                    <img src="6.png" alt="Digital Advisor">
+                    <h4>Digital Advisor</h4>
+                    <span>Formazione · Change</span>
+                    <p>Guida adozione, upskilling e re‑ingegnerizzazione dei processi interni.</p>
                 </div>
             </div>
         </div>
@@ -668,24 +783,24 @@
 
     <section id="ambiti">
         <div class="container">
-            <span class="section-title">Ambiti di monitoraggio</span>
-            <h2>Dati e controllo su tutte le fasi del contratto</h2>
+            <span class="section-title">Ambiti</span>
+            <h2>Soluzioni per i tuoi obiettivi digitali</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Programmazione e bandi</h3>
-                    <p>Piani triennali ICT, analisi fabbisogni e griglie di valutazione delle offerte: assicuriamo coerenza con le priorità nazionali e la normativa sugli acquisti pubblici verdi.</p>
+                    <h3>Sviluppo Web</h3>
+                    <p>Applicazioni moderne, accessibili e performanti con stack aggiornato e UX centrata sul valore.</p>
                 </div>
                 <div class="card">
-                    <h3>Esecuzione e SLA</h3>
-                    <p>Tracciamo SAL, consegne, penali e livelli di servizio, con dashboard condivise tra RUP, fornitori e direzioni competenti.</p>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Architetture GCP, container, automazione CI/CD e governance costi/sicurezza.</p>
                 </div>
                 <div class="card">
-                    <h3>Controllo economico</h3>
-                    <p>Monitoriamo impegni, liquidazioni e varianti contrattuali, evidenziando scostamenti rispetto a budget e milestone finanziarie.</p>
+                    <h3>AI & Data</h3>
+                    <p>Integrazione modelli, data platform e analytics per processi più intelligenti.</p>
                 </div>
                 <div class="card">
-                    <h3>Impatto twin transition</h3>
-                    <p>Mappiamo indicatori ambientali e digitali, misuriamo la riduzione delle emissioni e il contributo agli obiettivi di trasformazione dei servizi pubblici.</p>
+                    <h3>Formazione & Change</h3>
+                    <p>Programmi di training e accompagnamento per accelerare l’adozione tecnologica.</p>
                 </div>
             </div>
         </div>
@@ -693,40 +808,40 @@
 
     <section id="percorsi">
         <div class="container">
-            <span class="section-title">Percorsi di accompagnamento</span>
-            <h2>Pacchetti modulari per amministrazioni, in house e centrali di committenza</h2>
-            <p>Componiamo interventi personalizzati che coprono governance, strumenti digitali e capacity building affinché il monitoraggio diventi patrimonio interno.</p>
+            <span class="section-title">Percorsi</span>
+            <h2>Pacchetti modulari per imprese e PA</h2>
+            <p>Interventi componibili: dalla strategia alla messa in produzione, con formazione e supporto continuativo.</p>
             <div class="grid">
                 <div class="card">
-                    <h3>Avvio monitoraggio</h3>
+                    <h3>Kick‑off digitale</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">MAP</span><span class="feature-text">Censimento contratti ICT e matrice responsabilità</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">PO</span><span class="feature-text">Set-up dashboard e configurazione indicatori AGID</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">KIT</span><span class="feature-text">Template di verbali, report trimestrali e schede SLA</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">MAP</span><span class="feature-text">Assessment tecnico‑organizzativo e roadmap</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">POC</span><span class="feature-text">Prototipi rapidi su web/AI per validare il valore</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">GOV</span><span class="feature-text">Piano cloud, sicurezza e cost governance</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Controllo continuativo</h3>
+                    <h3>Build & Run</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">SLA</span><span class="feature-text">Monitoraggio mensile dei livelli di servizio</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">RISK</span><span class="feature-text">Gestione rischi, penali e piani di mitigation</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">AUD</span><span class="feature-text">Audit periodici con reportistica per organi di controllo</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">DEV</span><span class="feature-text">Sviluppo applicazioni e API cloud‑native</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">CI</span><span class="feature-text">Automazione CI/CD e ambienti container</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">SRE</span><span class="feature-text">Monitoraggio, affidabilità e performance</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Twin transition</h3>
+                    <h3>AI Adoption</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">ESG</span><span class="feature-text">KPI ambientali, sociali e digitali per PNRR e Green Deal</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">CO2</span><span class="feature-text">Inventari emissioni e contributo alla neutralità climatica</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">SKL</span><span class="feature-text">Formazione su procurement sostenibile e gestione dati</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">ML</span><span class="feature-text">Data pipeline e deployment modelli</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">OPS</span><span class="feature-text">MLOps e governance dei modelli</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">ETH</span><span class="feature-text">Linee guida etiche e valutazioni rischio</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Capacità interna</h3>
+                    <h3>Enablement</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">LAB</span><span class="feature-text">Workshop per RUP e RTD su monitoraggio contratti</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">GOV</span><span class="feature-text">Manuali operativi e procedure di governance</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">DOC</span><span class="feature-text">Repository documentale condiviso e versioning controllato</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">EDU</span><span class="feature-text">Formazione su cloud, AI e sviluppo moderno</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">PM</span><span class="feature-text">Project management e change</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">DOC</span><span class="feature-text">Documentazione e knowledge base</span></li>
                     </ul>
                 </div>
             </div>
@@ -735,24 +850,24 @@
 
     <section id="servizi">
         <div class="container">
-            <span class="section-title">Servizi professionali</span>
-            <h2>Consulenza su misura per il monitoraggio dei contratti ICT</h2>
+            <span class="section-title">Servizi</span>
+            <h2>Cosa possiamo fare per te</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Monitoraggio contratti</h3>
-                    <p>Gestione completa del ciclo di vita contrattuale, dalla pianificazione alla chiusura, con indicatori condivisi e aggiornamento continuo dei registri.</p>
+                    <h3>Sviluppo applicazioni web</h3>
+                    <p>Progettazione e sviluppo end‑to‑end con sicurezza, accessibilità e performance by design.</p>
                 </div>
                 <div class="card">
-                    <h3>Cruscotti e KPI</h3>
-                    <p>Progettiamo dashboard dinamiche integrate con fonti interne, open data e sistemi contabili per avere sempre sotto controllo performance e costi.</p>
+                    <h3>Cloud & Platform</h3>
+                    <p>Migrazioni a GCP, modernizzazione applicativa, data platform e automazione.</p>
                 </div>
                 <div class="card">
-                    <h3>Audit e compliance</h3>
-                    <p>Eseguiamo audit tecnici e amministrativi, predisponiamo piani di adeguamento e supportiamo le verifiche degli organi di controllo.</p>
+                    <h3>AI & ML</h3>
+                    <p>Use‑case, integrazione modelli, MLOps e misurazione dell’impatto.</p>
                 </div>
                 <div class="card">
-                    <h3>Program management</h3>
-                    <p>Coordiniamo portafogli di progetti digitali e green, bilanciando milestone, deliverable e benefici attesi per i cittadini.</p>
+                    <h3>Formazione & Marketing</h3>
+                    <p>Programmi formativi e strategie di web marketing sostenibile e data‑driven.</p>
                 </div>
             </div>
         </div>
@@ -760,40 +875,40 @@
 
     <section id="toolkit">
         <div class="container">
-            <span class="section-title">Toolkit operativo</span>
-            <h2>Strumenti e deliverable pronti all'uso per il monitoraggio AGID</h2>
-            <p>Forniamo strumenti digitali e materiali operativi che permettono agli uffici di presidiare contratti e progetti con continuità, anche dopo la nostra consulenza.</p>
+            <span class="section-title">Toolkit</span>
+            <h2>Strumenti e deliverable per l’innovazione</h2>
+            <p>Metodologie, template e asset tecnici per accelerare progetti web, cloud e AI, riducendo rischi e time‑to‑value.</p>
             <div class="grid">
                 <div class="card">
-                    <h3>Repository documentale</h3>
+                    <h3>Starter Kit Cloud</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">REG</span><span class="feature-text">Registro contratti ICT e schede di monitoraggio aggiornabili</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">VER</span><span class="feature-text">Check-list di affidamento ed esecuzione basate su Linee Guida AGID</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">PEC</span><span class="feature-text">Tracciamento automatico di PEC, verbali e stati di avanzamento</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">IaC</span><span class="feature-text">Template IaC, policy di sicurezza e landing zone GCP</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">CI</span><span class="feature-text">Pipeline CI/CD per build, test e deploy</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">OBS</span><span class="feature-text">Monitoraggio e logging pronti all’uso</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Cruscotti digitali</h3>
+                    <h3>Web Toolkit</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">BI</span><span class="feature-text">Dashboard Power BI / Data Studio con indicatori SLA ed ESG</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">API</span><span class="feature-text">Integrazione con sistemi contabili e anagrafiche fornitori</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">ALR</span><span class="feature-text">Alert automatici su scadenze, penali e rinnovi contrattuali</span></li>
-                    </ul>
-                </div>
-                <div class="card" style="background: rgba(101, 214, 160, 0.12); border: 1px solid rgba(101, 214, 160, 0.35);">
-                    <h3>Reporting twin transition</h3>
-                    <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">CSRD</span><span class="feature-text">Schede di rendicontazione ambientale e sociale integrate</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">PNRR</span><span class="feature-text">Monitoraggio milestone e target per misure digitali ed energetiche</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">VAL</span><span class="feature-text">Valutazione benefici per cittadini e imprese, pubblica in open data</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">UX</span><span class="feature-text">Design system e guide di accessibilità</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">API</span><span class="feature-text">Pattern per API sicure e scalabili</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">QA</span><span class="feature-text">Test end‑to‑end e performance</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Supporto continuativo</h3>
+                    <h3>AI Toolkit</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">PMO</span><span class="feature-text">Help desk operativo per RUP e RTD</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">OKR</span><span class="feature-text">Allineamento periodico tra obiettivi strategici e contratti attivi</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">KM</span><span class="feature-text">Aggiornamento knowledge base e lesson learned di progetto</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">DATA</span><span class="feature-text">Pipeline dati e feature store</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">MLO</span><span class="feature-text">MLOps e tracciabilità modelli</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">ETH</span><span class="feature-text">Checklist etiche e valutazioni rischio</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Enablement</h3>
+                    <ul class="feature-list">
+                        <li><span class="feature-icon" aria-hidden="true">EDU</span><span class="feature-text">Materiali formativi e workshop</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">OKR</span><span class="feature-text">Allineamento obiettivi/risultati</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">KM</span><span class="feature-text">Template di documentazione e lesson learned</span></li>
                     </ul>
                 </div>
             </div>
@@ -805,26 +920,26 @@
             <span class="section-title">Perché sceglierci</span>
             <div class="split">
                 <div>
-                    <h2>Un presidio che rende i contratti un asset strategico</h2>
-                    <p>Lavoriamo accanto a RUP, RTD e direzioni finanziarie per trasformare il monitoraggio in una funzione di governo. I nostri report supportano decisioni tempestive, migliorano il dialogo con i fornitori e abilitano la rendicontazione verso cittadini e organismi di controllo.</p>
+                    <h2>Impatto misurabile su tecnologia e business</h2>
+                    <p>Un approccio pragmatico: soluzioni scalabili, metriche chiare e trasferimento di competenze per rendere i team autonomi nel tempo.</p>
                     <div class="metrics">
                         <div class="metric">
-                            <strong>+35%</strong>
-                            <span>Indicatori di servizio monitorati rispetto allo stato iniziale</span>
+                            <strong>2x</strong>
+                            <span>Time‑to‑value più rapido con prototipi e rilasci incrementali</span>
                         </div>
                         <div class="metric">
-                            <strong>90 giorni</strong>
-                            <span>Per consolidare il sistema di reporting trimestrale</span>
+                            <strong>‑30%</strong>
+                            <span>Costi cloud ottimizzati grazie a governance e automazione</span>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Partnership continuativa</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">GOV</span><span class="feature-text">Governance condivisa con comitati di monitoraggio e controllo</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">TRN</span><span class="feature-text">Change management e formazione per uffici contratti e ICT</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">QLT</span><span class="feature-text">Quality review indipendente su deliverable e SLA</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">VAL</span><span class="feature-text">Misurazione del valore pubblico generato da ogni iniziativa</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">GOV</span><span class="feature-text">Modelli operativi e guardrail per sicurezza e qualità</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">TRN</span><span class="feature-text">Change management e programmi di formazione</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">SRE</span><span class="feature-text">Reliability engineering e performance</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">VAL</span><span class="feature-text">KPI di adozione e valore di business</span></li>
                     </ul>
                 </div>
             </div>
@@ -833,16 +948,16 @@
 
     <section id="contatti">
         <div class="container contact">
-            <span class="section-title">Parliamo dei tuoi contratti</span>
-            <h2>Costruiamo insieme il monitoraggio dei contratti ICT della tua PA</h2>
-            <p>Scrivici esigenze, contratti da presidiare e obiettivi di sostenibilità. In 48 ore riceverai un'analisi preliminare con piano di attivazione e KPI suggeriti.</p>
+            <span class="section-title">Contattaci</span>
+            <h2>Parliamo delle tue soluzioni digitali</h2>
+            <p>Raccontaci obiettivi e contesto: in 48 ore proponiamo un primo piano con priorità, effort e KPI.</p>
             <br><br>
             <a class="btn btn-primary" href="mailto:hello@lybercode.com">hello@lybercode.com</a>
             <div class="legal">
                 <strong>LyberCode di <a href="https://angelomontini.com" target="_blank" rel="noopener">Angelo Montini</a></strong>
-                <span>Roma · Terracina  <br> Sede operativa: Viale Europa 216 · 04019 Terracina (LT)</span><br>
+                <span>Roma · Terracina  <br> Viale Europa 216 · 04019 Terracina (LT)</span><br>
                 <a href="tel:+390773061194">Tel. 0773 061194</a> · <a href="tel:+393392528986">Cell. 339 2528986</a><br>
-                <span>P. IVA 11822551005</span><br>
+                <span>P. IVA 11822551005</span> · <span>REA LT-331862</span><br>
                 <a href="mailto:montini@peceasy.com">PEC: montini@peceasy.com</a>
             </div>
         </div>
@@ -852,11 +967,12 @@
         <div class="footer-grid">
             <div>
                 <h4><a href="https://angelomontini.com" target="_blank" rel="noopener">LyberCode</a></h4>
-                <p>Consulenza specializzata nel monitoraggio dei contratti ICT e green della Pubblica Amministrazione, con sede a Roma e Terracina.</p>
+                <p>Soluzioni strategiche per imprese e PA: sviluppo web, cloud (GCP), AI/ML, formazione, marketing sostenibile, assistenza tecnica e trasformazione digitale. Sedi a Roma e Terracina.</p>
             </div>
             <div>
                 <h4>Hub</h4>
-                <a href="#metodo">Metodo</a>
+                <a href="#soluzioni">Soluzioni</a>
+                <a href="#metodo">Approccio</a>
                 <a href="#competenze">Competenze</a>
                 <a href="#ambiti">Ambiti</a>
                 <a href="#toolkit">Toolkit</a>
@@ -868,7 +984,7 @@
                 <a href="tel:+390773061194">Tel. 0773 061194</a>
                 <a href="tel:+393392528986">Cell. 339 2528986</a>
                 <a href="mailto:montini@peceasy.com">PEC: montini@peceasy.com</a>
-                <span>P. IVA 11822551005</span>
+               
             </div>
             <div>
                 <h4>Community</h4>
@@ -877,8 +993,9 @@
                 <a href="#contatti">Newsletter</a>
             </div>
         </div>
-        <div class="bottom"> <a href="https://angelomontini.com" target="_blank" rel="noopener">© 2025 LyberCode di Angelo Montini. Tutti i diritti riservati</a> </div>
+        <div class="bottom"> <a href="https://angelomontini.com" target="_blank" rel="noopener">© 2025 LyberCode di Angelo Montini. <span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. Tutti i diritti riservati</a> </div>
     </footer>
+    <button id="scrollTop" aria-label="Torna all'inizio" title="Torna su">↑</button>
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('nav');
@@ -910,6 +1027,26 @@
                 }
             });
         }
+        // Scroll-to-top minimal logic
+        const scrollBtn = document.getElementById('scrollTop');
+        const headerEl = document.querySelector('header');
+        const headerTop = 0; // top of page
+
+        const toggleScrollBtn = () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+        window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+        toggleScrollBtn();
+
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Smoothly scroll to the top (header)
+            window.scrollTo({ top: headerTop, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
