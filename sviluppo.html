@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LyberCode | Servizi di Consulenza Informatica per Imprese e PA</title>
-    <meta name="description" content="LyberCode offre servizi di consulenza informatica completi: sviluppo software, cloud computing, cybersecurity, data analytics e AI per imprese e pubblica amministrazione.">
-    <meta name="keywords" content="LyberCode, consulenza informatica, sviluppo software, cloud computing, cybersecurity, AI, data analytics, trasformazione digitale">
+    <title>LyberCode | Soluzioni strategiche</title>
+    <meta name="description" content="Soluzioni strategiche: sviluppo web, cloud (Google Cloud Platform), AI/ML, formazione, web marketing sostenibile, assistenza tecnica e trasformazione digitale per imprese e PA.">
+    <meta name="keywords" content="LyberCode, sviluppo web, cloud computing, Google Cloud Platform, intelligenza artificiale, machine learning, formazione digitale, web marketing sostenibile, assistenza tecnica, trasformazione digitale, PA">
     <meta name="author" content="LyberCode di Angelo Montini">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="LyberCode">
-    <meta property="og:title" content="LyberCode | Servizi di Consulenza Informatica">
-    <meta property="og:description" content="Soluzioni IT complete: sviluppo software, cloud, cybersecurity, AI e data analytics per imprese e PA. Trasformazione digitale affidabile.">
+    <meta property="og:title" content="LyberCode | Soluzioni strategiche digitali">
+    <meta property="og:description" content="Sviluppo web, cloud (GCP), AI/ML, formazione, web marketing sostenibile, assistenza tecnica e trasformazione digitale per imprese e PA.">
     <meta property="og:url" content="https://lybercode.com/">
-    <meta property="og:image" content="https://lybercode.com/logoq.png">
+    <meta property="og:image" content="https://lybercode.com/logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LyberCode | Servizi di Consulenza Informatica">
-    <meta name="twitter:description" content="Consulenza IT completa: sviluppo software, cloud, cybersecurity, AI per imprese e PA. Innovazione digitale su misura.">
-    <meta name="twitter:image" content="https://lybercode.com/4.jpg">
+    <meta name="twitter:title" content="LyberCode | Soluzioni strategiche digitali">
+    <meta name="twitter:description" content="Sviluppo web, cloud (GCP), AI/ML, formazione, web marketing sostenibile, assistenza tecnica e trasformazione digitale per imprese e PA.">
+    <meta name="twitter:image" content="https://lybercode.it/4.jpg">
     <meta name="twitter:site" content="@LyberCode">
     <meta name="twitter:creator" content="@LyberCode">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
         header {
             background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.6), rgba(11, 21, 32, 0.95)), url('dash.jpg') center/cover no-repeat;
             color: #fff;
-            padding: 90px 0 120px;
+            padding: 10px 0 10px;
             position: relative;
             overflow: hidden;
         }
@@ -139,33 +139,34 @@
             transition: opacity 0.3s ease;
         }
 
+        nav .menu a:hover {
+            opacity: 0.8;
+        }
+
         /* Secondary subnav */
         .subnav {
             display: flex;
             gap: 14px;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
             flex-wrap: wrap;
-            justify-content: flex-end; /* right align */
-            margin-bottom: 16px;
         }
         .subnav a {
             color: #fff;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 8px 14px;
+            opacity: 0.9;
+            padding: 6px 12px;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(16, 30, 46, 0.35);
+            transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
         }
         .subnav a:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(255, 255, 255, 0.35);
-            transform: translateY(-1px);
-        }
-
-        nav .menu a:hover {
-            opacity: 0.8;
+            opacity: 1;
+            border-color: rgba(35, 165, 177, 0.5);
+            background: rgba(35, 165, 177, 0.15);
         }
 
         .hero {
@@ -483,6 +484,7 @@
         }
 
         @media (max-width: 720px) {
+            header { overflow: visible; background: #000; }
             nav {
                 gap: 14px;
             }
@@ -491,6 +493,7 @@
                 display: inline-flex;
             }
 
+            nav { position: relative; z-index: 1001; }
             nav .menu {
                 position: absolute;
                 top: calc(100% + 14px);
@@ -499,7 +502,7 @@
                 align-items: stretch;
                 gap: 18px;
                 padding: 22px;
-                background: rgba(6, 9, 13, 0.96);
+                background: #000;
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 border-radius: 18px;
                 min-width: 220px;
@@ -509,6 +512,7 @@
                 transform: translateY(-12px);
                 pointer-events: none;
                 transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+                z-index: 1000;
             }
 
             nav .menu li {
@@ -576,6 +580,42 @@
 
         /* Icon spacing inside buttons */
         .btn .icon-left { margin-right: 10px; display: inline-flex; align-items: center; }
+
+        /* Soluzioni: elegant feature list */
+        #soluzioni .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin-top: 18px;
+        }
+        #soluzioni .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 18px;
+            border: 1px solid rgba(124, 138, 164, 0.22);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.03);
+            transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+        }
+        #soluzioni .feature-list li:hover {
+            border-color: rgba(35, 165, 177, 0.55);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(35, 165, 177, 0.15);
+        }
+        #soluzioni .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.3), rgba(35, 165, 177, 0.65));
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: #041821;
+            flex-shrink: 0;
+        }
+        #soluzioni .feature-text { color: var(--muted); }
     </style>
 
     <script type="application/ld+json">
@@ -583,8 +623,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "LyberCode",
-    "url": "https://lybercode.com/",
-    "logo": "https://lybercode.com/logo.png",
+    "url": "https://lybercode.it/",
+    "logo": "https://lybercode.it/logo.png",
     "email": "hello@lybercode.com",
     "founder": "Angelo Montini",
     "address": {
@@ -600,16 +640,16 @@
         "https://github.com/lybercode",
         "https://www.linkedin.com/company/lybercode"
     ],
-    "description": "LyberCode offre servizi di consulenza informatica completi: sviluppo software, cloud computing, cybersecurity, data analytics e AI per imprese e pubblica amministrazione."
+    "description": "Soluzioni strategiche per imprese e PA: sviluppo web, cloud (Google Cloud Platform), AI/ML, formazione, web marketing sostenibile, assistenza tecnica e trasformazione digitale."
 }
     </script>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="subnav" aria-label="Secondaria">
-                <a href="#">Home</a>
-                <a href="sviluppo.html">Sviluppo</a>
+            <div class="subnav" aria-label="Secondaria" >
+                <a href="/">Home</a>
+                <a href="#">Sviluppo</a>
                 <a href="monitor.html">Monitoraggio</a>
             </div>
             <nav>
@@ -620,7 +660,9 @@
                     <span></span>
                 </button>
                 <ul class="menu">
-                    <li><a href="#metodo">Metodo</a></li>
+                  
+                    <li><a href="#soluzioni">Soluzioni</a></li>
+                    <li><a href="#metodo">Approccio</a></li>
                     <li><a href="#competenze">Competenze</a></li>
                     <li><a href="#ambiti">Ambiti</a></li>
                     <li><a href="#servizi">Servizi</a></li>
@@ -629,81 +671,72 @@
                     <li><a href="#contatti">Contatti</a></li>
                 </ul>
             </nav>
-            <div class="hero">
-                <div>
-                    <h1>Servizi di Consulenza Informatica per Imprese e PA</h1>
-                    <p>LyberCode è la società di consulenza specializzata in servizi IT per la trasformazione digitale. Offriamo soluzioni complete in sviluppo software, cloud computing, intelligenza artificiale, cybersecurity, data analytics e supporto tecnico, aiutando imprese e pubblica amministrazione a innovare e ottimizzare i processi.<br><br> Con un approccio personalizzato, garantiamo progetti su misura, formazione e assistenza continua per massimizzare il valore tecnologico.</p>
-                    <div class="cta-group">
-                        <a class="btn btn-primary" href="#servizi">I nostri servizi</a>
-                        <a class="btn btn-outline" href="#contatti">
-                            <span class="icon-left" aria-hidden="true">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                            </span>
-                            Contattaci
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Innovazione IT su misura</h3>
-                    <p>Soluzioni tecnologiche avanzate per migliorare l'efficienza, la sicurezza e la competitività delle tue operazioni digitali.</p>
-                    <div class="metrics">
-                        <div class="metric">
-                            <strong>500+</strong>
-                            <span>Progetti completati con successo</span>
-                        </div>
-                        <div class="metric">
-                            <strong>98%</strong>
-                            <span>Soddisfazione clienti</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </header>
 
-    <section id="sintesi">
-        <div class="container">
-            <span class="section-title">Sintesi dei servizi</span>
-            <h2>Monitoraggio e Sviluppo</h2>
-            <p>LyberCode offre due principali linee di servizio per supportare la Pubblica Amministrazione e le imprese nella trasformazione digitale e sostenibile.</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>Monitoraggio Contratti ICT e Green</h3>
-                    <p>Consulenza specializzata nel presidio del ciclo di vita dei contratti ICT della PA, con monitoraggio secondo le linee guida AGID, KPI di performance, impatto twin transition, cruscotti digitali e audit di conformità. Include percorsi modulari per avvio, controllo continuativo e capacity building.</p><br />
-                    <a class="btn btn-outline" href="monitor.html">Scopri il monitoraggio</a>
-                </div>
-                <div class="card">
-                    <h3>Soluzioni Strategiche Digitali</h3>
-                    <p>Sviluppo di applicazioni web moderne, adozione cloud (GCP), integrazione AI/ML, formazione, web marketing sostenibile, assistenza tecnica e progetti di trasformazione digitale. Approccio end-to-end con specialisti in cloud, AI, web e change management, toolkit operativi e percorsi di adozione incrementale.</p><br />
-                    <a class="btn btn-outline" href="sviluppo.html">Scopri le soluzioni</a>
-                </div>
-            </div>
+    <section id="soluzioni">
+        <div class="container" style="z-index: 0;">
+            <span class="section-title">Servizi</span>
+            <h2>Soluzioni strategiche</h2>
+            <ul class="feature-list">
+                <li>
+                    <div class="feature-icon">WEB</div>
+                    <div class="feature-text">Sviluppo di applicazioni web  con strumenti innovativi.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">CLOUD</div>
+                    <div class="feature-text">Consulenza sull'adozione del Cloud Computing e servizi correlati come Google Cloud Platform.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">AI</div>
+                    <div class="feature-text">Integrazione di soluzioni di Intelligenza Artificiale e Machine Learning per migliorare strategie digitali e operazioni di business.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">EDU</div>
+                    <div class="feature-text">Formazione su Cloud e tecnologie digitali per potenziare la capacità innovativa delle imprese.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">MKT</div>
+                    <div class="feature-text">Strategie e supporto per il web marketing sostenibile e la digitalizzazione dei processi aziendali.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">SUP</div>
+                    <div class="feature-text">Servizi di assistenza tecnica e supporto per sistemi digitali.</div>
+                </li>
+                <li>
+                    <div class="feature-icon">DX</div>
+                    <div class="feature-text">Servizi di trasformazione digitale, supporto all'elaborazione di piani di transizione digitale  </div>
+                </li>
+                <li>
+                    <div class="feature-icon">PA</div>
+                    <div class="feature-text">Coordinamento e gestione di progetti di innovazione e implementazione di nuove tecnologie come Cloud Computing e AI</div>
+                </li>
+            </ul>
         </div>
     </section>
 
     <section id="metodo">
         <div class="container">
-            <span class="section-title">Il nostro approccio</span>
-            <h2>Metodologia comprovata per progetti IT di successo</h2>
-            <p>Seguiamo un approccio strutturato e agile per la consegna di servizi di consulenza informatica, assicurando qualità, scalabilità e allineamento agli obiettivi aziendali. Dalla pianificazione alla manutenzione, ogni fase è progettata per minimizzare rischi e massimizzare i risultati.</p>
+            <span class="section-title">Approccio</span>
+            <h2>Dal bisogno alla soluzione: un framework per l’innovazione</h2>
+            <p>Affrontiamo le sfide digitali con un approccio end‑to‑end: analisi del contesto, prototipazione rapida, implementazione cloud‑native e misurazione dei risultati.</p>
             <div class="process">
                 <div class="process-step">
-                    <h4>1. Analisi e pianificazione</h4>
-                    <p>Valutiamo i bisogni del cliente, analizziamo l'infrastruttura esistente e definiamo obiettivi chiari, roadmap e metriche di successo.</p>
+                    <h4>1. Scoping e Roadmap</h4>
+                    <p>Raccogliamo requisiti, priorità e KPI di business; definiamo un piano incrementale e sostenibile.</p>
                 </div>
                 <div class="process-step">
-                    <h4>2. Design e sviluppo</h4>
-                    <p>Progettiamo architetture robuste, sviluppiamo soluzioni personalizzate e integriamo tecnologie avanzate come cloud e AI.</p>
+                    <h4>2. Architetture e Cloud</h4>
+                    <p>Disegniamo soluzioni su GCP e multi‑cloud, con best practice di sicurezza, cost‑control e automazione.</p>
                 </div>
                 <div class="process-step">
-                    <h4>3. Implementazione e testing</h4>
-                    <p>Deployamo le soluzioni in ambienti sicuri, eseguiamo test rigorosi e ottimizziamo performance e sicurezza.</p>
+                    <h4>3. AI e Sviluppo</h4>
+                    <p>Integrazione AI/ML e sviluppo web moderno per accelerare processi e decisioni data‑driven.</p>
                 </div>
                 <div class="process-step">
-                    <h4>4. Supporto e evoluzione</h4>
-                    <p>Forniamo assistenza continua, monitoraggio e aggiornamenti per garantire longevità e adattabilità delle soluzioni IT.</p>
+                    <h4>4. Change e Formazione</h4>
+                    <p>Onboarding team, formazione mirata e metriche di adozione per massimizzare il valore nel tempo.</p>
                 </div>
             </div>
         </div>
@@ -711,39 +744,39 @@
 
     <section id="competenze">
         <div class="container">
-            <span class="section-title">Il nostro team</span>
-            <h2>Esperti multidisciplinari in tecnologie IT avanzate</h2>
-            <p>Il nostro team di AI combina competenze tecniche, strategiche e di business per offrire soluzioni complete. Dalla cybersecurity allo sviluppo software, ogni specialista lavora in sinergia per garantire progetti innovativi e sicuri.</p>
+            <span class="section-title">Competenze</span>
+            <h2>Specialisti in cloud, AI e sviluppo web</h2>
+            <p>Supportiamo imprese e PA con competenze su architetture cloud (GCP), sviluppo web moderno, integrazione AI/ML, data engineering, formazione e change management. </p>
             <div class="ai-team-grid">
                 <div class="ai-agent">
-                    <img src="2.png" alt="Architetto di sistemi">
-                    <h4>Alphax</h4>
-                    <span>Architetture IT</span>
-                    <p>Progetta infrastrutture scalabili e sicure, ottimizzando performance e costi per ambienti cloud e on-premise.</p>
+                    <img src="2.png" alt="Architetto Cloud">
+                    <h4>Cloud Architect</h4>
+                    <span>GCP · Multi‑cloud</span>
+                    <p>Progetta workload sicuri, resilienti e ottimizzati sui costi con IaC e CI/CD.</p>
                 </div>
                 <div class="ai-agent">
-                    <img src="3.png" alt="Sviluppatore software">
-                    <h4>Beta9</h4>
-                    <span>Sviluppo</span>
-                    <p>Crea applicazioni personalizzate con linguaggi moderni, frameworks e best practices per soluzioni robuste.</p>
+                    <img src="3.png" alt="ML Engineer">
+                    <h4>ML Engineer</h4>
+                    <span>AI/ML</span>
+                    <p>Integra modelli, pipeline dati e servizi AI per automazione e insight.</p>
                 </div>
                 <div class="ai-agent">
-                    <img src="4.png" alt="Esperto in gestione progetti ICT">
-                    <h4>Optimus</h4>
-                    <span>Gestione Progetti</span>
-                    <p>Coordina progetti IT, gestisce risorse, rischi e stakeholder per garantire successo e qualità.</p>
+                    <img src="4.png" alt="Web Engineer">
+                    <h4>Web Engineer</h4>
+                    <span>Frontend · Backend</span>
+                    <p>Realizza applicazioni performanti e accessibili con stack moderno.</p>
                 </div>
                 <div class="ai-agent">
-                    <img src="5.png" alt="Data Scientist">
-                    <h4>Nextra</h4>
-                    <span>Analytics</span>
-                    <p>Analizza dati, costruisce modelli predittivi e integra AI per decisioni data-driven.</p>
+                    <img src="5.png" alt="Data Engineer">
+                    <h4>Data Engineer</h4>
+                    <span>Dati</span>
+                    <p>Costruisce pipeline e modelli dati per analytics e decisioni data‑driven.</p>
                 </div>
                 <div class="ai-agent">
-                    <img src="6.png" alt="Consulente digitale">
-                    <h4>Scrap</h4>
-                    <span>Trasformazione</span>
-                    <p>Guida la transizione digitale, formazione e change management per adottare nuove tecnologie.</p>
+                    <img src="6.png" alt="Digital Advisor">
+                    <h4>Digital Advisor</h4>
+                    <span>Formazione · Change</span>
+                    <p>Guida adozione, upskilling e re‑ingegnerizzazione dei processi interni.</p>
                 </div>
             </div>
         </div>
@@ -751,24 +784,24 @@
 
     <section id="ambiti">
         <div class="container">
-            <span class="section-title">Ambiti di intervento</span>
-            <h2>Soluzioni IT per ogni esigenza aziendale</h2>
+            <span class="section-title">Ambiti</span>
+            <h2>Soluzioni per i tuoi obiettivi digitali</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Sviluppo Software</h3>
-                    <p>Creazione di applicazioni web e mobile personalizzate, con focus su usabilità, sicurezza e integrazione con sistemi esistenti.</p>
+                    <h3>Sviluppo Web</h3>
+                    <p>Applicazioni moderne, accessibili e performanti con stack aggiornato e UX centrata sul valore.</p>
                 </div>
                 <div class="card">
-                    <h3>Cloud Computing</h3>
-                    <p>Migrazione e gestione di infrastrutture cloud, ottimizzazione costi e prestazioni su piattaforme come AWS, GCP e Azure.</p>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Architetture GCP, container, automazione CI/CD e governance costi/sicurezza.</p>
                 </div>
                 <div class="card">
-                    <h3>Gestione Progetti ICT</h3>
-                    <p>Pianificazione, coordinamento e controllo di progetti IT complessi, con metodologie agili e monitoraggio di tempi, costi e rischi.</p>
+                    <h3>AI & Data</h3>
+                    <p>Integrazione modelli, data platform e analytics per processi più intelligenti.</p>
                 </div>
                 <div class="card">
-                    <h3>Data & AI</h3>
-                    <p>Analisi dati, machine learning e intelligenza artificiale per automazione processi e insights strategici.</p>
+                    <h3>Formazione & Change</h3>
+                    <p>Programmi di training e accompagnamento per accelerare l’adozione tecnologica.</p>
                 </div>
             </div>
         </div>
@@ -776,40 +809,40 @@
 
     <section id="percorsi">
         <div class="container">
-            <span class="section-title">Pacchetti di servizi</span>
-            <h2>Soluzioni modulari per progetti IT su misura</h2>
-            <p>Offriamo pacchetti flessibili e componibili per rispondere a esigenze specifiche, dalla consultazione iniziale alla gestione completa del progetto.</p>
+            <span class="section-title">Percorsi</span>
+            <h2>Pacchetti modulari per imprese e PA</h2>
+            <p>Interventi componibili: dalla strategia alla messa in produzione, con formazione e supporto continuativo.</p>
             <div class="grid">
                 <div class="card">
-                    <h3>Assessment e Consulenza</h3>
+                    <h3>Kick‑off digitale</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">ANA</span><span class="feature-text">Analisi infrastruttura IT esistente e gap analysis</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">STR</span><span class="feature-text">Strategia digitale e roadmap tecnologica</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">RIS</span><span class="feature-text">Valutazione rischi e piani di mitigazione</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">MAP</span><span class="feature-text">Assessment tecnico‑organizzativo e roadmap</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">POC</span><span class="feature-text">Prototipi rapidi su web/AI per validare il valore</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">GOV</span><span class="feature-text">Piano cloud, sicurezza e cost governance</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Sviluppo e Implementazione</h3>
+                    <h3>Build & Run</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">DEV</span><span class="feature-text">Sviluppo software personalizzato e integrazione</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">DEP</span><span class="feature-text">Deployment in cloud e testing completo</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">OPT</span><span class="feature-text">Ottimizzazione performance e sicurezza</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">DEV</span><span class="feature-text">Sviluppo applicazioni e API cloud‑native</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">CI</span><span class="feature-text">Automazione CI/CD e ambienti container</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">SRE</span><span class="feature-text">Monitoraggio, affidabilità e performance</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Supporto e Manutenzione</h3>
+                    <h3>AI Adoption</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">SUP</span><span class="feature-text">Assistenza tecnica 24/7 e monitoraggio sistemi</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">UPD</span><span class="feature-text">Aggiornamenti software e sicurezza</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">TRA</span><span class="feature-text">Formazione team interno e documentazione</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">ML</span><span class="feature-text">Data pipeline e deployment modelli</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">OPS</span><span class="feature-text">MLOps e governance dei modelli</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">ETH</span><span class="feature-text">Linee guida etiche e valutazioni rischio</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Trasformazione Digitale</h3>
+                    <h3>Enablement</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">AI</span><span class="feature-text">Integrazione AI e automazione processi</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">PRO</span><span class="feature-text">Gestione progetti ICT e metodologie agili</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">DAT</span><span class="feature-text">Gestione dati e analytics per decisioni strategiche</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">EDU</span><span class="feature-text">Formazione su cloud, AI e sviluppo moderno</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">PM</span><span class="feature-text">Project management e change</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">DOC</span><span class="feature-text">Documentazione e knowledge base</span></li>
                     </ul>
                 </div>
             </div>
@@ -818,24 +851,24 @@
 
     <section id="servizi">
         <div class="container">
-            <span class="section-title">I nostri servizi</span>
-            <h2>Soluzioni IT complete per ogni bisogno</h2>
+            <span class="section-title">Servizi</span>
+            <h2>Cosa possiamo fare per te</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Sviluppo Software</h3>
-                    <p>Creazione di applicazioni su misura, dalla web development alla mobile, con tecnologie moderne e best practices.</p>
+                    <h3>Sviluppo applicazioni web</h3>
+                    <p>Progettazione e sviluppo end‑to‑end con sicurezza, accessibilità e performance by design.</p>
                 </div>
                 <div class="card">
-                    <h3>Cloud Solutions</h3>
-                    <p>Consulenza e migrazione verso cloud, gestione infrastrutture scalabili e ottimizzazione costi su piattaforme leader.</p>
+                    <h3>Cloud & Platform</h3>
+                    <p>Migrazioni a GCP, modernizzazione applicativa, data platform e automazione.</p>
                 </div>
                 <div class="card">
-                    <h3>Gestione Progetti ICT</h3>
-                    <p>Coordinamento e gestione di progetti IT, assicurando consegna entro tempi e budget con reportistica e controllo qualità.</p>
+                    <h3>AI & ML</h3>
+                    <p>Use‑case, integrazione modelli, MLOps e misurazione dell’impatto.</p>
                 </div>
                 <div class="card">
-                    <h3>Data Analytics & AI</h3>
-                    <p>Analisi dati, modelli predittivi e integrazione AI per migliorare processi e decisioni aziendali.</p>
+                    <h3>Formazione & Marketing</h3>
+                    <p>Programmi formativi e strategie di web marketing sostenibile e data‑driven.</p>
                 </div>
             </div>
         </div>
@@ -843,40 +876,40 @@
 
     <section id="toolkit">
         <div class="container">
-            <span class="section-title">Toolkit e risorse</span>
-            <h2>Strumenti pronti all'uso per l'innovazione IT</h2>
-            <p>Forniamo risorse digitali, template e piattaforme che accelerano i progetti IT, riducendo tempi e costi di sviluppo.</p>
+            <span class="section-title">Toolkit</span>
+            <h2>Strumenti e deliverable per l’innovazione</h2>
+            <p>Metodologie, template e asset tecnici per accelerare progetti web, cloud e AI, riducendo rischi e time‑to‑value.</p>
             <div class="grid">
                 <div class="card">
-                    <h3>Framework di Sviluppo</h3>
+                    <h3>Starter Kit Cloud</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">TPL</span><span class="feature-text">Template per applicazioni web e API sicure</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">ARC</span><span class="feature-text">Architetture reference per cloud-native e microservizi</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">TEST</span><span class="feature-text">Suite di testing automatizzato e CI/CD pipelines</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">IaC</span><span class="feature-text">Template IaC, policy di sicurezza e landing zone GCP</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">CI</span><span class="feature-text">Pipeline CI/CD per build, test e deploy</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">OBS</span><span class="feature-text">Monitoraggio e logging pronti all’uso</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Dashboard e Analytics</h3>
+                    <h3>Web Toolkit</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">DASH</span><span class="feature-text">Cruscotti interattivi per monitoraggio KPI e performance</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">INT</span><span class="feature-text">Integrazione con fonti dati eterogenee e API</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">ALT</span><span class="feature-text">Alert automatici per anomalie e scadenze</span></li>
-                    </ul>
-                </div>
-                <div class="card" style="background: rgba(101, 214, 160, 0.12); border: 1px solid rgba(101, 214, 160, 0.35);">
-                    <h3>Project Management Toolkit</h3>
-                    <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">PMT</span><span class="feature-text">Template per piani di progetto e Gantt charts</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">RIS</span><span class="feature-text">Strumenti per gestione rischi e monitoraggio KPI</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">COL</span><span class="feature-text">Piattaforme collaborative per team remoti</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">UX</span><span class="feature-text">Design system e guide di accessibilità</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">API</span><span class="feature-text">Pattern per API sicure e scalabili</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">QA</span><span class="feature-text">Test end‑to‑end e performance</span></li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Formazione e Documentazione</h3>
+                    <h3>AI Toolkit</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">EDU</span><span class="feature-text">Materiali formativi su cloud, AI e gestione progetti</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">DOC</span><span class="feature-text">Repository documentale e knowledge base</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">SUP</span><span class="feature-text">Supporto help desk e troubleshooting guide</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">DATA</span><span class="feature-text">Pipeline dati e feature store</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">MLO</span><span class="feature-text">MLOps e tracciabilità modelli</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">ETH</span><span class="feature-text">Checklist etiche e valutazioni rischio</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Enablement</h3>
+                    <ul class="feature-list">
+                        <li><span class="feature-icon" aria-hidden="true">EDU</span><span class="feature-text">Materiali formativi e workshop</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">OKR</span><span class="feature-text">Allineamento obiettivi/risultati</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">KM</span><span class="feature-text">Template di documentazione e lesson learned</span></li>
                     </ul>
                 </div>
             </div>
@@ -888,26 +921,26 @@
             <span class="section-title">Perché sceglierci</span>
             <div class="split">
                 <div>
-                    <h2>Innovazione IT affidabile e misurabile</h2>
-                    <p>Con LyberCode, ottieni soluzioni IT che non solo risolvono problemi immediati, ma creano valore a lungo termine. Il nostro approccio basato su dati e best practices garantisce progetti di successo, riduzione costi e miglioramento dell'efficienza operativa.</p>
+                    <h2>Impatto misurabile su tecnologia e business</h2>
+                    <p>Un approccio pragmatico: soluzioni scalabili, metriche chiare e trasferimento di competenze per rendere i team autonomi nel tempo.</p>
                     <div class="metrics">
                         <div class="metric">
-                            <strong>500+</strong>
-                            <span>Progetti IT completati con successo</span>
+                            <strong>2x</strong>
+                            <span>Time‑to‑value più rapido con prototipi e rilasci incrementali</span>
                         </div>
                         <div class="metric">
-                            <strong>98%</strong>
-                            <span>Soddisfazione clienti e uptime sistemi</span>
+                            <strong>‑30%</strong>
+                            <span>Costi cloud ottimizzati grazie a governance e automazione</span>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Partnership strategica</h3>
+                    <h3>Partnership continuativa</h3>
                     <ul class="feature-list">
-                        <li><span class="feature-icon" aria-hidden="true">EXP</span><span class="feature-text">Esperienza comprovata in tecnologie emergenti e legacy</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">SUP</span><span class="feature-text">Supporto continuo e manutenzione post-implementazione</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">PRO</span><span class="feature-text">Gestione progetti efficiente e metodologie comprovate</span></li>
-                        <li><span class="feature-icon" aria-hidden="true">INN</span><span class="feature-text">Innovazione costante per mantenere competitività</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">GOV</span><span class="feature-text">Modelli operativi e guardrail per sicurezza e qualità</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">TRN</span><span class="feature-text">Change management e programmi di formazione</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">SRE</span><span class="feature-text">Reliability engineering e performance</span></li>
+                        <li><span class="feature-icon" aria-hidden="true">VAL</span><span class="feature-text">KPI di adozione e valore di business</span></li>
                     </ul>
                 </div>
             </div>
@@ -916,9 +949,9 @@
 
     <section id="contatti">
         <div class="container contact">
-            <span class="section-title">Contatti</span>
-            <h2>Costruiamo insieme il tuo futuro digitale</h2>
-            <p>Scrivici le tue esigenze: in 48 ore riceverai un'analisi preliminare con piano di attivazione e KPI suggeriti.</p>
+            <span class="section-title">Contattaci</span>
+            <h2>Parliamo delle tue soluzioni digitali</h2>
+            <p>Raccontaci obiettivi e contesto: in 48 ore proponiamo un primo piano con priorità, effort e KPI.</p>
             <br><br>
             <a class="btn btn-primary" href="mailto:hello@lybercode.com">hello@lybercode.com</a>
             <div class="legal">
@@ -935,11 +968,12 @@
         <div class="footer-grid">
             <div>
                 <h4><a href="https://angelomontini.com" target="_blank" rel="noopener">LyberCode</a></h4>
-                <p>Servizi di consulenza informatica per imprese e PA: sviluppo software, cloud, cybersecurity, AI e trasformazione digitale, con sede a Roma e Terracina.</p>
+                <p>Soluzioni strategiche per imprese e PA: sviluppo web, cloud (GCP), AI/ML, formazione, marketing sostenibile, assistenza tecnica e trasformazione digitale. Sedi a Roma e Terracina.</p>
             </div>
             <div>
                 <h4>Hub</h4>
-                <a href="#metodo">Metodo</a>
+                <a href="#soluzioni">Soluzioni</a>
+                <a href="#metodo">Approccio</a>
                 <a href="#competenze">Competenze</a>
                 <a href="#ambiti">Ambiti</a>
                 <a href="#toolkit">Toolkit</a>
