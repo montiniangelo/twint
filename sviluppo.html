@@ -57,6 +57,7 @@
             overflow: hidden;
         }
 
+     
         header::after {
             content: "";
             position: absolute;
@@ -139,34 +140,33 @@
             transition: opacity 0.3s ease;
         }
 
-        nav .menu a:hover {
-            opacity: 0.8;
-        }
-
         /* Secondary subnav */
         .subnav {
             display: flex;
             gap: 14px;
-            align-items: center;
-            justify-content: flex-end;
-            margin-bottom: 14px;
-            font-size: 0.95rem;
             flex-wrap: wrap;
+            justify-content: flex-end; /* right align */
+            margin-bottom: 16px;
         }
         .subnav a {
             color: #fff;
             text-decoration: none;
-            opacity: 0.9;
-            padding: 6px 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 14px;
             border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            background: rgba(16, 30, 46, 0.35);
-            transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
         }
         .subnav a:hover {
-            opacity: 1;
-            border-color: rgba(35, 165, 177, 0.5);
-            background: rgba(35, 165, 177, 0.15);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.35);
+            transform: translateY(-1px);
+        }
+
+        nav .menu a:hover {
+            opacity: 0.8;
         }
 
         .hero {
@@ -484,7 +484,6 @@
         }
 
         @media (max-width: 720px) {
-            header { overflow: visible; background: #000; }
             nav {
                 gap: 14px;
             }
@@ -493,7 +492,6 @@
                 display: inline-flex;
             }
 
-            nav { position: relative; z-index: 1001; }
             nav .menu {
                 position: absolute;
                 top: calc(100% + 14px);
@@ -502,7 +500,7 @@
                 align-items: stretch;
                 gap: 18px;
                 padding: 22px;
-                background: #000;
+                background: rgba(6, 9, 13, 0.96);
                 border: 1px solid rgba(255, 255, 255, 0.08);
                 border-radius: 18px;
                 min-width: 220px;
@@ -512,7 +510,6 @@
                 transform: translateY(-12px);
                 pointer-events: none;
                 transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-                z-index: 1000;
             }
 
             nav .menu li {
@@ -580,42 +577,8 @@
 
         /* Icon spacing inside buttons */
         .btn .icon-left { margin-right: 10px; display: inline-flex; align-items: center; }
+    </style>
 
-        /* Soluzioni: elegant feature list */
-        #soluzioni .feature-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 18px;
-            margin-top: 18px;
-        }
-        #soluzioni .feature-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            padding: 16px 18px;
-            border: 1px solid rgba(124, 138, 164, 0.22);
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.03);
-            transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-        }
-        #soluzioni .feature-list li:hover {
-            border-color: rgba(35, 165, 177, 0.55);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 28px rgba(35, 165, 177, 0.15);
-        }
-        #soluzioni .feature-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, rgba(35, 165, 177, 0.3), rgba(35, 165, 177, 0.65));
-            display: grid;
-            place-items: center;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            color: #041821;
-            flex-shrink: 0;
-        }
-        #soluzioni .feature-text { color: var(--muted); }
     </style>
 
     <script type="application/ld+json">
