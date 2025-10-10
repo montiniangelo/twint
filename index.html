@@ -49,6 +49,65 @@
             line-height: 1.6;
         }
 
+        /* News ticker styles */
+        .news-ticker {
+            background: rgba(11, 21, 32, 0.95);
+            border-bottom: 1px solid rgba(35, 165, 177, 0.3);
+            padding: 8px 0;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .ticker-wrapper {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: scroll-left 60s linear infinite;
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 60px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+
+        .ticker-item::before {
+            content: "●";
+            color: var(--secondary);
+            margin-right: 12px;
+            font-size: 0.6rem;
+        }
+
+        .ticker-label {
+            background: linear-gradient(135deg, var(--secondary), rgba(35, 165, 177, 0.8));
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 15px;
+            box-shadow: 0 2px 8px rgba(35, 165, 177, 0.3);
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .news-ticker:hover .ticker-wrapper {
+            animation-play-state: paused;
+        }
+
         header {
             background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.6), rgba(11, 21, 32, 0.95)), url('y.jpg') center/cover no-repeat;
             color: #fff;
@@ -574,6 +633,28 @@
         #scrollTop:hover { transform: translateY(-2px); }
         @media (max-width: 768px) { #scrollTop { right: 14px; bottom: 14px; } }
 
+        /* News ticker responsive styles */
+        @media (max-width: 768px) {
+            .news-ticker {
+                padding: 6px 0;
+            }
+            
+            .ticker-label {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+                margin-right: 10px;
+            }
+            
+            .ticker-item {
+                font-size: 0.8rem;
+                margin-right: 40px;
+            }
+            
+            .ticker-wrapper {
+                animation-duration: 45s; /* Slightly faster on mobile */
+            }
+        }
+
         /* Icon spacing inside buttons */
         .btn .icon-left { margin-right: 10px; display: inline-flex; align-items: center; }
     </style>
@@ -605,6 +686,17 @@
     </script>
 </head>
 <body>
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-wrapper">
+            <span class="ticker-label">Ultime Notizie</span>
+            <div class="ticker-item">Aggiudicata gara per la realizzazione di una web app per la visualizzazione degli interventi di manutenzione operati da una azienda municipalizzata</div>
+            <div class="ticker-item">Avviata procedura per l'aggiudicazione della gestione dei servizi web evoluti di uno dei musei più importanti del nostro paese</div>
+            <div class="ticker-item">Completato sviluppo di sistema di monitoraggio per azienda leader nel settore energetico</div>
+            <div class="ticker-item">Implementata soluzione di analisi dati avanzata per ottimizzazione processi in ambito manifatturiero</div>
+        </div>
+    </div>
+    
     <header>
         <div class="container">
             <div class="subnav" aria-label="Secondaria">
