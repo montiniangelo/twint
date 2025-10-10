@@ -100,7 +100,7 @@
 
         @keyframes scroll-left {
             0% {
-                transform: translateX(100%);
+                transform: translateX(0%);
             }
             100% {
                 transform: translateX(-100%);
@@ -658,7 +658,7 @@
             }
             
             .ticker-wrapper {
-                animation-duration: 40s; /* Adjusted timing for better visibility */
+                animation-duration: 55s; /* Slower for better readability on tablets */
                 width: max-content; /* Ensure wrapper spans full content width */
                 min-width: calc(100vw + 200vw); /* Minimum width to ensure all content is visible */
             }
@@ -686,7 +686,7 @@
             }
             
             .ticker-wrapper {
-                animation-duration: 35s; /* Optimal speed for small screens */
+                animation-duration: 50s; /* Much slower for better readability on small screens */
                 width: max-content;
                 min-width: calc(100vw + 250vw); /* Extended width for full content visibility */
             }
