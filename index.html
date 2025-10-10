@@ -647,15 +647,20 @@
                 font-size: 0.7rem;
                 padding: 3px 8px;
                 margin-right: 10px;
+                flex-shrink: 0; /* Prevent label from shrinking */
             }
             
             .ticker-item {
                 font-size: 0.8rem;
-                margin-right: 40px;
+                margin-right: 50px; /* More space between items */
+                flex-shrink: 0; /* Prevent items from shrinking */
+                min-width: max-content; /* Ensure full width */
             }
             
             .ticker-wrapper {
-                animation-duration: 35s; /* Faster on mobile */
+                animation-duration: 40s; /* Adjusted timing for better visibility */
+                width: max-content; /* Ensure wrapper spans full content width */
+                min-width: calc(100vw + 200vw); /* Minimum width to ensure all content is visible */
             }
         }
 
@@ -670,15 +675,20 @@
                 font-size: 0.65rem;
                 padding: 2px 6px;
                 margin-right: 8px;
+                flex-shrink: 0;
             }
             
             .ticker-item {
                 font-size: 0.75rem;
-                margin-right: 35px;
+                margin-right: 40px; /* Sufficient spacing */
+                flex-shrink: 0;
+                min-width: max-content;
             }
             
             .ticker-wrapper {
-                animation-duration: 30s; /* Much faster on very small screens */
+                animation-duration: 35s; /* Optimal speed for small screens */
+                width: max-content;
+                min-width: calc(100vw + 250vw); /* Extended width for full content visibility */
             }
         }
 
@@ -717,7 +727,12 @@
     <div class="news-ticker">
         <div class="ticker-wrapper">
             <span class="ticker-label">Ultime Notizie</span>
-            <div class="ticker-item">Aggiudicata gara per la realizzazione di una web app per la visualizzazione degli interventi di manutenzione operati da una azienda municipalizzata</div>
+            <div class="ticker-item">Aggiudicata gara per la realizzazione di una web app per la visualizzazione degli interventi di manutenzione</div>
+            <div class="ticker-item">Avviata procedura per l'aggiudicazione della gestione dei servizi web evoluti di uno dei musei più importanti del nostro paese</div>
+            <div class="ticker-item">Completato sviluppo di sistema di monitoraggio per azienda leader nel settore energetico</div>
+            <div class="ticker-item">Implementata soluzione di analisi dati avanzata per ottimizzazione processi in ambito manifatturiero</div>
+            <!-- Duplicate content for seamless infinite scroll -->
+            <div class="ticker-item">Aggiudicata gara per la realizzazione di una web app per la visualizzazione degli interventi di manutenzione</div>
             <div class="ticker-item">Avviata procedura per l'aggiudicazione della gestione dei servizi web evoluti di uno dei musei più importanti del nostro paese</div>
             <div class="ticker-item">Completato sviluppo di sistema di monitoraggio per azienda leader nel settore energetico</div>
             <div class="ticker-item">Implementata soluzione di analisi dati avanzata per ottimizzazione processi in ambito manifatturiero</div>
