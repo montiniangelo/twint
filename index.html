@@ -111,6 +111,68 @@
             animation-play-state: paused;
         }
 
+        /* Second ticker styles with different colors */
+        .news-ticker-2 {
+            background: #252627;
+            border-bottom: 1px solid rgba(123, 44, 191, 0.3);
+            padding: 8px 0;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+            display: block;
+            width: 100%;
+            min-height: 32px;
+        }
+
+        .ticker-wrapper-2 {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: scroll-right 30s linear infinite;
+        }
+
+        .ticker-item-2 {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 60px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+
+        .ticker-item-2::before {
+            content: "●";
+            color: #ffffff;
+            margin-right: 12px;
+            font-size: 0.6rem;
+        }
+
+        .ticker-label-2 {
+            background: linear-gradient(135deg, var(--secondary), rgba(35, 165, 177, 0.8));
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 15px;
+            box-shadow: 0 2px 8px rgba(123, 44, 191, 0.3);
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .news-ticker-2:hover .ticker-wrapper-2 {
+            animation-play-state: paused;
+        }
+
         header {
             background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.6), rgba(11, 21, 32, 0.95)), url('y.jpg') center/cover no-repeat;
             color: #fff;
@@ -643,7 +705,19 @@
                 display: block; /* Ensure visibility */
             }
             
+            .news-ticker-2 {
+                padding: 6px 0;
+                display: block; /* Ensure visibility */
+            }
+            
             .ticker-label {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+                margin-right: 10px;
+                flex-shrink: 0; /* Prevent label from shrinking */
+            }
+            
+            .ticker-label-2 {
                 font-size: 0.7rem;
                 padding: 3px 8px;
                 margin-right: 10px;
@@ -657,8 +731,21 @@
                 min-width: max-content; /* Ensure full width */
             }
             
+            .ticker-item-2 {
+                font-size: 0.8rem;
+                margin-right: 50px; /* More space between items */
+                flex-shrink: 0; /* Prevent items from shrinking */
+                min-width: max-content; /* Ensure full width */
+            }
+            
             .ticker-wrapper {
-                animation-duration: 28s; /* Double speed for tablets */
+                animation-duration: 28s; /* Same speed for tablets */
+                width: max-content; /* Ensure wrapper spans full content width */
+                min-width: calc(100vw + 200vw); /* Minimum width to ensure all content is visible */
+            }
+            
+            .ticker-wrapper-2 {
+                animation-duration: 28s; /* Same speed for tablets */
                 width: max-content; /* Ensure wrapper spans full content width */
                 min-width: calc(100vw + 200vw); /* Minimum width to ensure all content is visible */
             }
@@ -671,7 +758,19 @@
                 display: block !important; /* Force visibility on very small screens */
             }
             
+            .news-ticker-2 {
+                padding: 5px 0;
+                display: block !important; /* Force visibility on very small screens */
+            }
+            
             .ticker-label {
+                font-size: 0.65rem;
+                padding: 2px 6px;
+                margin-right: 8px;
+                flex-shrink: 0;
+            }
+            
+            .ticker-label-2 {
                 font-size: 0.65rem;
                 padding: 2px 6px;
                 margin-right: 8px;
@@ -685,8 +784,21 @@
                 min-width: max-content;
             }
             
+            .ticker-item-2 {
+                font-size: 0.75rem;
+                margin-right: 40px; /* Sufficient spacing */
+                flex-shrink: 0;
+                min-width: max-content;
+            }
+            
             .ticker-wrapper {
-                animation-duration: 25s; /* Double speed for small screens */
+                animation-duration: 25s; /* Same speed for small screens */
+                width: max-content;
+                min-width: calc(100vw + 250vw); /* Extended width for full content visibility */
+            }
+            
+            .ticker-wrapper-2 {
+                animation-duration: 25s; /* Same speed for small screens */
                 width: max-content;
                 min-width: calc(100vw + 250vw); /* Extended width for full content visibility */
             }
@@ -724,17 +836,38 @@
 </head>
 <body>
     <!-- News Ticker -->
-    <div class="news-ticker">
+    <div class="news-ticker-2">
         <div class="ticker-wrapper">
-            <span class="ticker-label">Progetti realizzati</span>
+            <span class="ticker-label">IN PRIMO PIANO</span>
             <div class="ticker-item"> Sviluppo di una dashboard web app per la visualizzazione degli interventi di manutenzione sistema idrico</div>
-            <span class="ticker-label">Progetti realizzati</span>
+            <span class="ticker-label">IN PRIMO PIANO</span>
             <div class="ticker-item"> Sviluppo di una dashboard web app per la visualizzazione degli interventi di manutenzione sistema idrico</div>
-            <span class="ticker-label">Progetti realizzati</span>
+            <span class="ticker-label">IN PRIMO PIANO</span>
             <div class="ticker-item"> Sviluppo di una dashboard web app per la visualizzazione degli interventi di manutenzione sistema idrico</div>
         </div>
     </div>
-    
+
+    <!-- Second News Ticker - Clienti Istituzionali -->
+    <!-- <div class="news-ticker-2">
+        <div class="ticker-wrapper-2">
+            <span class="ticker-label-2">CLIENTI ISTITUZIONALI</span>
+            <div class="ticker-item-2">IFEL</div>
+            <div class="ticker-item-2">ANCI</div>
+            <div class="ticker-item-2">ANCITEL EA</div>
+            <div class="ticker-item-2">COMUNE DI CASTELNUOVO DI FARFA</div>
+            <div class="ticker-item-2">REGIONE LAZIO</div>
+            <div class="ticker-item-2">PARCO REGIONALE VALLE DEL TREJA</div>
+            <span class="ticker-label-2">CLIENTI ISTITUZIONALI</span>
+            <div class="ticker-item-2">IFEL</div>
+            <div class="ticker-item-2">ANCI</div>
+            <div class="ticker-item-2">ANCITEL EA</div>
+            <div class="ticker-item-2">COMUNE DI CASTELNUOVO DI FARFA</div>
+            <div class="ticker-item-2">REGIONE LAZIO</div>
+            <div class="ticker-item-2">PARCO REGIONALE VALLE DEL TREJA</div>
+            <span class="ticker-label-2">CLIENTI ISTITUZIONALI</span>
+        </div>
+    </div>
+     -->
     <header>
         <div class="container">
             <div class="subnav" aria-label="Secondaria">
