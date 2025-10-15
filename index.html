@@ -836,6 +836,15 @@
             .cliente-nome {
                 font-size: 0.8rem;
             }
+            
+            /* Reduce ticker speed by 50% on tablets */
+            .ticker-wrapper {
+                animation-duration: 60s;
+            }
+            
+            .ticker-wrapper-2 {
+                animation-duration: 60s;
+            }
         }
 
         @media (max-width: 480px) {
@@ -904,13 +913,13 @@
             }
             
             .ticker-wrapper {
-                animation-duration: 25s; /* Same speed for small screens */
+                animation-duration: 50s; /* Reduced speed by 50% for mobile devices */
                 width: max-content;
                 min-width: calc(100vw + 250vw); /* Extended width for full content visibility */
             }
             
             .ticker-wrapper-2 {
-                animation-duration: 25s; /* Same speed for small screens */
+                animation-duration: 50s; /* Reduced speed by 50% for mobile devices */
                 width: max-content;
                 min-width: calc(100vw + 250vw); /* Extended width for full content visibility */
             }
