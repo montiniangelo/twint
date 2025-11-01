@@ -49,6 +49,43 @@
             line-height: 1.6;
         }
 
+        /* News badge - Lampeggiante */
+        .news-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .news-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            }
+            50% {
+                opacity: 0.6;
+                box-shadow: 0 4px 25px rgba(35, 165, 177, 0.8);
+            }
+        }
+
         /* Clienti istituzionali styles */
       
       
@@ -846,15 +883,11 @@
             }
             
             .ticker-wrapper {
-                animation-duration: 60s; /* 50% slower on mobile (30s * 2 = 60s) */
-                width: max-content; /* Ensure wrapper spans full content width */
-                min-width: calc(100vw + 200vw); /* Minimum width to ensure all content is visible */
+                display: none;
             }
             
             .ticker-wrapper-2 {
-                animation-duration: 60s; /* 50% slower on mobile (30s * 2 = 60s) */
-                width: max-content; /* Ensure wrapper spans full content width */
-                min-width: calc(100vw + 200vw); /* Minimum width to ensure all content is visible */
+                display: none;
             }
         }
 
@@ -999,6 +1032,9 @@
     </script>
 </head>
 <body>
+    <!-- News Badge Icon - Lampeggiante -->
+    <a href="news.html" class="news-badge" title="Vai alle News" aria-label="Link alle news">📰</a>
+
     <!-- News Ticker -->
     <div class="news-ticker-2">
         <div class="ticker-wrapper">

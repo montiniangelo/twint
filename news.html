@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - LyberCode | Ultimi Aggiornamenti e Progetti</title>
+    <meta name="description" content="Scopri le ultime notizie, aggiornamenti e progetti di LyberCode: sviluppi software, formazione informatica e servizi per la PA.">
+    <meta name="keywords" content="LyberCode news, progetti, aggiornamenti, formazione, sviluppo software, pubblica amministrazione">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='52'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+
+    <style>
+        :root {
+            --primary: #101e2e;
+            --secondary: #23a5b1;
+            --accent: #0b1520;
+            --text: #ffffff;
+            --muted: #e7e9ee;
+            --surface: rgba(16, 30, 46, 0.9);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: var(--accent);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* News badge - Lampeggiante */
+        .news-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .news-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            }
+            50% {
+                opacity: 0.6;
+                box-shadow: 0 4px 25px rgba(35, 165, 177, 0.8);
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.6), rgba(11, 21, 32, 0.95)), url('y.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(16, 30, 46, 0.75), rgba(35, 165, 177, 0.3));
+            z-index: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        nav .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        nav .logo span {
+            line-height: 1;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            background: rgba(16, 30, 46, 0.4);
+            color: #fff;
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav .menu a:hover {
+            opacity: 0.8;
+        }
+
+        .page-header {
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        /* News Section */
+        .news-section {
+            padding: 80px 0;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .news-card {
+            background: rgba(35, 53, 75, 0.4);
+            border: 1px solid rgba(35, 165, 177, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            background: rgba(35, 53, 75, 0.6);
+            border-color: rgba(35, 165, 177, 0.4);
+        }
+
+        .news-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), rgba(35, 165, 177, 0.8));
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            width: fit-content;
+            box-shadow: 0 2px 8px rgba(35, 165, 177, 0.3);
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .news-date::before {
+            content: "📅";
+        }
+
+        .news-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: #fff;
+        }
+
+        .news-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .news-card a {
+            display: inline-block;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+            margin-top: auto;
+        }
+
+        .news-card a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(16, 30, 46, 0.8);
+            border-top: 1px solid rgba(35, 165, 177, 0.2);
+            padding: 60px 0 30px;
+            margin-top: 80px;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer h4 {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        footer a {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(35, 165, 177, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        .bottom a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .bottom a:hover {
+            color: var(--secondary);
+        }
+
+        /* Scroll to top button */
+        #scrollTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: #fff;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #scrollTop:hover {
+            transform: translateY(-3px);
+        }
+
+        #scrollTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                margin-bottom: 30px;
+            }
+
+            nav .logo {
+                font-size: 1.5rem;
+            }
+
+            nav .logo img {
+                height: 32px;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav .menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: rgba(16, 30, 46, 0.95);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                z-index: 1000;
+            }
+
+            nav.menu-open .menu {
+                max-height: 500px;
+            }
+
+            nav .menu a {
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(35, 165, 177, 0.1);
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header p {
+                font-size: 0.95rem;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-card {
+                padding: 25px;
+            }
+
+            #scrollTop {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav .logo {
+                font-size: 1.2rem;
+            }
+
+            nav .logo img {
+                height: 28px;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+
+            .page-header p {
+                font-size: 0.9rem;
+            }
+
+            .news-section {
+                padding: 60px 0;
+            }
+
+            .news-card h2 {
+                font-size: 1.15rem;
+            }
+
+            .news-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- News Badge Icon - Lampeggiante -->
+    <a href="news.html" class="news-badge" title="Vai alle News" aria-label="Link alle news">📰</a>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="LyberCode">
+                    <span>LyberCode</span>
+                </a>
+                <button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="index.html#metodo">Metodo</a></li>
+                    <li><a href="index.html#competenze">Competenze</a></li>
+                    <li><a href="index.html#ambiti">Ambiti</a></li>
+                    <li><a href="index.html#toolkit">Toolkit</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="index.html#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="page-header">
+                <h1>Ultime News</h1>
+                <p>Scopri gli ultimi aggiornamenti, progetti e novità da LyberCode</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="news-section">
+        <div class="container">
+            <div class="news-grid">
+                <!-- News 1 -->
+                <article class="news-card">
+                    <span class="news-category">PRIMO PIANO</span>
+                    <div class="news-date">Gennaio 2025</div>
+                    <h2>Dashboard Web App per Sistema Idrico</h2>
+                    <p>Abbiamo sviluppato una innovativa dashboard web app per la visualizzazione e il monitoraggio degli interventi di manutenzione del sistema idrico. La soluzione consente una gestione centralizzata e in tempo reale di tutti gli interventi, migliorando l'efficienza operativa e riducendo i tempi di risposta.</p>
+                    <a href="index.html#ambiti">Scopri di più →</a>
+                </article>
+
+                <!-- News 2 -->
+                <article class="news-card">
+                    <span class="news-category">PUBBLICA AMMINISTRAZIONE</span>
+                    <div class="news-date">Dicembre 2024</div>
+                    <h2>Offerte MEPA su acquistinretepa.it</h2>
+                    <p>LyberCode è ora presente nel catalogo MEPA con una nuova sezione dedicata alle offerte per la Pubblica Amministrazione. Scopri le nostre soluzioni già pubblicate sul portale ufficiale acquistinretepa.it. Soluzioni IT complete e verificate per semplificare gli acquisti della PA.</p>
+                    <a href="sviluppo.html#mepa">Consulta le offerte →</a>
+                </article>
+
+                <!-- News 3 -->
+                <article class="news-card">
+                    <span class="news-category">PRIMO PIANO</span>
+                    <div class="news-date">Novembre 2024</div>
+                    <h2>Servizi Web Sito Istituzionale Uffizi</h2>
+                    <p>LyberCode è ora responsabile della gestione dei servizi web evoluti del sito istituzionale e dei servizi informatici delle Gallerie degli Uffizi. Un progetto di rilevanza culturale internazionale che rappresenta un'eccellenza nella trasformazione digitale dei beni culturali italiani.</p>
+                    <a href="index.html#ambiti">Vedi i nostri servizi →</a>
+                </article>
+
+                <!-- News 4 -->
+                <article class="news-card">
+                    <span class="news-category">FORMAZIONE</span>
+                    <div class="news-date">Ottobre 2024</div>
+                    <h2>Corso Pacchetto Office & Cybersecurity</h2>
+                    <p>LyberCode ha erogato un corso completo su Pacchetto Office e Sicurezza Informatica rivolto al personale del 3° Reparto Comando e Supporti Tattici Granatieri "Guardie". Il programma ha fornito competenze essenziali sulla produttività digitale e sulle migliori pratiche di sicurezza informatica.</p>
+                    <a href="index.html#competenze">Scopri i nostri corsi →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>LyberCode</h4>
+                <p>Servizi di consulenza informatica per imprese e PA: sviluppo software, cloud, cybersecurity, AI e trasformazione digitale, con sede a Roma e Terracina.</p>
+            </div>
+            <div>
+                <h4>Hub</h4>
+                <a href="index.html#metodo">Metodo</a>
+                <a href="index.html#competenze">Competenze</a>
+                <a href="index.html#ambiti">Ambiti</a>
+                <a href="index.html#toolkit">Toolkit</a>
+                <a href="index.html#valore">Perché noi</a>
+            </div>
+            <div>
+                <h4>Contatti</h4>
+                <a href="mailto:hello@lybercode.com">hello@lybercode.com</a>
+                <a href="tel:+390773061194">Tel. 0773 061194</a>
+                <a href="tel:+393392528986">Cell. 339 2528986</a>
+                <a href="mailto:montini@peceasy.com">PEC: montini@peceasy.com</a>
+            </div>
+            <div>
+                <h4>Community</h4>
+                <a href="https://github.com/montiniangelo">GitHub</a>
+                <a href="https://www.linkedin.com/company/lybercode/">LinkedIn</a>
+                <a href="index.html#contatti">Newsletter</a>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="https://angelomontini.com" target="_blank" rel="noopener">© 2025 LyberCode di Angelo Montini. <span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. Tutti i diritti riservati</a>
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Torna all'inizio" title="Torna su">↑</button>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        const menuLinks = document.querySelectorAll('.menu a');
+
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('menu-open');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+                menuToggle.setAttribute('aria-label', isOpen ? 'Chiudi il menu' : 'Apri il menu');
+            });
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('menu-open')) {
+                        nav.classList.remove('menu-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuToggle.setAttribute('aria-label', 'Apri il menu');
+                    }
+                });
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && nav.classList.contains('menu-open')) {
+                    nav.classList.remove('menu-open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.setAttribute('aria-label', 'Apri il menu');
+                    menuToggle.focus();
+                }
+            });
+        }
+
+        // Scroll-to-top button logic
+        const scrollBtn = document.getElementById('scrollTop');
+        const headerEl = document.querySelector('header');
+        const headerTop = 0;
+
+        const toggleScrollBtn = () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+        toggleScrollBtn();
+
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: headerTop, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
