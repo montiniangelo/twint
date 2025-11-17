@@ -75,6 +75,31 @@
             box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
         }
 
+        .blog-badge {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
         @keyframes pulse-glow {
             0%, 100% {
                 opacity: 1;
@@ -673,6 +698,9 @@
 <body>
     <!-- News Badge Icon - Lampeggiante -->
     <a href="news.html" class="news-badge" title="Vai alle News" aria-label="Link alle news" style="font-size:small">NEWS</a>
+
+    <!-- Blog Badge Icon - Lampeggiante -->
+    <a href="blog.html" class="blog-badge" title="Vai al Blog" aria-label="Link al blog" style="font-size:small">BLOG</a>
 
     <header>
         <div class="container">
