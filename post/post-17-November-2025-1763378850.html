@@ -76,11 +76,28 @@ footer a{
     color:var(--muted);
     text-decoration:none
 }
+        .back-link {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--secondary);
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
 </style>
 </head>
 <body>
 <header>
     <div class="container">
+            <a href="../blog.html" class="back-link">← Torna al blog</a>
         <div class="post-header">
             <h1>Cloud Computing, AI e Automazione: Trasformare l'IT Moderno</h1>
             <p>Data 12/11/2025</p>
