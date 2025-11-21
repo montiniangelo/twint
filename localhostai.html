@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n LocalHostAI | 20 Soluzioni Smart per Automazioni Intelligenti</title>
+    <meta name="description" content="Catalogo di 20 soluzioni smart n8n su LocalHostAI: automazioni intelligenti per produttività personale, processi d'ufficio innovativi e gestione documentale.">
+    <meta name="keywords" content="n8n, automazioni, LocalHostAI, produttività, innovazione, processi, ufficio, documenti, AI">
+    <meta name="author" content="LyberCode di Angelo Montini">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="n8n LocalHostAI Catalog">
+    <meta property="og:title" content="n8n LocalHostAI | 20 Soluzioni Smart">
+    <meta property="og:description" content="Scopri 20 soluzioni innovative di automazione n8n per rinnovare i processi di ufficio e aumentare la produttività.">
+    <meta property="og:url" content="https://lybercode.com/localhostai.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="n8n LocalHostAI | Automazioni Smart">
+    <meta name="twitter:description" content="20 soluzioni di automazione intelligent per produttività e innovazione dei processi d'ufficio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='52'%3E⚡%3C/text%3E%3C/svg%3E">
+
+    <style>
+        :root {
+            --primary: #101e2e;
+            --secondary: #23a5b1;
+            --accent: #0b1520;
+            --text: #ffffff;
+            --muted: #e7e9ee;
+            --surface: rgba(16, 30, 46, 0.9);
+            --success: #10b981;
+            --highlight: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: var(--accent);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: var(--muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: var(--primary);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+            background: rgba(35, 165, 177, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--secondary);
+            background: transparent;
+            color: var(--secondary);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--secondary);
+            color: var(--accent);
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .solution-card {
+            background: var(--surface);
+            border: 1px solid var(--secondary);
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(35, 165, 177, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--highlight);
+            box-shadow: 0 10px 30px rgba(35, 165, 177, 0.3);
+        }
+
+        .solution-card:hover::before {
+            left: 100%;
+        }
+
+        .solution-number {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--accent);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .solution-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .solution-category {
+            display: inline-block;
+            background: rgba(35, 165, 177, 0.2);
+            color: var(--secondary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .solution-description {
+            color: var(--muted);
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .solution-benefits {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .solution-benefits li {
+            padding: 5px 0;
+            color: var(--muted);
+            font-size: 0.9em;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .solution-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .solution-impact {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 3px solid var(--success);
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: var(--muted);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .stat-box {
+            background: var(--surface);
+            border: 1px solid var(--secondary);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: var(--primary);
+            border-top: 2px solid var(--secondary);
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--muted);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 1024px) {
+            #category-filter {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #category-filter {
+                grid-template-columns: 1fr !important;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filters {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-btn {
+                width: 100%;
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(35, 165, 177, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚡ n8n LocalHostAI</h1>
+        <p>Catalogo di 20 Soluzioni Smart per Automazioni Intelligenti</p>
+        <p style="font-size: 1em; margin-top: 15px;">Scopri come rinnovare i tuoi processi di ufficio e accelerare la produttività personale</p>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#soluzioni">Soluzioni</a>
+        <a href="#categorie">Categorie</a>
+        <a href="#impatto">Impatto</a>
+    </nav>
+
+    <div class="container">
+        <!-- <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">21</div>
+                <div class="stat-label">Soluzioni</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">80%</div>
+                <div class="stat-label">Aumento Produttività</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100+h</div>
+                <div class="stat-label">Tempo Risparmiato</div>
+            </div>
+        </div> -->
+  <div style="background: rgba(35, 165, 177, 0.1); border-left: 3px solid var(--secondary); padding: 25px; margin-bottom: 40px; border-radius: 10px;">
+                <p style="color: var(--muted); font-size: 1em; line-height: 1.8;">Installare n8n su localhost è semplice, gratuito e non richiede alcuna licenza a pagamento per l'uso personale o di sviluppo. Basta seguire la procedura ufficiale: puoi scaricare ed eseguire n8n direttamente sul tuo computer usando Node.js oppure tramite Docker, senza nessun costo. Tutte le funzionalità open source sono disponibili liberamente, rendendo la piattaforma ideale per test, automazioni private, prototipazione e sviluppo di workflow. Non sono previsti canoni, abbonamenti o limiti di utilizzo per chi lo installa in locale.</p>
+            </div>
+        <div id="categorie" style="margin-bottom: 60px;">
+            <h2 style="text-align: center; font-size: 2.5em; margin: 40px 0 30px;">Categorie di Soluzioni</h2>
+            <div class="solutions-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 40px;" id="category-filter">
+                <div data-filter="all" style="background: var(--surface); border: 2px solid var(--secondary); padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(35, 165, 177, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" onclick="filterSolutions('all')">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">🔍</div>
+                    <div style="font-weight: 700; color: var(--secondary);">Tutte</div>
+                    <div style="color: var(--muted); font-size: 0.9em; margin-top: 5px;">21 Soluzioni</div>
+                </div>
+                <div data-filter="productivity" style="background: var(--surface); border: 2px solid var(--secondary); padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(35, 165, 177, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" onclick="filterSolutions('productivity')">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">⚙️</div>
+                    <div style="font-weight: 700; color: var(--secondary);">Produttività</div>
+                    <div style="color: var(--muted); font-size: 0.9em; margin-top: 5px;">4 Soluzioni</div>
+                </div>
+                <div data-filter="documents" style="background: var(--surface); border: 2px solid var(--secondary); padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(35, 165, 177, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" onclick="filterSolutions('documents')">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">📄</div>
+                    <div style="font-weight: 700; color: var(--secondary);">Documenti</div>
+                    <div style="color: var(--muted); font-size: 0.9em; margin-top: 5px;">4 Soluzioni</div>
+                </div>
+                <div data-filter="social" style="background: var(--surface); border: 2px solid var(--secondary); padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(35, 165, 177, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" onclick="filterSolutions('social')">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">📱</div>
+                    <div style="font-weight: 700; color: var(--secondary);">Social Media</div>
+                    <div style="color: var(--muted); font-size: 0.9em; margin-top: 5px;">2 Soluzioni</div>
+                </div>
+                <div data-filter="crm" style="background: var(--surface); border: 2px solid var(--secondary); padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(35, 165, 177, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" onclick="filterSolutions('crm')">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">👥</div>
+                    <div style="font-weight: 700; color: var(--secondary);">CRM</div>
+                    <div style="color: var(--muted); font-size: 0.9em; margin-top: 5px;">3 Soluzioni</div>
+                </div>
+                <div data-filter="analytics" style="background: var(--surface); border: 2px solid var(--secondary); padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(35, 165, 177, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" onclick="filterSolutions('analytics')">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">📊</div>
+                    <div style="font-weight: 700; color: var(--secondary);">Analytics</div>
+                    <div style="color: var(--muted); font-size: 0.9em; margin-top: 5px;">3 Soluzioni</div>
+                </div>
+                <div data-filter="communication" style="background: var(--surface); border: 2px solid var(--secondary); padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(35, 165, 177, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" onclick="filterSolutions('communication')">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">💬</div>
+                    <div style="font-weight: 700; color: var(--secondary);">Comunicazione</div>
+                    <div style="color: var(--muted); font-size: 0.9em; margin-top: 5px;">3 Soluzioni</div>
+                </div>
+                <div data-filter="finance" style="background: var(--surface); border: 2px solid var(--secondary); padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(35, 165, 177, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" onclick="filterSolutions('finance')">
+                    <div style="font-size: 2.5em; margin-bottom: 10px;">💰</div>
+                    <div style="font-weight: 700; color: var(--secondary);">Finanza</div>
+                    <div style="color: var(--muted); font-size: 0.9em; margin-top: 5px;">2 Soluzioni</div>
+                </div>
+            </div>
+
+          
+        </div>
+
+        <div id="soluzioni">
+            <h2 style="text-align: center; font-size: 2.5em; margin: 40px 0 30px;">Tutte le Soluzioni</h2>
+            
+            <div class="solutions-grid">
+                <div class="solution-card" data-category="productivity">
+                    <div class="solution-number">1</div>
+                    <div class="solution-category">Produttività</div>
+                    <div class="solution-title">Email Auto-Responder Intelligente</div>
+                    <div class="solution-description">Sistema automatico di risposta email con categorizzazione intelligente e routing basato su IA.</div>
+                    <ul class="solution-benefits">
+                        <li>Risponde automaticamente a email comuni</li>
+                        <li>Categorizza messaggi per priorità</li>
+                        <li>Invia notifiche in tempo reale</li>
+                    </ul>
+                    <div class="solution-impact">💡 Riduce il carico di lavoro email del 70%</div>
+                </div>
+
+                <div class="solution-card" data-category="documents">
+                    <div class="solution-number">2</div>
+                    <div class="solution-category">Documenti</div>
+                    <div class="solution-title">Estrazione Dati da PDF Automatica</div>
+                    <div class="solution-description">Legge e estrae automaticamente dati da PDF, fatture e documenti importanti.</div>
+                    <ul class="solution-benefits">
+                        <li>Estrae testo strutturato da documenti</li>
+                        <li>Crea database automatici</li>
+                        <li>Integra con spreadsheet</li>
+                    </ul>
+                    <div class="solution-impact">💡 Processa 100+ documenti senza intervento</div>
+                </div>
+
+                <div class="solution-card" data-category="social">
+                    <div class="solution-number">3</div>
+                    <div class="solution-category">Social Media</div>
+                    <div class="solution-title">Gestione Social Media Programmata</div>
+                    <div class="solution-description">Pubblica automaticamente contenuti su LinkedIn, Twitter e Instagram con timing ottimizzato.</div>
+                    <ul class="solution-benefits">
+                        <li>Pianifica post settimane in anticipo</li>
+                        <li>Ottimizza orari di pubblicazione</li>
+                        <li>Analizza engagement automatico</li>
+                    </ul>
+                    <div class="solution-impact">💡 Guadagna 10+ ore/settimana di gestione social</div>
+                </div>
+
+                <div class="solution-card" data-category="crm">
+                    <div class="solution-number">4</div>
+                    <div class="solution-category">CRM</div>
+                    <div class="solution-title">Lead Generation e Nurturing Automatico</div>
+                    <div class="solution-description">Cattura e nutre automaticamente i lead con sequenze email intelligenti basate su comportamento.</div>
+                    <ul class="solution-benefits">
+                        <li>Invia email personalizzate per fase</li>
+                        <li>Traccia interazioni automatiche</li>
+                        <li>Qualifica lead in tempo reale</li>
+                    </ul>
+                    <div class="solution-impact">💡 Aumenta conversione lead del 40%</div>
+                </div>
+
+                <div class="solution-card" data-category="analytics">
+                    <div class="solution-number">5</div>
+                    <div class="solution-category">Analytics</div>
+                    <div class="solution-title">Report Giornalieri Automatici su Slack</div>
+                    <div class="solution-description">Genera automaticamente report dettagliati da più sorgenti e li invia su Slack ogni mattina.</div>
+                    <ul class="solution-benefits">
+                        <li>Raccoglie dati da Google Analytics</li>
+                        <li>Combina metriche di più piattaforme</li>
+                        <li>Invia notifiche anomalie</li>
+                    </ul>
+                    <div class="solution-impact">💡 Report generato senza intervento manuale</div>
+                </div>
+
+                <div class="solution-card" data-category="communication">
+                    <div class="solution-number">6</div>
+                    <div class="solution-category">Comunicazione</div>
+                    <div class="solution-title">Trascrizione e Sintesi Chiamate Automatica</div>
+                    <div class="solution-description">Trascrivi automaticamente riunioni Zoom/Teams e genera riassunti con punti chiave.</div>
+                    <ul class="solution-benefits">
+                        <li>Trascrivi riunioni in tempo reale</li>
+                        <li>Genera riassunti automatici</li>
+                        <li>Assegna compiti da meeting</li>
+                    </ul>
+                    <div class="solution-impact">💡 Mantieni traccia di 100% conversazioni</div>
+                </div>
+
+                <div class="solution-card" data-category="productivity">
+                    <div class="solution-number">7</div>
+                    <div class="solution-category">Produttività</div>
+                    <div class="solution-title">Task Manager con Dipendenze Intelligenti</div>
+                    <div class="solution-description">Crea automaticamente task interdipendenti e aggiorna priorità basato su timeline e blocchi.</div>
+                    <ul class="solution-benefits">
+                        <li>Rileva dipendenze automatiche</li>
+                        <li>Notify blocchi di progetto</li>
+                        <li>Ripianifica timeline dinamicamente</li>
+                    </ul>
+                    <div class="solution-impact">💡 Riduce ritardi progetto del 30%</div>
+                </div>
+
+                <div class="solution-card" data-category="documents">
+                    <div class="solution-number">8</div>
+                    <div class="solution-category">Documenti</div>
+                    <div class="solution-title">Backup e Sincronizzazione Cloud Automatica</div>
+                    <div class="solution-description">Sincronizza automaticamente documenti su Google Drive, OneDrive e Dropbox con controllo versioni.</div>
+                    <ul class="solution-benefits">
+                        <li>Backup ogni ora automaticamente</li>
+                        <li>Mantiene cronologia versioni</li>
+                        <li>Sincronizza multi-cloud</li>
+                    </ul>
+                    <div class="solution-impact">💡 Protezione dati 24/7 senza intervento</div>
+                </div>
+
+                <div class="solution-card" data-category="finance">
+                    <div class="solution-number">9</div>
+                    <div class="solution-category">Finanza</div>
+                    <div class="solution-title">Tracking Spese e Riconciliazione Automatica</div>
+                    <div class="solution-description">Monitora spese automaticamente da carte di credito e bancari, riconcilia e categorizza.</div>
+                    <ul class="solution-benefits">
+                        <li>Importa transazioni automatiche</li>
+                        <li>Categorizza spese intelligentemente</li>
+                        <li>Genera budget alert</li>
+                    </ul>
+                    <div class="solution-impact">💡 Riduce errori contabili del 95%</div>
+                </div>
+
+                <div class="solution-card" data-category="communication">
+                    <div class="solution-number">10</div>
+                    <div class="solution-category">Comunicazione</div>
+                    <div class="solution-title">Gestione Ticket Support Automatica</div>
+                    <div class="solution-description">Distribuisce automaticamente ticket di supporto basato su competenze e carico di lavoro.</div>
+                    <ul class="solution-benefits">
+                        <li>Assegna ticket intelligentemente</li>
+                        <li>Invia risposta automatica cliente</li>
+                        <li>Escalate problemi critici</li>
+                    </ul>
+                    <div class="solution-impact">💡 Riduce tempo risposta del 50%</div>
+                </div>
+
+                <div class="solution-card" data-category="crm">
+                    <div class="solution-number">11</div>
+                    <div class="solution-category">CRM</div>
+                    <div class="solution-title">Sincronizzazione Contatti Multi-Piattaforma</div>
+                    <div class="solution-description">Sincronizza automaticamente contatti tra Gmail, Outlook, CRM e application terze.</div>
+                    <ul class="solution-benefits">
+                        <li>Unifica dati contatti duplicati</li>
+                        <li>Sincronizza bidirezionale</li>
+                        <li>Mantiene fonte unica della verità</li>
+                    </ul>
+                    <div class="solution-impact">💡 Elimina contatti duplicati al 100%</div>
+                </div>
+
+                <div class="solution-card" data-category="social">
+                    <div class="solution-number">12</div>
+                    <div class="solution-category">Social Media</div>
+                    <div class="solution-title">Monitoraggio Menzioni e Sentiment Automatico</div>
+                    <div class="solution-description">Monitora automaticamente menzioni del brand e analizza sentiment in tempo reale su web e social.</div>
+                    <ul class="solution-benefits">
+                        <li>Monitora brand 24/7 online</li>
+                        <li>Analizza sentiment negativi</li>
+                        <li>Notifica crisi reputazionali</li>
+                    </ul>
+                    <div class="solution-impact">💡 Risposta crisi in minuti, non ore</div>
+                </div>
+
+                <div class="solution-card" data-category="analytics">
+                    <div class="solution-number">13</div>
+                    <div class="solution-category">Analytics</div>
+                    <div class="solution-title">Generazione Grafici e Dashboard Dinamici</div>
+                    <div class="solution-description">Crea automaticamente dashboard aggiornati da molteplici fonti dati con visualizzazioni intelligenti.</div>
+                    <ul class="solution-benefits">
+                        <li>Aggiorna dati in tempo reale</li>
+                        <li>Crea dashboard interattivi</li>
+                        <li>Esporta report su demand</li>
+                    </ul>
+                    <div class="solution-impact">💡 Dashboard sempre aggiornato senza sforzo</div>
+                </div>
+
+                <div class="solution-card" data-category="documents">
+                    <div class="solution-number">14</div>
+                    <div class="solution-category">Documenti</div>
+                    <div class="solution-title">Generazione Contratti da Template Automatica</div>
+                    <div class="solution-description">Genera automaticamente contratti da template compilando dati cliente intelligentemente.</div>
+                    <ul class="solution-benefits">
+                        <li>Compila variabili da CRM</li>
+                        <li>Genera PDF in secondi</li>
+                        <li>Invia per firma e-sign</li>
+                    </ul>
+                    <div class="solution-impact">💡 Crea contratti in 2 minuti vs 30 minuti</div>
+                </div>
+
+                <div class="solution-card" data-category="productivity">
+                    <div class="solution-number">15</div>
+                    <div class="solution-category">Produttività</div>
+                    <div class="solution-title">Aggregatore Notifiche Unificato</div>
+                    <div class="solution-description">Centralizza tutte le notifiche da app diverse in un'unica dashboard intelligente filtrata.</div>
+                    <ul class="solution-benefits">
+                        <li>Aggrega notifiche da 50+ app</li>
+                        <li>Filtra per priorità/urgenza</li>
+                        <li>Prioritizzazione intelligente</li>
+                    </ul>
+                    <div class="solution-impact">💡 Riduce context-switching del 60%</div>
+                </div>
+
+                <div class="solution-card" data-category="finance">
+                    <div class="solution-number">16</div>
+                    <div class="solution-category">Finanza</div>
+                    <div class="solution-title">Fatturazione e Pagamenti Automatici</div>
+                    <div class="solution-description">Genera fatture automaticamente, invia reminder pagamenti e riconcilia incassi.</div>
+                    <ul class="solution-benefits">
+                        <li>Emette fatture automatiche</li>
+                        <li>Invia reminder pagamenti</li>
+                        <li>Registra pagamenti in tempo reale</li>
+                    </ul>
+                    <div class="solution-impact">💡 Riduce giorni pagamento medi di 50%</div>
+                </div>
+
+                <div class="solution-card" data-category="communication">
+                    <div class="solution-number">17</div>
+                    <div class="solution-category">Comunicazione</div>
+                    <div class="solution-title">Newsletter e Campagne Email Automatiche</div>
+                    <div class="solution-description">Crea automaticamente newsletter personalizzate da contenuti aggregati e invia con timing ottimizzato.</div>
+                    <ul class="solution-benefits">
+                        <li>Raccoglie contenuti automaticamente</li>
+                        <li>Personalizza per segmento</li>
+                        <li>Invia con timing ottimale</li>
+                    </ul>
+                    <div class="solution-impact">💡 Aumenta engagement email del 35%</div>
+                </div>
+
+                <div class="solution-card" data-category="crm">
+                    <div class="solution-number">18</div>
+                    <div class="solution-category">CRM</div>
+                    <div class="solution-title">Pipeln Vendita Automatizzata</div>
+                    <div class="solution-description">Muove automaticamente deal attraverso pipeline basato su trigger e regole intelligenti.</div>
+                    <ul class="solution-benefits">
+                        <li>Aggiorna stage automaticamente</li>
+                        <li>Assegna follow-up basato su data</li>
+                        <li>Prevede probabilità chiusura</li>
+                    </ul>
+                    <div class="solution-impact">💡 Aumenta conversione pipeline del 25%</div>
+                </div>
+
+                <div class="solution-card" data-category="analytics">
+                    <div class="solution-number">19</div>
+                    <div class="solution-category">Analytics</div>
+                    <div class="solution-title">Monitoraggio Performance App Automatico</div>
+                    <div class="solution-description">Monitora performance applicazioni, API e server con alert automatici per anomalie.</div>
+                    <ul class="solution-benefits">
+                        <li>Monitora uptime 24/7</li>
+                        <li>Alert su errori e lentezza</li>
+                        <li>Genera report performance</li>
+                    </ul>
+                    <div class="solution-impact">💡 Riduce downtime non rilevato del 90%</div>
+                </div>
+
+                <div class="solution-card" data-category="documents">
+                    <div class="solution-number">20</div>
+                    <div class="solution-category">Documenti</div>
+                    <div class="solution-title">Archivio Digitale Intelligente con Search IA</div>
+                    <div class="solution-description">Indicizza automaticamente documenti e offre ricerca semantica con AI per trovare file istantaneamente.</div>
+                    <ul class="solution-benefits">
+                        <li>Indicizza documenti automaticamente</li>
+                        <li>Ricerca semantica con IA</li>
+                        <li>Organizza file intelligentemente</li>
+                    </ul>
+                    <div class="solution-impact">💡 Trova documenti in secondi vs ore</div>
+                </div>
+
+                <div class="solution-card" data-category="communication">
+                    <div class="solution-number">21</div>
+                    <div class="solution-category">Comunicazione</div>
+                    <div class="solution-title">API Gateway e Middleware di Integrazione</div>
+                    <div class="solution-description">Crea automaticamente un gateway API centralizzato che connette sistemi legacy con applicazioni moderne e servizi cloud.</div>
+                    <ul class="solution-benefits">
+                        <li>Integra sistemi eterogenei senza codice</li>
+                        <li>Trasforma formato dati automaticamente</li>
+                        <li>Monitora e logga tutte le chiamate API</li>
+                    </ul>
+                    <div class="solution-impact">💡 Riduce complessità integrazione dell'80%</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="impatto" style="background: var(--surface); border: 1px solid var(--secondary); padding: 40px; border-radius: 10px; margin: 60px 0; text-align: center;">
+            <h2 style="font-size: 2em; margin-bottom: 20px;">Impatto Complessivo delle Automazioni</h2>
+            <p style="color: var(--muted); font-size: 1.1em; margin-bottom: 20px;">Con tutte le 21 soluzioni implementate:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="background: rgba(16, 185, 129, 0.1); padding: 20px; border-radius: 10px; border-left: 3px solid var(--success);">
+                    <div style="font-size: 2.5em; font-weight: 700; color: var(--success);">100+ ore</div>
+                    <div style="color: var(--muted); margin-top: 10px;">Risparmiate mensili</div>
+                </div>
+                <div style="background: rgba(245, 158, 11, 0.1); padding: 20px; border-radius: 10px; border-left: 3px solid var(--highlight);">
+                    <div style="font-size: 2.5em; font-weight: 700; color: var(--highlight);">80%</div>
+                    <div style="color: var(--muted); margin-top: 10px;">Aumento produttività</div>
+                </div>
+                <div style="background: rgba(35, 165, 177, 0.1); padding: 20px; border-radius: 10px; border-left: 3px solid var(--secondary);">
+                    <div style="font-size: 2.5em; font-weight: 700; color: var(--secondary);">99%</div>
+                    <div style="color: var(--muted); margin-top: 10px;">Errori ridotti</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>n8n LocalHostAI Catalog</strong> - Innovazione per la Produttività Personale</p>
+        <p>Realizzato da <a href="index.html" style="color: var(--secondary); text-decoration: none;">LyberCode</a> di Angelo Montini</p>
+        <p style="margin-top: 20px; font-size: 0.9em; color: #666;">© 2025 LyberCode. Tutte le automazioni sono personalizzabili e scalabili.</p>
+    </footer>
+
+    <script>
+        function filterSolutions(category) {
+            const cards = document.querySelectorAll('.solution-card');
+            const categoryButtons = document.querySelectorAll('#category-filter > div');
+            
+            categoryButtons.forEach(btn => {
+                btn.style.borderColor = 'var(--secondary)';
+                btn.style.background = 'var(--surface)';
+            });
+            
+            const activeBtn = document.querySelector(`[data-filter="${category}"]`);
+            if (activeBtn) {
+                activeBtn.style.borderColor = 'var(--highlight)';
+                activeBtn.style.background = 'rgba(35, 165, 177, 0.2)';
+            }
+            
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = '';
+                    card.style.animation = 'fadeIn 0.3s ease';
+                } else {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (cardCategory === category) {
+                        card.style.display = '';
+                        card.style.animation = 'fadeIn 0.3s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+
+            document.querySelector('#soluzioni').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const allBtn = document.querySelector('[data-filter="all"]');
+            if (allBtn) {
+                allBtn.style.borderColor = 'var(--highlight)';
+                allBtn.style.background = 'rgba(35, 165, 177, 0.2)';
+            }
+        });
+    </script>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>

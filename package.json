@@ -1,0 +1,17 @@
+{
+  "name": "lybercode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "localhostai.test.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "htmlhint localhostai.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "htmlhint": "^1.7.1",
+    "jest": "^30.2.0"
+  }
+}

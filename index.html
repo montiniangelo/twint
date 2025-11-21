@@ -111,6 +111,31 @@
             }
         }
 
+        @keyframes glow-pulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(35, 165, 177, 0.6), 0 0 40px rgba(35, 165, 177, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(35, 165, 177, 0.9), 0 0 60px rgba(35, 165, 177, 0.5);
+                transform: scale(1.02);
+            }
+        }
+
+        .btn-smart {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1ba8a0 100%);
+            border-color: var(--secondary) !important;
+            color: #fff !important;
+            box-shadow: 0 0 20px rgba(35, 165, 177, 0.6), 0 0 40px rgba(35, 165, 177, 0.3);
+            animation: glow-pulse 2s ease-in-out infinite;
+            font-weight: 700;
+        }
+
+        .btn-smart:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 30px rgba(35, 165, 177, 0.9), 0 0 60px rgba(35, 165, 177, 0.5) !important;
+        }
+
         /* Clienti istituzionali styles */
       
       
@@ -1193,7 +1218,8 @@
                         <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M200-360q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T240-480q0-17-11.5-28.5T200-520q-17 0-28.5 11.5T160-480q0 17 11.5 28.5T200-440Zm280 80q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T520-480q0-17-11.5-28.5T480-520q-17 0-28.5 11.5T440-480q0 17 11.5 28.5T480-440Zm280 80q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Z"/></svg>Intelligenza Documentale e OCR</li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M200-360q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T240-480q0-17-11.5-28.5T200-520q-17 0-28.5 11.5T160-480q0 17 11.5 28.5T200-440Zm280 80q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T520-480q0-17-11.5-28.5T480-520q-17 0-28.5 11.5T440-480q0 17 11.5 28.5T480-440Zm280 80q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Z"/></svg>AI & Machine Learning customizzati</li>
                     </ul>
-                    <a class="btn btn-outline" href="sviluppo.html#ai-automazione">Scopri le nostre soluzioni AI →</a>
+                    <a class="btn btn-outline" href="sviluppo.html#ai-automazione">Soluzioni AI →</a>
+                     <a class="btn btn-smart" href="localhostai.html" style="margin-top:.5em">Catalogo n8n →</a>
                 </div>
                 <div class="card">
                     <span class="section-title" style="display: inline-block; margin-bottom: 15px;">MEPA</span>
