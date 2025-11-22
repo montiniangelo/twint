@@ -66,31 +66,78 @@
             margin: 0 auto;
         }
 
-        nav {
-            background: var(--primary);
-            padding: 20px;
+  
+        /* News badge - Lampeggiante */
+        .news-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--secondary);
-        }
-
-        nav a {
-            color: var(--muted);
+            font-size: 1.5rem;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 5px 15px;
-            border-radius: 5px;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--secondary);
-            background: rgba(35, 165, 177, 0.1);
+        .news-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        .blog-badge {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            }
+            50% {
+                opacity: 0.6;
+                box-shadow: 0 4px 25px rgba(35, 165, 177, 0.8);
+            }
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(35, 165, 177, 0.6), 0 0 40px rgba(35, 165, 177, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(35, 165, 177, 0.9), 0 0 60px rgba(35, 165, 177, 0.5);
+                transform: scale(1.02);
+            }
         }
 
         .container {
@@ -382,6 +429,12 @@
     </style>
 </head>
 <body>
+    <!-- News Badge Icon - Lampeggiante -->
+    <a href="news.html" class="news-badge" title="Vai alle News" aria-label="Link alle news" style="font-size:small">NEWS</a>
+
+    <!-- Blog Badge Icon - Lampeggiante -->
+    <a href="blog.html" class="blog-badge" title="Vai al Blog" aria-label="Link al blog" style="font-size:small">BLOG</a>
+    
     <header>
         <a href="../index.html" class="back-link">← Torna alla Home</a>
         <h1>⚡ n8n LocalHostAI</h1>
