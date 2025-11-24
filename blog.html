@@ -11,6 +11,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='52'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Cos'è la trasformazione digitale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La trasformazione digitale è il processo di integrazione delle tecnologie digitali in tutti gli aspetti della gestione aziendale. Comporta l'adozione di nuovi strumenti, processi e metodologie per migliorare efficienza, innovazione e valore per i clienti."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali sono i vantaggi del Cloud Computing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il Cloud Computing offre numerosi vantaggi: riduzione dei costi infrastrutturali, scalabilità a seconda delle necessità, accesso da qualsiasi luogo, automatizzazione dei processi, backup e disaster recovery integrati, e sicurezza di livello enterprise."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come l'AI può migliorare i processi aziendali?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'intelligenza artificiale automatizza attività ripetitive, analizza grandi volumi di dati per insights predittivi, personalizza le esperienze cliente, ottimizza la gestione delle risorse e fornisce supporto decisionale basato su dati in tempo reale, aumentando significativamente la produttività aziendale."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qual è l'importanza della cybersecurity moderna?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La cybersecurity è fondamentale per proteggere i dati aziendali e dei clienti da attacchi sempre più sofisticati. Una strategia robusta di sicurezza informatica previene violazioni di dati, mantiene la continuità operativa, protegge la reputazione aziendale e assicura conformità alle normative internazionali."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come scegliere il partner tecnologico giusto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scegli un partner con esperienza provata nel tuo settore, che comprenda le tue esigenze specifiche, offra soluzioni scalabili e sostenibili, garantisca supporto continuativo, e dimostri impegno nell'innovazione e nella trasformazione digitale della tua organizzazione."
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         :root {
             --primary: #101e2e;
@@ -150,6 +199,124 @@
 
         .blog-section {
             padding: 80px 0;
+        }
+
+        .blog-intro {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: rgba(35, 53, 75, 0.3);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+        }
+
+        .blog-intro h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .blog-intro > p {
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .blog-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: rgba(16, 30, 46, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--secondary);
+        }
+
+        .info-card p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        .blog-categories-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(35, 53, 75, 0.2);
+            border-radius: 12px;
+        }
+
+        .blog-categories-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .blog-categories-section > p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .category-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: rgba(16, 30, 46, 0.6);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(35, 165, 177, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            border-color: rgba(35, 165, 177, 0.3);
+            background: rgba(16, 30, 46, 0.8);
+            transform: translateY(-3px);
+        }
+
+        .category-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .category-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        .blog-resources {
+            background: rgba(35, 165, 177, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .blog-resources h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .blog-resources p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.8;
         }
 
         .blog-grid {
@@ -444,8 +611,65 @@
 
     <section class="blog-section">
         <div class="container">
+            <div class="blog-intro">
+                <h2>Ultimi Articoli e Approfondimenti sulla Trasformazione Digitale</h2>
+                <p>Benvenuto nel blog di LyberCode, il tuo punto di riferimento per approfondimenti su innovazione tecnologica, trasformazione digitale e soluzioni IT avanzate. I nostri articoli esplorano le ultime tendenze nel cloud computing, intelligenza artificiale, cybersecurity e automazione, fornendo insights pratici per le imprese e la Pubblica Amministrazione.</p>
+                
+                <div class="blog-info-grid">
+                    <div class="info-card">
+                        <h3>Innovazione Tecnologica</h3>
+                        <p>Scopri come le tecnologie emergenti stanno trasformando i modelli di business. Dai nostri articoli apprendi le best practices per implementare cloud computing, AI e automazione nella tua organizzazione, massimizzando il ROI e la sostenibilità operativa.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Trasformazione Digitale</h3>
+                        <p>La trasformazione digitale non è solo tecnologia, ma un cambiamento organizzativo e culturale. I nostri esperti condividono strategie collaudate, case study e metodologie per accompagnare le aziende nel loro percorso di digitalizzazione e modernizzazione.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Consulenza IT Specializzata</h3>
+                        <p>LyberCode offre consulenza specializzata per integrazioni cloud, soluzioni AI, monitoraggio infrastrutture e cybersecurity. Leggi come supportiamo imprese e PA nel raggiungimento dei loro obiettivi di trasformazione digitale con soluzioni scalabili e sostenibili.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="blog-grid" id="blog-container">
                 <!-- Blog posts will be loaded here -->
+            </div>
+
+            <div class="blog-categories-section">
+                <h2>Categorie di Articoli e Approfondimenti</h2>
+                <p>Scopri i principali argomenti affrontati nel blog di LyberCode, suddivisi per categoria tematica. Naviga tra gli articoli per trovare soluzioni, case study e best practices relative ai tuoi interessi di trasformazione digitale.</p>
+                
+                <div class="category-cards">
+                    <div class="category-card">
+                        <h3>Cloud Computing e Architetture Moderne</h3>
+                        <p>Articoli dedicati a Google Cloud Platform, architetture serverless, containerizzazione, microservizi e migrazione cloud. Scopri come modernizzare l'infrastruttura IT, ridurre costi operativi e aumentare scalabilità con soluzioni cloud-native. Approfondisci best practices di deployment, monitoring e disaster recovery su piattaforme cloud enterprise.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>Intelligenza Artificiale e Automazione</h3>
+                        <p>Esplora come AI e Machine Learning stanno trasformando i processi aziendali. I nostri articoli coprono applicazioni pratiche di IA: automazioni intelligenti, chatbot, predictive analytics, processamento del linguaggio naturale e computer vision. Leggi come le imprese integrano AI per aumentare produttività, ridurre errori e migliorare decisioni strategiche.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>Cybersecurity e Protezione Dati</h3>
+                        <p>Articoli sulla sicurezza informatica moderna, protezione dei dati aziendali e conformità normativa. Scopri strategie di difesa dai cyberattacchi, best practices di gestione identità, crittografia, audit di sicurezza e incident response. Impara come proteggere infrastrutture cloud e implementare politiche di zero-trust security.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>Trasformazione Digitale della PA</h3>
+                        <p>Approfondimenti specifici per la Pubblica Amministrazione: modernizzazione servizi digitali, conformità AGID, monitoraggio appalti pubblici, gestione documentale e accessibilità WCAG. Leggi case study di amministrazioni che hanno implementato soluzioni innovative, green public procurement e reporting sulla twin transition.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>Sviluppo Web Moderno e Best Practices</h3>
+                        <p>Guida completa allo sviluppo web contemporaneo con Next.js, React, TypeScript e strumenti moderni. Articoli su responsive design, performance optimization, SEO, PWA, e-commerce e accessibilità web. Scopri metodologie di sviluppo agile, testing automatizzato, CI/CD pipelines e deployment su cloud.</p>
+                    </div>
+                    <div class="category-card">
+                        <h3>Monitoraggio, Analytics e Reporting</h3>
+                        <p>Articoli su strumenti di monitoring e observability come Datadog, metriche di performance, KPI dashboards e reportistica automatizzata. Leggi come tracciare lo stato di salute delle applicazioni, identificare problemi in tempo reale, analizzare dati di utilizzo e prendere decisioni basate su insights concreti.</p>
+                    </div>
+                </div>
+
+                <div class="blog-resources">
+                    <h3>Risorse Utili per l'Apprendimento Continuo</h3>
+                    <p>Oltre agli articoli, LyberCode offre risorse complementari per approfondire conoscenze su innovazione tecnologica e trasformazione digitale. Accedi a whitepaper, guide tecniche, webinar registrati e case study dettagliati che illustrano come le imprese hanno risolto sfide complesse di digitalizzazione. Il blog è aggiornato costantemente con nuovi contenuti, analisi di trend tecnologici emergenti e commenti su evoluzioni del panorama IT italiano e internazionale. Iscriviti alla newsletter per ricevere gli ultimi articoli direttamente nella tua inbox.</p>
+                </div>
             </div>
         </div>
     </section>

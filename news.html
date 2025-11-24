@@ -12,6 +12,47 @@
     <link rel="icon" type="image/svg+xml"
   href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='52'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quali sono gli ultimi servizi di LyberCode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LyberCode offre servizi innovativi di consulenza IT inclusa sviluppo web con Next.js, workflow AI per automazioni aziendali, monitoraggio infrastrutture, cybersecurity, cloud computing e formazione specializzata. Scopri le nostre ultime soluzioni per imprese e Pubblica Amministrazione."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come LyberCode supporta la trasformazione digitale della PA?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LyberCode è specializzata nella trasformazione digitale della Pubblica Amministrazione, offrendo soluzioni MEPA, monitoring di appalti pubblici secondo AGID, gestione documentale, modernizzazione di servizi web istituzionali e formazione su cybersecurity e Office automation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali progetti recenti ha realizzato LyberCode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Recentemente LyberCode ha sviluppato menu digitali interattivi per ristorazione, gestione gallery fotografiche per istituzioni scolastiche, dashboard per sistemi idrici, servizi web per gallerie d'arte internazionali, e workflow AI per automazioni complesse di processi aziendali."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come contattare LyberCode per una consulenza?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Puoi contattare LyberCode tramite email a hello@lybercode.com, oppure telefonicamente al 0773 061194 o al 339 2528986. Per le comunicazioni ufficiali verso la PA utilizza PEC: montini@peceasy.com. Siamo disponibili per valutare le tue esigenze di trasformazione digitale."
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         :root {
             --primary: #101e2e;
@@ -210,6 +251,124 @@
         /* News Section */
         .news-section {
             padding: 80px 0;
+        }
+
+        .news-intro {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: rgba(35, 53, 75, 0.3);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+        }
+
+        .news-intro h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .news-intro > p {
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .news-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .highlight-item {
+            background: rgba(16, 30, 46, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .highlight-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--secondary);
+        }
+
+        .highlight-item p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        .news-context-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(35, 53, 75, 0.2);
+            border-radius: 12px;
+        }
+
+        .news-context-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .news-context-section > p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .context-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .context-card {
+            background: rgba(16, 30, 46, 0.6);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(35, 165, 177, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .context-card:hover {
+            border-color: rgba(35, 165, 177, 0.3);
+            background: rgba(16, 30, 46, 0.8);
+            transform: translateY(-3px);
+        }
+
+        .context-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .context-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        .news-impact {
+            background: rgba(35, 165, 177, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .news-impact h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .news-impact p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.8;
         }
 
         .news-grid {
@@ -515,6 +674,26 @@
 
     <section class="news-section">
         <div class="container">
+            <div class="news-intro">
+                <h2>Ultime Notizie e Progetti da LyberCode</h2>
+                <p>Resta aggiornato con gli ultimi sviluppi di LyberCode. Scopri i nostri innovativi progetti realizzati per imprese e Pubblica Amministrazione, le nuove soluzioni di intelligenza artificiale, gli aggiornamenti tecnologici e i successi della nostra community. Dalla trasformazione digitale al cloud computing, ecco come stiamo rivoluzionando il panorama IT italiano.</p>
+                
+                <div class="news-highlights">
+                    <div class="highlight-item">
+                        <h3>🚀 Innovazione AI</h3>
+                        <p>Workflow AI avanzati per automazioni aziendali che riducono i tempi operativi e aumentano l'efficienza. Le nostre soluzioni di intelligenza artificiale trasformano i processi amministrativi e di back-office.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>🌐 Sviluppo Web Moderno</h3>
+                        <p>Applicazioni Next.js con design responsivo e funzionalità avanzate. Dal menu digitale per ristorazione alle gallery fotografiche, sviluppiamo soluzioni digitali cutting-edge per tutti i settori.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>🏛️ Pubblica Amministrazione</h3>
+                        <p>Specializzati nella trasformazione digitale della PA: soluzioni MEPA, monitoraggio appalti pubblici, gestione documentale e modernizzazione di servizi web istituzionali secondo le direttive AGID.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="news-grid">
                 <!-- News 1 - Nuova: Workflow AI per Automazioni Aziendali -->
                 <article class="news-card">
@@ -587,6 +766,35 @@
                     <p>LyberCode ha erogato un corso completo su Pacchetto Office e Sicurezza Informatica rivolto al personale del 3° Reparto Comando e Supporti Tattici Granatieri "Guardie". Il programma ha fornito competenze essenziali sulla produttività digitale e sulle migliori pratiche di sicurezza informatica.</p>
                     <a href="index.html#competenze">Scopri i nostri corsi →</a>
                 </article>
+            </div>
+
+            <div class="news-context-section">
+                <h2>LyberCode: Innovazione e Trasformazione Digitale in Azione</h2>
+                <p>Le news pubblicate qui raccontano il percorso concreto di LyberCode nella trasformazione digitale di imprese e Pubblica Amministrazione. Scopri come i nostri progetti innovativi stanno cambiando il panorama IT italiano e come possiamo supportare anche la tua organizzazione.</p>
+                
+                <div class="context-cards">
+                    <div class="context-card">
+                        <h3>💡 Soluzioni AI e Automazione</h3>
+                        <p>LyberCode è all'avanguardia nell'implementazione di soluzioni di intelligenza artificiale per automazioni aziendali. I nostri workflow AI riducono tempi operativi, aumentano l'efficienza nei processi amministrativi e di back-office, e permettono alle organizzazioni di liberare risorse per attività ad alto valore strategico. Leggi come abbiamo implementato automazioni intelligenti per ottimizzare la produttività.</p>
+                    </div>
+                    <div class="context-card">
+                        <h3>🌐 Sviluppo Web Moderno</h3>
+                        <p>Le nostre applicazioni web costruite con Next.js, React e tecnologie cloud-native offrono performance superiori, user experience eccezionale e scalabilità garantita. Dal menu digitale interattivo per ristorazione alle gallery fotografiche per istituzioni scolastiche, sviluppiamo soluzioni digitali che migliorano l'esperienza utente e semplificano la gestione operativa.</p>
+                    </div>
+                    <div class="context-card">
+                        <h3>🏛️ Esperienza nella PA</h3>
+                        <p>LyberCode vanta una consolidata esperienza nel supporto della Pubblica Amministrazione. Siamo specializzati in monitoraggio di appalti pubblici secondo AGID, offerte MEPA, gestione documentale, modernizzazione di siti istituzionali e conformità a normative europee. La nostra partnership con istituzioni di rilievo dimostra la qualità e l'affidabilità dei nostri servizi nel settore pubblico.</p>
+                    </div>
+                    <div class="context-card">
+                        <h3>🎓 Formazione Specializzata</h3>
+                        <p>Oltre ai servizi tecnici, LyberCode eroga formazione specializzata su cybersecurity, Office automation, cloud computing e sviluppo digitale. I nostri corsi hands-on trasferiscono competenze pratiche direttamente applicabili, preparando team e organizzazioni ad affrontare le sfide della trasformazione digitale con consapevolezza e preparazione.</p>
+                    </div>
+                </div>
+
+                <div class="news-impact">
+                    <h3>L'Impatto della Trasformazione Digitale</h3>
+                    <p>I progetti presentati nelle news rappresentano una selezione dei successi di LyberCode nel supportare organizzazioni verso la modernizzazione tecnologica. Dalle innovazioni nei servizi web istituzionali alla gestione intelligente di infrastrutture critiche, dai workflow AI per processi automatizzati alla formazione su cybersecurity, ogni progetto sottolinea il nostro impegno nella ricerca di eccellenza tecnologica. La trasformazione digitale non è un obiettivo singolo, ma un percorso continuo di innovazione, ottimizzazione e adattamento. LyberCode accompagna organizzazioni di ogni dimensione - imprese, PA, istituzioni culturali - lungo questo percorso, offrendo expertise, metodologie collaudate e soluzioni scalabili su misura per le tue esigenze specifiche di innovazione.</p>
+                </div>
             </div>
         </div>
     </section>
