@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluzioni Web App | LyberCode | Tecnologie e Stack di Sviluppo</title>
+    <meta name="description" content="Scopri le soluzioni di realizzazione web app di LyberCode: ProcessWire, Payload CMS, WordPress API + React, Flutter + Firebase e altre tecnologie moderne.">
+    <meta name="keywords" content="web app, soluzioni web, ProcessWire, Payload CMS, WordPress API, React, Flutter, Firebase, sviluppo web">
+    <meta name="author" content="LyberCode di Angelo Montini">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LyberCode">
+    <meta property="og:title" content="Soluzioni Web App | LyberCode">
+    <meta property="og:description" content="Scopri le soluzioni di realizzazione web app e gli stack tecnologici di LyberCode.">
+    <meta property="og:url" content="https://lybercode.com/soluzioni-web.html">
+    <meta property="og:image" content="https://lybercode.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Soluzioni Web App | LyberCode">
+    <meta name="twitter:description" content="Stack tecnologici e soluzioni di realizzazione web app.">
+    <meta name="twitter:image" content="https://lybercode.it/x.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='52'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+
+    <style>
+        :root {
+            --primary: #101e2e;
+            --secondary: #23a5b1;
+            --accent: #0b1520;
+            --text: #ffffff;
+            --muted: #e7e9ee;
+            --surface: rgba(16, 30, 46, 0.9);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: var(--accent);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .news-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .news-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        .blog-badge {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            }
+            50% {
+                opacity: 0.6;
+                box-shadow: 0 4px 25px rgba(35, 165, 177, 0.8);
+            }
+        }
+
+        header {
+            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.6), rgba(11, 21, 32, 0.95)), url('x.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(16, 30, 46, 0.75), rgba(35, 165, 177, 0.3));
+            z-index: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        nav .logo span {
+            line-height: 1;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            background: rgba(16, 30, 46, 0.4);
+            color: #fff;
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+            z-index: 2;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav .menu a:hover {
+            opacity: 0.8;
+        }
+
+        .page-header {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2em;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        .intro-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: rgba(35, 53, 75, 0.3);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+        }
+
+        .intro-section h2 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .intro-section > p {
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .solution-card {
+            background: rgba(16, 30, 46, 0.6);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .solution-card:hover {
+            border-color: rgba(35, 165, 177, 0.4);
+            background: rgba(16, 30, 46, 0.8);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(35, 165, 177, 0.15);
+        }
+
+        .solution-badge {
+            display: inline-block;
+            background: rgba(35, 165, 177, 0.2);
+            color: var(--secondary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .solution-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .solution-card .description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .tech-stack {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(35, 165, 177, 0.1);
+        }
+
+        .tech-stack h4 {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: rgba(35, 165, 177, 0.1);
+            color: var(--muted);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(35, 165, 177, 0.1);
+        }
+
+        .use-cases {
+            margin-top: 20px;
+        }
+
+        .use-cases h4 {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .use-cases ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .use-cases li {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .use-cases li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .comparison-section {
+            margin-top: 80px;
+            padding: 40px;
+            background: rgba(35, 53, 75, 0.2);
+            border-radius: 12px;
+        }
+
+        .comparison-section h2 {
+            color: var(--secondary);
+            margin-bottom: 30px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .comparison-item {
+            background: rgba(16, 30, 46, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .comparison-item h4 {
+            color: var(--secondary);
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .comparison-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.2), rgba(11, 21, 32, 0.8));
+            padding: 60px;
+            border-radius: 16px;
+            border: 1px solid rgba(35, 165, 177, 0.2);
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .cta-section p {
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 35px;
+            border-radius: 32px;
+            border: 2px solid transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(35, 165, 177, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: rgba(255, 255, 255, 0.6);
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(35, 165, 177, 0.25);
+        }
+
+        footer {
+            background: var(--primary);
+            border-top: 1px solid rgba(35, 165, 177, 0.2);
+            padding: 50px 0 20px;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        footer h4 {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        footer a, footer p {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        footer .bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(35, 165, 177, 0.2);
+        }
+
+        footer .bottom a {
+            display: inline;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            color: var(--accent);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        #scrollTop.show {
+            display: flex;
+        }
+
+        #scrollTop:hover {
+            background: #1a8f9f;
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.5);
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: rgba(16, 30, 46, 0.95);
+                padding: 20px;
+                gap: 15px;
+                border-radius: 8px;
+                z-index: 9998;
+            }
+
+            nav.menu-open .menu {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header p {
+                font-size: 0.9rem;
+            }
+
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            #scrollTop {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+
+            .cta-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="news.html" class="news-badge" title="Vai alle News" aria-label="Link alle news" style="font-size:small">NEWS</a>
+    <a href="blog.html" class="blog-badge" title="Vai al Blog" aria-label="Link al blog" style="font-size:small">BLOG</a>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="LyberCode">
+                    <span>LyberCode</span>
+                </a>
+                <button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="sviluppo.html">Sviluppo</a></li>
+                    <li><a href="monitor.html">Monitoraggio</a></li>
+                </ul>
+            </nav>
+            <div class="page-header">
+                <h1>Soluzioni Web App</h1>
+                <p>Scopri gli stack tecnologici e le architetture disponibili per realizzare siti web, web app e applicazioni moderne</p>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="intro-section">
+                <h2>Stack Tecnologici per Ogni Esigenza</h2>
+                <p>LyberCode offre diverse soluzioni di realizzazione web app e siti web, ciascuna ottimizzata per specifici casi d'uso, requisiti di scalabilità, manutenzione e budget. Scegli la tecnologia più adatta al tuo progetto tra le nostre opzioni comprovate e moderne.</p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <span class="solution-badge">CMS Completo</span>
+                    <h3>ProcessWire</h3>
+                    <p class="description">CMS headless altamente flessibile con dashboard intuitiva, perfetto per gestione di contenuti complessi senza limitazioni. Architettura modulare che consente massima personalizzazione.</p>
+                    <div class="tech-stack">
+                        <h4>Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">ProcessWire</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML/CSS/JS</span>
+                        </div>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Casi d'uso</h4>
+                        <ul>
+                            <li>Siti aziendali e portfolio</li>
+                            <li>Blog e pubblicazioni</li>
+                            <li>Portali di contenuto</li>
+                            <li>Siti istituzionali PA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <span class="solution-badge">CMS + Frontend Moderno</span>
+                    <h3>ProcessWire API + React App</h3>
+                    <p class="description">Combina la flessibilità di ProcessWire come backend con la reattività e le performance di React frontend. Ideale per interfacce utente complesse e interattive.</p>
+                    <div class="tech-stack">
+                        <h4>Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">ProcessWire API</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Casi d'uso</h4>
+                        <ul>
+                            <li>Web app interattive</li>
+                            <li>Dashboard e analytics</li>
+                            <li>Piattaforme collaborative</li>
+                            <li>Esperienze utente complesse</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <span class="solution-badge">CMS Moderno</span>
+                    <h3>Payload CMS</h3>
+                    <p class="description">CMS headless basato su TypeScript con REST API integrata e admin panel moderna. Perfetto per progetti moderni che richiedono flessibilità e performance elevate.</p>
+                    <div class="tech-stack">
+                        <h4>Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">Payload CMS</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB/PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Casi d'uso</h4>
+                        <ul>
+                            <li>Startup e MVP</li>
+                            <li>E-commerce</li>
+                            <li>App mobile-first</li>
+                            <li>Piattaforme multi-canale</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <span class="solution-badge">CMS Diffuso + Frontend Moderno</span>
+                    <h3>WordPress API + React App</h3>
+                    <p class="description">Sfrutta l'ecosistema WordPress come backend per i contenuti con React per il frontend. Combina la popolarità di WordPress con le prestazioni di React.</p>
+                    <div class="tech-stack">
+                        <h4>Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">WordPress REST API</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Casi d'uso</h4>
+                        <ul>
+                            <li>Blog decoupled</li>
+                            <li>Riviste online</li>
+                            <li>Portali di news</li>
+                            <li>Siti con ampio archivio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <span class="solution-badge">Semplice e Leggero</span>
+                    <h3>HTML/CSS/JS Senza Dashboard</h3>
+                    <p class="description">Soluzione pura e minimalista per siti statici, landing page e portfolio. Massima leggerezza, velocità e semplicità di deployment e manutenzione.</p>
+                    <div class="tech-stack">
+                        <h4>Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript Vanilla</span>
+                            <span class="tech-tag">Static Hosting</span>
+                        </div>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Casi d'uso</h4>
+                        <ul>
+                            <li>Landing page</li>
+                            <li>Portfolio personali</li>
+                            <li>Siti statici leggeri</li>
+                            <li>Documenti interattivi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <span class="solution-badge">Mobile-First + Backend Scalabile</span>
+                    <h3>Flutter App + Firebase</h3>
+                    <p class="description">Applicazioni mobile native per iOS e Android con backend serverless su Firebase. Deployment simultaneo su multiple piattaforme con sincronizzazione real-time.</p>
+                    <div class="tech-stack">
+                        <h4>Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Cloud Functions</span>
+                        </div>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Casi d'uso</h4>
+                        <ul>
+                            <li>App iOS e Android</li>
+                            <li>Web app responsiva</li>
+                            <li>Applicazioni real-time</li>
+                            <li>Soluzioni cross-platform</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <span class="solution-badge">Next Generation Frontend</span>
+                    <h3>Next.js + API Backend</h3>
+                    <p class="description">Framework moderno per React con SSR, SSG e API routes integrati. Performance superiori, SEO ottimizzato e developer experience eccellente per applicazioni complesse.</p>
+                    <div class="tech-stack">
+                        <h4>Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Vercel/GCP</span>
+                        </div>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Casi d'uso</h4>
+                        <ul>
+                            <li>Web app enterprise</li>
+                            <li>SaaS platform</li>
+                            <li>E-commerce avanzato</li>
+                            <li>Siti performance-critical</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <span class="solution-badge">Headless CMS Moderno</span>
+                    <h3>Strapi + Frontend Decoupled</h3>
+                    <p class="description">CMS open-source headless con REST API e admin panel completa. Flessibilità totale nel frontend con supporto per multiple piattaforme (web, mobile, IoT).</p>
+                    <div class="tech-stack">
+                        <h4>Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">Strapi</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">React/Vue/Angular</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="use-cases">
+                        <h4>Casi d'uso</h4>
+                        <ul>
+                            <li>Multi-canale content</li>
+                            <li>Piattaforme B2B</li>
+                            <li>Applicazioni omnichannel</li>
+                            <li>API-driven projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-section">
+                <h2>Tabella Comparativa</h2>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <h4>Facilità di Utilizzo</h4>
+                        <p><strong>ProcessWire/WordPress:</strong> Dashboard intuitiva per non tecnici. <strong>React/Next.js:</strong> Migliore per developer. <strong>Flutter:</strong> Ottimale per mobile.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Scalabilità</h4>
+                        <p><strong>Next.js/Firebase:</strong> Massima. <strong>Payload/Strapi:</strong> Molto buona. <strong>HTML/CSS/JS:</strong> Illimitata con CDN.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Performance</h4>
+                        <p><strong>HTML/CSS/JS:</strong> Velocissima. <strong>Next.js:</strong> Eccellente. <strong>React/Flutter:</strong> Molto buona. <strong>WordPress:</strong> Buona con ottimizzazione.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Costo Implementazione</h4>
+                        <p><strong>HTML/CSS/JS:</strong> Minimo. <strong>ProcessWire/WordPress:</strong> Basso. <strong>Next.js/React:</strong> Moderato. <strong>Flutter:</strong> Moderato-Alto.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Manutenzione</h4>
+                        <p><strong>Managed services:</strong> Minima. <strong>Self-hosted:</strong> Dipende dal team. <strong>Cloud Native:</strong> Intermedia con automazione.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Supporto Ecositema</h4>
+                        <p><strong>WordPress/React:</strong> Massimo. <strong>Next.js/Flutter:</strong> Molto buono. <strong>ProcessWire:</strong> Comunità attiva. <strong>Custom:</strong> Dipende.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="cta-section">
+                <h2>Pronto a Iniziare?</h2>
+                <p>Contatta il nostro team per discutere quale stack tecnologico sia più adatto alle tue esigenze di progetto. Ti supporteremo nella scelta della soluzione migliore, dall'architettura fino al deployment e alla manutenzione.</p>
+                <a href="mailto:hello@lybercode.com" class="btn btn-primary">Richiedi una Consulenza</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>LyberCode</h4>
+                <p>Servizi di consulenza informatica per imprese e PA: sviluppo software, cloud, cybersecurity, AI e trasformazione digitale, con sede a Roma e Terracina.</p>
+            </div>
+            <div>
+                <h4>Hub</h4>
+                <a href="index.html#metodo">Metodo</a>
+                <a href="index.html#competenze">Competenze</a>
+                <a href="index.html#ambiti">Ambiti</a>
+                <a href="index.html#toolkit">Toolkit</a>
+                <a href="index.html#valore">Perché noi</a>
+            </div>
+            <div>
+                <h4>Contatti</h4>
+                <a href="mailto:hello@lybercode.com">hello@lybercode.com</a>
+                <a href="tel:+390773061194">Tel. 0773 061194</a>
+                <a href="tel:+393392528986">Cell. 339 2528986</a>
+                <a href="mailto:montini@peceasy.com">PEC: montini@peceasy.com</a>
+            </div>
+            <div>
+                <h4>Community</h4>
+                <a href="https://github.com/montiniangelo">GitHub</a>
+                <a href="https://www.linkedin.com/company/lybercode/">LinkedIn</a>
+                <a href="index.html#contatti">Newsletter</a>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="https://angelomontini.com" target="_blank" rel="noopener">© 2025 LyberCode di Angelo Montini. <span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. Tutti i diritti riservati</a>
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Torna all'inizio" title="Torna su">↑</button>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        const menuLinks = document.querySelectorAll('.menu a');
+
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('menu-open');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+                menuToggle.setAttribute('aria-label', isOpen ? 'Chiudi il menu' : 'Apri il menu');
+            });
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('menu-open')) {
+                        nav.classList.remove('menu-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuToggle.setAttribute('aria-label', 'Apri il menu');
+                    }
+                });
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && nav.classList.contains('menu-open')) {
+                    nav.classList.remove('menu-open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.setAttribute('aria-label', 'Apri il menu');
+                    menuToggle.focus();
+                }
+            });
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        const headerEl = document.querySelector('header');
+
+        const toggleScrollBtn = () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+        toggleScrollBtn();
+
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
