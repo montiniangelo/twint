@@ -77,12 +77,12 @@
 
     <style>
         :root {
-            --primary: #101e2e;
+            --primary: #f5f7fa;
             --secondary: #23a5b1;
-            --accent: #0b1520;
-            --text: #ffffff;
-            --muted: #e7e9ee;
-            --surface: rgba(16, 30, 46, 0.9);
+            --accent: #ffffff;
+            --text: #1a1a1a;
+            --muted: #4a4a4a;
+            --surface: rgba(255, 255, 255, 0.9);
         }
 
         * {
@@ -93,7 +93,7 @@
         }
 
         body {
-            background: var(--accent);
+            background: #ffffff;
             color: var(--text);
             line-height: 1.6;
         }
@@ -113,7 +113,7 @@
             justify-content: center;
             font-size: 1.5rem;
             text-decoration: none;
-            color: #fff;
+            color: var(--text);
             box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
             animation: pulse-glow 1.5s ease-in-out infinite;
             transition: transform 0.3s ease;
@@ -138,7 +138,7 @@
             justify-content: center;
             font-size: 1.5rem;
             text-decoration: none;
-            color: #fff;
+            color: var(--text);
             box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
             animation: pulse-glow 1.5s ease-in-out infinite;
             transition: transform 0.3s ease;
@@ -161,8 +161,8 @@
         }
 
         header {
-            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.6), rgba(11, 21, 32, 0.95)), url('x.jpg') center/cover no-repeat;
-            color: #fff;
+            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.15), rgba(255, 255, 255, 0.85)), url('x.jpg') center/cover no-repeat;
+            color: var(--text);
             padding: 90px 0 120px;
             position: relative;
             overflow: hidden;
@@ -173,7 +173,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(16, 30, 46, 0.75), rgba(35, 165, 177, 0.3));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(35, 165, 177, 0.1));
             z-index: 0;
         }
 
@@ -200,7 +200,7 @@
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: 1px;
-            color: #fff;
+            color: var(--text);
             text-decoration: none;
         }
 
@@ -222,10 +222,10 @@
             gap: 5px;
             width: 44px;
             height: 44px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(26, 26, 26, 0.3);
             border-radius: 999px;
-            background: rgba(16, 30, 46, 0.4);
-            color: #fff;
+            background: rgba(26, 26, 26, 0.06);
+            color: var(--text);
             cursor: pointer;
             transition: border-color 0.3s ease, background 0.3s ease;
         }
@@ -245,7 +245,7 @@
         }
 
         nav .menu a {
-            color: #fff;
+            color: var(--text);
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s ease;
@@ -260,19 +260,19 @@
             margin-bottom: 16px;
         }
         .subnav a {
-            color: #fff;
+            color: var(--text);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
             padding: 8px 14px;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(26, 26, 26, 0.04);
+            border: 1px solid rgba(26, 26, 26, 0.12);
             transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
         }
         .subnav a:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(255, 255, 255, 0.35);
+            background: rgba(26, 26, 26, 0.08);
+            border-color: rgba(26, 26, 26, 0.25);
             transform: translateY(-1px);
         }
 
@@ -319,14 +319,14 @@
 
         .btn-primary {
             background: var(--secondary);
-            color: #fff;
+            color: var(--text);
             box-shadow: 0 12px 30px rgba(35, 165, 177, 0.35);
         }
 
         .btn-outline {
             background: transparent;
             border-color: rgba(255, 255, 255, 0.6);
-            color: #fff;
+            color: var(--text);
         }
 
         .btn:hover {
@@ -371,8 +371,8 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(124, 138, 164, 0.2);
+            background: rgba(245, 247, 250, 0.8);
+            border: 1px solid rgba(35, 165, 177, 0.15);
             border-radius: 16px;
             padding: 30px;
             transition: border-color 0.3s ease, transform 0.3s ease;
@@ -426,14 +426,14 @@
         .metric {
             padding: 24px;
             border-radius: 16px;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(245, 247, 250, 0.8);
             text-align: center;
         }
 
         .metric strong {
             display: block;
             font-size: 2rem;
-            color: #fff;
+            color: var(--text);
         }
 
         ul {
@@ -458,13 +458,13 @@
             width: 36px;
             height: 36px;
             border-radius: 12px;
-            background: linear-gradient(135deg, rgba(35, 165, 177, 0.25), rgba(35, 165, 177, 0.6));
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.15), rgba(35, 165, 177, 0.35));
             display: grid;
             place-items: center;
             font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 0.05em;
-            color: #041821;
+            color: #ffffff;
             text-transform: uppercase;
             box-shadow: 0 6px 16px rgba(35, 165, 177, 0.2);
         }
@@ -481,8 +481,8 @@
         }
 
         .ai-agent {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(124, 138, 164, 0.2);
+            background: rgba(245, 247, 250, 0.8);
+            border: 1px solid rgba(35, 165, 177, 0.15);
             border-radius: 18px;
             padding: 28px 22px;
             text-align: center;
@@ -506,7 +506,7 @@
         }
 
         .ai-agent h4 {
-            color: #fff;
+            color: var(--text);
             font-size: 1.1rem;
             margin-bottom: 8px;
         }
@@ -516,7 +516,7 @@
             font-size: 0.8rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: rgba(228, 233, 240, 0.7);
+            color: rgba(74, 74, 74, 0.7);
             margin-bottom: 10px;
         }
 
@@ -533,7 +533,7 @@
         }
 
         footer {
-            background: #06090d;
+            background: #f5f7fa;
             padding: 50px 0;
             color: var(--muted);
         }
@@ -548,7 +548,7 @@
         }
 
         footer h4 {
-            color: #fff;
+            color: var(--text);
             margin-bottom: 15px;
         }
 
@@ -561,74 +561,74 @@
         }
 
         footer a:hover {
-            color: #fff;
+            color: var(--text);
         }
 
         .legal {
             margin-top: 25px;
             font-size: 0.9rem;
-            color: rgba(228, 233, 240, 0.7);
+            color: rgba(74, 74, 74, 0.7);
             line-height: 1.5;
         }
 
         .legal strong {
-            color: #fff;
+            color: var(--text);
             display: block;
             font-size: 1rem;
             margin-bottom: 6px;
         }
 
         .legal a {
-            color: rgba(228, 233, 240, 0.85);
+            color: rgba(74, 74, 74, 0.85);
             text-decoration: none;
         }
 
         .legal a:hover {
-            color: #fff;
+            color: var(--text);
         }
 
         .bottom {
             margin-top: 5em;
             text-align: center;
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(74, 74, 74, 0.4);
         }
 
-        /* Section background colors - progressive shades of #0b1520 */
+        /* Section background colors - progressive shades */
         #soluzioni {
-            background-color: #0b1520;
+            background-color: #ffffff;
         }
 
         #metodo {
-            background-color: #0d172a;
+            background-color: #f9fafb;
         }
 
         #ambiti {
-            background-color: #0f1a34;
+            background-color: #f3f5f8;
         }
 
         #percorsi {
-            background-color: #111e3e;
+            background-color: #edf0f5;
         }
 
         #servizi {
-            background-color: #132148;
+            background-color: #e8ecf2;
         }
 
         #toolkit {
-            background-color: #152552;
+            background-color: #e2e8ed;
         }
 
         #valore {
-            background-color: #17285c;
+            background-color: #dde4eb;
         }
 
         #mepa {
-            background-color: #192c66;
+            background-color: #d8dfe9;
         }
 
         #contatti {
-            background-color: #1b3070;
+            background-color: #d3dae7;
         }
 
         @media (max-width: 720px) {
@@ -648,11 +648,11 @@
                 align-items: stretch;
                 gap: 18px;
                 padding: 22px;
-                background: rgba(6, 9, 13, 0.96);
-                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.96);
+                border: 1px solid rgba(26, 26, 26, 0.08);
                 border-radius: 18px;
                 min-width: 220px;
-                box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45);
+                box-shadow: 0 22px 45px rgba(0, 0, 0, 0.1);
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(-12px);
@@ -707,15 +707,15 @@
             width: 44px;
             height: 44px;
             border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            background: rgba(16, 30, 46, 0.6);
-            color: #fff;
+            border: 1px solid rgba(26, 26, 26, 0.3);
+            background: rgba(26, 26, 26, 0.08);
+            color: var(--text);
             cursor: pointer;
             display: none; /* hidden by default */
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
             transition: opacity 0.3s ease, transform 0.2s ease;
             z-index: 999;
         }
@@ -896,7 +896,7 @@
         </div>
     </section>
 
-    <section style="background-color: #0e1828; border-top: 1px solid rgba(35, 165, 177, 0.15); border-bottom: 1px solid rgba(35, 165, 177, 0.15);">
+    <section style="background-color: #f5f7fa; border-top: 1px solid rgba(35, 165, 177, 0.15); border-bottom: 1px solid rgba(35, 165, 177, 0.15);">
         <div class="container">
             <div style="text-align: center; padding: 20px 0;">
                 <span class="section-title">Stack Tecnologici</span>
@@ -1116,22 +1116,7 @@
 
 
 
-    <section id="contatti">
-        <div class="container contact">
-            <span class="section-title">Contattaci</span>
-            <h2>Parliamo delle tue soluzioni digitali</h2>
-            <p>Raccontaci obiettivi e contesto: in 48 ore proponiamo un primo piano con priorità, effort e KPI.</p>
-            <br><br>
-            <a class="btn btn-primary" href="mailto:hello@lybercode.com">hello@lybercode.com</a>
-            <div class="legal">
-                <strong>LyberCode di <a href="https://angelomontini.com" target="_blank" rel="noopener">Angelo Montini</a></strong>
-                <span>Roma · Terracina  <br> Viale Europa 216 · 04019 Terracina (LT)</span><br>
-                <a href="tel:+390773061194">Tel. 0773 061194</a> · <a href="tel:+393392528986">Cell. 339 2528986</a><br>
-                <span>P. IVA 11822551005</span> · <span>REA LT-331862</span><br>
-                <a href="mailto:montini@peceasy.com">PEC: montini@peceasy.com</a>
-            </div>
-        </div>
-    </section>
+   
 
     <footer>
         <div class="footer-grid">
