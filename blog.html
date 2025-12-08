@@ -392,6 +392,53 @@
             opacity: 0.8;
         }
 
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .pagination button, .pagination a {
+            padding: 10px 14px;
+            border: 1px solid rgba(35, 165, 177, 0.3);
+            border-radius: 6px;
+            background: rgba(245, 247, 250, 0.8);
+            color: var(--text);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+        }
+
+        .pagination button:hover, .pagination a:hover {
+            background: rgba(35, 165, 177, 0.15);
+            border-color: rgba(35, 165, 177, 0.5);
+        }
+
+        .pagination button.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination button:disabled:hover {
+            background: rgba(245, 247, 250, 0.8);
+            border-color: rgba(35, 165, 177, 0.3);
+        }
+
         footer {
             background: var(--primary);
             border-top: 1px solid rgba(35, 165, 177, 0.2);
@@ -575,6 +622,17 @@
                 height: 45px;
                 font-size: 1.1rem;
             }
+
+            .pagination {
+                gap: 8px;
+                margin-top: 40px;
+            }
+
+            .pagination button, .pagination a {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+                min-width: 36px;
+            }
         }
     </style>
 </head>
@@ -636,6 +694,10 @@
                 <!-- Blog posts will be loaded here -->
             </div>
 
+            <div id="pagination" class="pagination">
+                <!-- Pagination will be loaded here -->
+            </div>
+
             <div class="blog-categories-section">
                 <h2>Categorie di Articoli e Approfondimenti</h2>
                 <p>Scopri i principali argomenti affrontati nel blog di LyberCode, suddivisi per categoria tematica. Naviga tra gli articoli per trovare soluzioni, case study e best practices relative ai tuoi interessi di trasformazione digitale.</p>
@@ -669,7 +731,7 @@
 
                 <div class="blog-resources">
                     <h3>Risorse Utili per l'Apprendimento Continuo</h3>
-                    <p>Oltre agli articoli, LyberCode offre risorse complementari per approfondire conoscenze su innovazione tecnologica e trasformazione digitale. Accedi a whitepaper, guide tecniche, webinar registrati e case study dettagliati che illustrano come le imprese hanno risolto sfide complesse di digitalizzazione. Il blog è aggiornato costantemente con nuovi contenuti, analisi di trend tecnologici emergenti e commenti su evoluzioni del panorama IT italiano e internazionale. Iscriviti alla newsletter per ricevere gli ultimi articoli direttamente nella tua inbox.</p>
+                    <p>Oltre agli articoli, LyberCode offre risorse complementari per approfondire conoscenze su innovazione tecnologica e trasformazione digitale. Accedi a whitepaper, guide tecniche, webinar registrati e case study dettagliati che illustrano come le imprese hanno risolto sfide complesse di digitalizzazione. Il blog è aggiornato costantemente con nuovi contenuti, analisi di trend tecnologici emergenti e commenti su evoluzioni del panorama IT italiano e internazionale.</p>
                 </div>
             </div>
         </div>
@@ -764,92 +826,247 @@
 
         const posts = [
             {
-                title: "Massimizza l'efficienza delle tue integrazioni con Cloudflare Workers",
-                category: "I VANTAGGI DI CLOUDFLARE WORKERS",
-                date: "21 Novembre 2025",
-                excerpt: "Scopri come ottimizzare le tue integrazioni con Cloudflare Workers per migliorare prestazioni e efficienza.",
-                link: "post/post-19-November-2025-1763543565.html"
-            },
-            {
-                title: "Sfrutta al meglio i tuoi dati con DataDog",
-                category: "MONITORAGGIO DETTAGLIATO",
-                date: "19 Novembre 2025",
-                excerpt: "Scopri come DataDog ti aiuta a monitorare e analizzare i tuoi dati in tempo reale.",
-                link: "post/post-19-November-2025-1763543344.html"
-            },
-            {
-                title: "Il Futuro della Tecnologia: Cloud Computing, AI e Automazione",
-                category: "CLOUD COMPUTING",
-                date: "25 Novembre 2025",
-                excerpt: "Scopri come Cloud Computing, AI e Automazione stanno trasformando il panorama tecnologico.",
-                link: "post/post-18-November-2025-1763420467.html"
-            },
-            {
-                title: "La Trasformazione Digitale nella Pubblica Amministrazione",
-                category: "APPROFONDIMENTO",
-                date: "15 Novembre 2025",
-                excerpt: "La digital transformation ha introdotto cambiamenti significativi nella Pubblica Amministrazione.",
-                link: "post/post-17-November-2025.html"
-            },
-            {
-                title: "Cloud Computing e Automazione: Il Futuro della Tecnologia",
-                category: "CLOUD & AI",
-                date: "19 Novembre 2025",
-                excerpt: "Scopri come l'integrazione di Cloud Computing e Automazione sta trasformando il mondo IT.",
-                link: "post/post-17-November-2025-1763379177.html"
-            },
-            {
-                title: "Cloud Computing, AI e Automazione: Trasformare l'IT Moderno",
-                category: "CLOUD & AI",
-                date: "19 Novembre 2025",
-                excerpt: "Scopri come il cloud computing, la IA e l'automazione stanno ridefinendo lo sviluppo web moderno.",
-                link: "post/post-17-November-2025-1763378850.html"
-            },
-            {
-                title: "Cloud Computing, AI e Automazione: La Trasformazione Digitale delle Imprese",
-                category: "CLOUD & AI",
-                date: "19 Novembre 2025",
-                excerpt: "Scopri come il cloud computing, l'intelligenza artificiale e l'automazione stanno rivoluzionando il mondo IT.",
-                link: "post/post-17-November-2025-1763378495.html"
-            },
-            {
-                title: "Cloud Computing e AI: Impatto sulla Modernizzazione IT",
-                category: "CLOUD & AI",
-                date: "25 Novembre 2025",
-                excerpt: "Scopri come il Cloud Computing e l'Intelligenza Artificiale stanno trasformando le imprese.",
-                link: "post/post-17-November-2025-1763376714.html"
+                title: "Innovazione Digitale nella PA",
+                category: "TRASFORMAZIONE DIGITALE",
+                date: "20/10/2025",
+                excerpt: "Scopri come la trasformazione digitale sta rivoluzionando i servizi della Pubblica Amministrazione c...",
+                link: "post/001-innovazione-digitale.html"
             },
             {
                 title: "Cloud Computing, AI e Automazione: Driving Modern Web Development",
                 category: "CLOUD & AI",
-                date: "19 Novembre 2025",
-                excerpt: "Scopri come Cloud Computing, AI e Automazione stanno trasformando lo sviluppo web moderno.",
+                date: "10/10/2025",
+                excerpt: "Scopri come Cloud Computing, AI e Automazione stanno trasformando lo sviluppo web moderno....",
                 link: "post/post-17-November-2025-1763376302.html"
             },
             {
-                title: "Innovazione Digitale nella Pubblica Amministrazione",
+                title: "Cloud Computing e AI: Impatto sulla Modernizzazione IT",
+                category: "CLOUD & AI",
+                date: "25/09/2025",
+                excerpt: "Scopri come il Cloud Computing e l'Intelligenza Artificiale stanno trasformando le imprese....",
+                link: "post/post-17-November-2025-1763376714.html"
+            },
+            {
+                title: "Cloud Computing, AI e Automazione: La Trasformazione Digitale delle Imprese",
+                category: "CLOUD & AI",
+                date: "21/10/2025",
+                excerpt: "Scopri come il cloud computing, l'intelligenza artificiale e l'automazione stanno rivoluzionando il...",
+                link: "post/post-17-November-2025-1763378495.html"
+            },
+            {
+                title: "Cloud Computing, AI e Automazione: Trasformare l'IT Moderno",
+                category: "CLOUD & AI",
+                date: "12/11/2025",
+                excerpt: "Scopri come il cloud computing, l'IA e l'automazione stanno ridefinendo lo sviluppo web moderno....",
+                link: "post/post-17-November-2025-1763378850.html"
+            },
+            {
+                title: "Cloud Computing e Automazione: Il Futuro della Tecnologia",
+                category: "CLOUD & AI",
+                date: "28/10/2025",
+                excerpt: "Scopri come l'integrazione di Cloud Computing e Automazione sta trasformando il mondo IT....",
+                link: "post/post-17-November-2025-1763379177.html"
+            },
+            {
+                title: "La Trasformazione Digitale nella Pubblica Amministrazione",
+                category: "TRASFORMAZIONE DIGITALE",
+                date: "15/10/2025",
+                excerpt: "Scopri come la digital transformation sta rivoluzionando la PA. Contattaci per consulenza!...",
+                link: "post/post-17-November-2025.html"
+            },
+            {
+                title: "Il Futuro della Tecnologia: Cloud Computing, AI e Automazione",
+                category: "CLOUD & AI",
+                date: "25/10/2025",
+                excerpt: "Scopri come il cloud computing, l'Intelligenza Artificiale e l'automazione stanno trasformando il mo...",
+                link: "post/post-18-November-2025-1763420467.html"
+            },
+            {
+                title: "Sfrutta al meglio i tuoi dati con DataDog",
+                category: "MONITORAGGIO",
+                date: "15/09/2022",
+                excerpt: "Scopri come DataDog può aiutarti a monitorare e ottimizzare le prestazioni dei tuoi servizi....",
+                link: "post/post-19-November-2025-1763543344.html"
+            },
+            {
+                title: "Massimizza l'efficienza delle tue integrazioni con Cloudflare Workers",
+                category: "CLOUD & AI",
+                date: "01/12/2025",
+                excerpt: "Scopri come massimizzare l'efficienza delle integrazioni con Cloudflare Workers: edge computing, ser...",
+                link: "post/post-19-November-2025-1763543565.html"
+            },
+            {
+                title: "Servizi Integrati di Automazione Aziendale",
                 category: "APPROFONDIMENTO",
-                date: "14 Novembre 2025",
-                excerpt: "Scopri come la trasformazione digitale sta rivoluzionando i servizi della Pubblica Amministrazione.",
-                link: "post/001-innovazione-digitale.html"
+                date: "05/12/2025",
+                excerpt: "Scopri come i servizi Zapier, n8n, CrewAI e Cloudflare Workers possono trasformare la tua attività a...",
+                link: "post/post-19-November-2025-1763550067.html"
+            },
+            {
+                title: "Servizio Cloudflare Workers: Ottimizza il Tuo Sito Web",
+                category: "CLOUD & AI",
+                date: "02/12/2025",
+                excerpt: "Ottimizza il tuo sito web con Cloudflare Workers: edge computing, serverless, performance e sicurezz...",
+                link: "post/post-20-November-2025-1763636466.html"
+            },
+            {
+                title: "Servizi per l'integrazione: Zapier semplifica il tuo lavoro di automazione",
+                category: "APPROFONDIMENTO",
+                date: "12/11/2025",
+                excerpt: "Automatizza i processi aziendali senza codice con Zapier: integrazione di 6000+ app, risparmio tempo...",
+                link: "post/post-21-November-2025-1763722863.html"
+            },
+            {
+                title: "Massimizza l'efficienza del tuo team con Airbyte",
+                category: "INTELLIGENZA ARTIFICIALE",
+                date: "15/11/2023",
+                excerpt: "Scopri come Airbyte può aiutarti a sincronizzare i tuoi dati in modo efficiente....",
+                link: "post/post-22-November-2025-1763809261.html"
+            },
+            {
+                title: "Semplificare l'integrazione dei servizi con CrewAI",
+                category: "INTELLIGENZA ARTIFICIALE",
+                date: "29/11/2025",
+                excerpt: "Scopri come CrewAI può semplificare l'integrazione dei servizi nella tua azienda....",
+                link: "post/post-23-November-2025-1763895656.html"
+            },
+            {
+                title: "Massimizza la tua produttività con Workato",
+                category: "APPROFONDIMENTO",
+                date: "05/11/2023",
+                excerpt: "Scopri come Workato può migliorare l'efficienza del tuo business....",
+                link: "post/post-24-November-2025-1763982060.html"
+            },
+            {
+                title: "Automatizza i tuoi processi con Make.com",
+                category: "APPROFONDIMENTO",
+                date: "16/09/2024",
+                excerpt: "Scopri come Make.com può aiutarti ad automatizzare i tuoi processi aziendali....",
+                link: "post/post-25-November-2025-1764068462.html"
+            },
+            {
+                title: "Massimizza l'efficienza dei tuoi processi con Zapier",
+                category: "APPROFONDIMENTO",
+                date: "27/11/2023",
+                excerpt: "Scopri come Zapier può automatizzare i tuoi flussi di lavoro aziendali...",
+                link: "post/post-26-November-2025-1764154869.html"
+            },
+            {
+                title: "Massimizza l'efficienza del tuo team con Make.com",
+                category: "APPROFONDIMENTO",
+                date: "30/11/2025",
+                excerpt: "Scopri come Make.com può trasformare il modo in cui lavori e collabori con il tuo team....",
+                link: "post/post-27-November-2025-1764241259.html"
+            },
+            {
+                title: "Servizi Integrati per la tua Azienda",
+                category: "APPROFONDIMENTO",
+                date: "25/11/2025",
+                excerpt: "Scopri come Zapier può automatizzare i processi della tua azienda per migliorare l'efficienza....",
+                link: "post/post-28-November-2025-1764327669.html"
+            },
+            {
+                title: "Servizio Cloudflare Workers: Ottimizza il tuo Sito Web",
+                category: "CLOUD & AI",
+                date: "25/11/2022",
+                excerpt: "Scopri come Cloudflare Workers può migliorare le performance del tuo sito web....",
+                link: "post/post-29-November-2025-1764414055.html"
+            },
+            {
+                title: "Servizio di integrazione dati con DataDog",
+                category: "MONITORAGGIO",
+                date: "23/11/2023",
+                excerpt: "Scopri come DataDog può ottimizzare l'integrazione dei dati aziendali...",
+                link: "post/post-30-November-2025-1764500456.html"
             }
         ];
 
-        const container = document.getElementById('blog-container');
-        
-        posts.forEach(post => {
-            const card = document.createElement('a');
-            card.href = post.link;
-            card.className = 'blog-card';
-            card.innerHTML = `
-                <span class="blog-category">${post.category}</span>
-                <div class="blog-date">📅 ${post.date}</div>
-                <h2>${post.title}</h2>
-                <p>${post.excerpt}</p>
-                <a href="${post.link}" style="color: var(--secondary); font-weight: 600;">Leggi l'articolo →</a>
-            `;
-            container.appendChild(card);
+        // Sort posts by date in descending order (most recent first)
+        posts.sort((a, b) => {
+            const parseDate = (dateStr) => {
+                const [day, month, year] = dateStr.split('/');
+                return new Date(year, month - 1, day);
+            };
+            return parseDate(b.date) - parseDate(a.date);
         });
+
+        const container = document.getElementById('blog-container');
+        const paginationDiv = document.getElementById('pagination');
+        const postsPerPage = 10;
+        let currentPage = 1;
+
+        function renderPosts(page) {
+            container.innerHTML = '';
+            const startIndex = (page - 1) * postsPerPage;
+            const endIndex = Math.min(startIndex + postsPerPage, posts.length);
+            
+            for (let i = startIndex; i < endIndex; i++) {
+                const post = posts[i];
+                const card = document.createElement('a');
+                card.href = post.link;
+                card.className = 'blog-card';
+                card.innerHTML = `
+                    <span class="blog-category">${post.category}</span>
+                    <div class="blog-date">📅 ${post.date}</div>
+                    <h2>${post.title}</h2>
+                    <p>${post.excerpt}</p>
+                    <a href="${post.link}" style="color: var(--secondary); font-weight: 600;">Leggi l'articolo →</a>
+                `;
+                container.appendChild(card);
+            }
+            
+            window.scrollTo({ top: container.offsetTop - 100, behavior: 'smooth' });
+        }
+
+        function renderPagination() {
+            paginationDiv.innerHTML = '';
+            const totalPages = Math.ceil(posts.length / postsPerPage);
+            
+            // Previous button
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '← Precedente';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderPosts(currentPage);
+                    renderPagination();
+                }
+            });
+            paginationDiv.appendChild(prevBtn);
+            
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i;
+                if (i === currentPage) {
+                    btn.classList.add('active');
+                }
+                btn.addEventListener('click', () => {
+                    currentPage = i;
+                    renderPosts(currentPage);
+                    renderPagination();
+                });
+                paginationDiv.appendChild(btn);
+            }
+            
+            // Next button
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = 'Successivo →';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderPosts(currentPage);
+                    renderPagination();
+                }
+            });
+            paginationDiv.appendChild(nextBtn);
+        }
+
+        // Initial render
+        renderPosts(currentPage);
+        renderPagination();
     </script>
 <!-- Matomo -->
 <script>
