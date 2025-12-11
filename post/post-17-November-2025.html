@@ -79,7 +79,48 @@ footer a{color:var(--muted);text-decoration:none}
             opacity: 0.8;
         }
 
-</style>
+        @media (max-width: 768px) {
+            .post-header h1 {
+                font-size: 1.5rem;
+            }
+
+            article {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .post-header h1 {
+                font-size: 1.3rem;
+            }
+
+            article {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post-header h1 {
+                font-size: 1.1rem;
+            }
+
+            article {
+                padding: 16px;
+            }
+
+            header {
+                padding: 30px 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>

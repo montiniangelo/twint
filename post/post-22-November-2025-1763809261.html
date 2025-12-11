@@ -45,7 +45,50 @@
   ]
 }
 </script>
-<style>:root{--primary:#f5f7fa;--secondary:#23a5b1;--accent:#ffffff;--text:#1a1a1a;--muted:#4a4a4a} *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif} body{background:var(--accent);color:var(--text);line-height:1.6} .container{width:90%;max-width:800px;margin:0 auto} header{background:linear-gradient(135deg,#f5f7fa,#23a5b1);padding:40px 0} .post-header h1{font-size:2rem;margin-bottom:10px} article{background:rgba(245, 247, 250, 0.6);border:1px solid rgba(35,165,177,0.2);border-radius:8px;padding:30px;margin:40px 0} article h2{color:var(--secondary);margin:20px 0 10px} article p{margin-bottom:15px;line-height:1.7} article ul{margin:15px 0 15px 20px} article li{margin-bottom:8px} footer{background:var(--primary);padding:30px 0;margin-top:30px} footer .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px} footer h4{color:var(--secondary);margin-bottom:10px} footer a{color:var(--muted);text-decoration:none} .back-link { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 8px; color: var(--secondary); text-decoration: none; margin-bottom: 20px; transition: opacity 0.3s ease; } .back-link:hover { opacity: 0.8; }</style>
+<style>:root{--primary:#f5f7fa;--secondary:#23a5b1;--accent:#ffffff;--text:#1a1a1a;--muted:#4a4a4a} *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif} body{background:var(--accent);color:var(--text);line-height:1.6} .container{width:90%;max-width:800px;margin:0 auto} header{background:linear-gradient(135deg,#f5f7fa,#23a5b1);padding:40px 0} .post-header h1{font-size:2rem;margin-bottom:10px} article{background:rgba(245, 247, 250, 0.6);border:1px solid rgba(35,165,177,0.2);border-radius:8px;padding:30px;margin:40px 0} article h2{color:var(--secondary);margin:20px 0 10px} article p{margin-bottom:15px;line-height:1.7} article ul{margin:15px 0 15px 20px} article li{margin-bottom:8px} footer{background:var(--primary);padding:30px 0;margin-top:30px} footer .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px} footer h4{color:var(--secondary);margin-bottom:10px} footer a{color:var(--muted);text-decoration:none} .back-link { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 8px; color: var(--secondary); text-decoration: none; margin-bottom: 20px; transition: opacity 0.3s ease; } .back-link:hover { opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            .post-header h1 {
+                font-size: 1.5rem;
+            }
+
+            article {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .post-header h1 {
+                font-size: 1.3rem;
+            }
+
+            article {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post-header h1 {
+                font-size: 1.1rem;
+            }
+
+            article {
+                padding: 16px;
+            }
+
+            header {
+                padding: 30px 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
