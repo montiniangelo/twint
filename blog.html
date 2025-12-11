@@ -710,9 +710,9 @@
                     <span></span>
                 </button>
                 <ul class="menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="sviluppo.html">Sviluppo</a></li>
-                    <li> <a href="monitor.html">PA</a></li>
+                    <li><a href="/">Hom</a></li>
+                    <li><a href="sviluppo.html">Dev</a></li>
+                    <li> <a href="monitor.html">Pa</a></li>
                 </ul>
             </nav>
             <div class="page-header">
@@ -828,36 +828,6 @@
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('nav');
-        const menuLinks = document.querySelectorAll('.menu a');
-
-        if (menuToggle && nav) {
-            menuToggle.addEventListener('click', () => {
-                const isOpen = nav.classList.toggle('menu-open');
-                menuToggle.setAttribute('aria-expanded', String(isOpen));
-                menuToggle.setAttribute('aria-label', isOpen ? 'Chiudi il menu' : 'Apri il menu');
-            });
-
-            menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (nav.classList.contains('menu-open')) {
-                        nav.classList.remove('menu-open');
-                        menuToggle.setAttribute('aria-expanded', 'false');
-                        menuToggle.setAttribute('aria-label', 'Apri il menu');
-                    }
-                });
-            });
-
-            document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && nav.classList.contains('menu-open')) {
-                    nav.classList.remove('menu-open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    menuToggle.setAttribute('aria-label', 'Apri il menu');
-                    menuToggle.focus();
-                }
-            });
-        }
-
         const scrollBtn = document.getElementById('scrollTop');
         const headerEl = document.querySelector('header');
         const headerTop = 0;

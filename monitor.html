@@ -308,18 +308,22 @@
         /* Secondary subnav */
         .subnav {
             display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            justify-content: flex-end; /* right align */
+            gap: 10px;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
             margin-bottom: 16px;
         }
         .subnav a {
             color: var(--text);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
-            padding: 8px 14px;
-            border-radius: 999px;
+            font-size: 0.9rem;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
             background: rgba(26, 26, 26, 0.04);
             border: 1px solid rgba(26, 26, 26, 0.12);
             transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
@@ -332,7 +336,7 @@
 
         @media (max-width: 640px) {
             .subnav {
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 justify-content: center;
                 gap: 8px;
                 margin-bottom: 12px;
@@ -340,19 +344,22 @@
 
             .subnav a {
                 font-size: 0.85rem;
-                padding: 6px 10px;
+                width: 40px;
+                height: 40px;
             }
         }
 
         @media (max-width: 480px) {
             .subnav {
-                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
                 gap: 6px;
             }
 
             .subnav a {
-                width: 100%;
-                text-align: center;
+                width: 36px;
+                height: 36px;
+                font-size: 0.75rem;
             }
         }
 
@@ -866,9 +873,9 @@
     <header>
         <div class="container">
             <div class="subnav" aria-label="Secondaria">
-                <a href="/">Home</a>
-                <a href="sviluppo.html">Sviluppo</a>
-                <a href="#">PA</a>
+                <a href="/">Hom</a>
+                <a href="sviluppo.html">Dev</a>
+                <a href="#">Pa</a>
             </div>
             <nav>
                 <a href="index.html" class="logo"><img src="logo.png" alt="LyberCode" style="height: 48px; width: auto;"><span>LyberCode</span></a>
@@ -1204,36 +1211,6 @@
     </footer>
     <button id="scrollTop" aria-label="Torna all'inizio" title="Torna su">↑</button>
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('nav');
-        const menuLinks = document.querySelectorAll('.menu a');
-
-        if (menuToggle && nav) {
-            menuToggle.addEventListener('click', () => {
-                const isOpen = nav.classList.toggle('menu-open');
-                menuToggle.setAttribute('aria-expanded', String(isOpen));
-                menuToggle.setAttribute('aria-label', isOpen ? 'Chiudi il menu' : 'Apri il menu');
-            });
-
-            menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (nav.classList.contains('menu-open')) {
-                        nav.classList.remove('menu-open');
-                        menuToggle.setAttribute('aria-expanded', 'false');
-                        menuToggle.setAttribute('aria-label', 'Apri il menu');
-                    }
-                });
-            });
-
-            document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && nav.classList.contains('menu-open')) {
-                    nav.classList.remove('menu-open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    menuToggle.setAttribute('aria-label', 'Apri il menu');
-                    menuToggle.focus();
-                }
-            });
-        }
         // Scroll-to-top minimal logic
         const scrollBtn = document.getElementById('scrollTop');
         const headerEl = document.querySelector('header');
