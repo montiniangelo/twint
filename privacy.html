@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | LyberCode</title>
+    <meta name="description" content="Informativa sulla privacy e il trattamento dei dati personali di LyberCode. Scopri come proteggiamo i tuoi dati secondo GDPR e normative italiane.">
+    <meta name="keywords" content="privacy policy, GDPR, protezione dati, LyberCode">
+    <meta name="author" content="LyberCode di Angelo Montini">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LyberCode">
+    <meta property="og:title" content="Privacy Policy | LyberCode">
+    <meta property="og:description" content="Informativa sulla privacy e trattamento dati personali secondo GDPR">
+    <meta property="og:url" content="https://lybercode.com/privacy.html">
+    <meta property="og:image" content="https://lybercode.com/y.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | LyberCode">
+    <meta name="twitter:description" content="Informativa sulla privacy e protezione dati personali">
+    <meta name="twitter:image" content="https://lybercode.com/y.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='52'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+
+    <style>
+        :root {
+            --primary: #f5f7fa;
+            --secondary: #23a5b1;
+            --accent: #ffffff;
+            --text: #1a1a1a;
+            --muted: #4a4a4a;
+            --surface: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        nav .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+
+        nav .logo span {
+            line-height: 1;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(26, 26, 26, 0.3);
+            border-radius: 999px;
+            background: rgba(26, 26, 26, 0.06);
+            color: var(--text);
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav .menu a:hover {
+            opacity: 0.8;
+        }
+
+        .subnav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            margin-bottom: 16px;
+        }
+
+        .subnav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            width: auto;
+            height: 44px;
+            padding: 0 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background: rgba(26, 26, 26, 0.04);
+            border: 1px solid rgba(26, 26, 26, 0.12);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .subnav a:hover {
+            background: rgba(26, 26, 26, 0.08);
+            border-color: rgba(26, 26, 26, 0.25);
+            transform: translateY(-1px);
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.08), rgba(255, 255, 255, 0.95));
+            color: var(--text);
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(35, 165, 177, 0.05));
+            z-index: 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2em;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--muted);
+            max-width: 700px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            line-height: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            line-height: 1.2em;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            margin: 20px 0 10px;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--muted);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: var(--muted);
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .card {
+            background: rgba(245, 247, 250, 0.8);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(35, 165, 177, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 30px;
+            border-radius: 32px;
+            border: 2px solid transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(35, 165, 177, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(35, 165, 177, 0.25);
+        }
+
+        .content-section {
+            background: #ffffff;
+        }
+
+        .content-section:nth-child(even) {
+            background: rgba(245, 247, 250, 0.5);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+
+        th {
+            background: rgba(35, 165, 177, 0.1);
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text);
+            border-bottom: 2px solid rgba(35, 165, 177, 0.3);
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(35, 165, 177, 0.1);
+            color: var(--muted);
+        }
+
+        tr:hover {
+            background: rgba(245, 247, 250, 0.8);
+        }
+
+        footer {
+            background: #f5f7fa;
+            padding: 50px 0;
+            color: var(--muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto 30px;
+        }
+
+        footer h4 {
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        .legal {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: rgba(74, 74, 74, 0.7);
+            line-height: 1.5;
+        }
+
+        .legal strong {
+            color: var(--text);
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .bottom {
+            margin-top: 5em;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(74, 74, 74, 0.4);
+        }
+
+        .toc {
+            background: rgba(245, 247, 250, 0.8);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 12px;
+        }
+
+        .toc a {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        @media (max-width: 720px) {
+            nav {
+                gap: 14px;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+
+            nav .menu {
+                position: absolute;
+                top: calc(100% + 14px);
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+                padding: 22px;
+                background: rgba(255, 255, 255, 0.96);
+                border: 1px solid rgba(26, 26, 26, 0.08);
+                border-radius: 18px;
+                min-width: 220px;
+                box-shadow: 0 22px 45px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-12px);
+                pointer-events: none;
+                transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+            }
+
+            nav .menu li {
+                margin: 0;
+            }
+
+            nav .menu a {
+                font-size: 0.95rem;
+                opacity: 0.9;
+            }
+
+            nav.menu-open .menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            nav.menu-open .menu-toggle {
+                border-color: rgba(35, 165, 177, 0.6);
+                background: rgba(35, 165, 177, 0.12);
+            }
+
+            nav.menu-open .menu-toggle span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            nav.menu-open .menu-toggle span:nth-child(2) {
+                opacity: 0;
+            }
+
+            nav.menu-open .menu-toggle span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .subnav {
+                flex-wrap: nowrap;
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 12px;
+            }
+
+            .subnav a {
+                width: auto;
+                height: 36px;
+                font-size: 0.75rem;
+                padding: 0 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 40px 0 60px;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .toc {
+                padding: 20px;
+            }
+
+            .table-wrapper {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        #scrollTop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            border: 1px solid rgba(26, 26, 26, 0.3);
+            background: rgba(26, 26, 26, 0.08);
+            color: var(--secondary);
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            z-index: 999;
+        }
+
+        #scrollTop.show {
+            display: inline-flex;
+            opacity: 1;
+        }
+
+        #scrollTop:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="subnav" aria-label="Secondaria">
+                <a href="index.html">Home</a>
+                <a href="sviluppo.html">Sviluppo</a>
+                <a href="monitor.html">PA</a>
+            </div>
+            <nav>
+                <a href="index.html" class="logo"><img src="logo.png" alt="LyberCode" style="height: 48px; width: auto;"><span>LyberCode</span></a>
+                <button class="menu-toggle" aria-expanded="false" aria-label="Apri il menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#metodo">Metodo</a></li>
+                    <li><a href="index.html#competenze">Competenze</a></li>
+                    <li><a href="index.html#contatti">Contatti</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+            <h1>Privacy Policy</h1>
+            <p>Informativa sul trattamento dei dati personali secondo il GDPR e le normative italiane sulla privacy.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="toc">
+            <h3>Indice dei contenuti</h3>
+            <ul>
+                <li><a href="#titolare">Titolare del trattamento</a></li>
+                <li><a href="#dati-personali">Dati personali trattati</a></li>
+                <li><a href="#base-giuridica">Base giuridica del trattamento</a></li>
+                <li><a href="#finalita">Finalità del trattamento</a></li>
+                <li><a href="#destinatari">Destinatari dei dati</a></li>
+                <li><a href="#conservazione">Periodo di conservazione</a></li>
+                <li><a href="#diritti">Diritti dell'interessato</a></li>
+                <li><a href="#cookie">Cookie e tecnologie di tracciamento</a></li>
+                <li><a href="#sicurezza">Sicurezza dei dati</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="titolare" class="content-section">
+        <div class="container">
+            <h2>1. Titolare del Trattamento</h2>
+            <p>Il titolare del trattamento dei dati personali è:</p>
+            <div class="card">
+                <strong>LyberCode</strong><br>
+                Ragione sociale: LyberCode di Angelo Montini<br>
+                Titolare: Angelo Montini<br>
+                Sede legale: Viale Europa 216, 04019 Terracina (LT), Italia<br>
+                Email: <a href="mailto:hello@lybercode.com">hello@lybercode.com</a><br>
+                Telefono: 0773 061194 / 339 2528986<br>
+                PEC: <a href="mailto:montini@peceasy.com">montini@peceasy.com</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="dati-personali" class="content-section">
+        <div class="container">
+            <h2>2. Dati Personali Trattati</h2>
+            <p>In base alle finalità di seguito indicate, LyberCode raccoglie e tratta i seguenti dati personali:</p>
+            
+            <h3>Dati forniti direttamente:</h3>
+            <ul>
+                <li>Dati di identificazione: nome, cognome, ragione sociale</li>
+                <li>Dati di contatto: indirizzo email, numero di telefono, indirizzo postale</li>
+                <li>Dati professionali: qualifica, settore di attività, azienda di appartenenza</li>
+                <li>Dati di comunicazione: messaggi e contenuti inviati tramite i nostri moduli di contatto</li>
+                <li>Dati di fatturazione: informazioni bancarie, fiscali e amministrative per l'emissione di fatture</li>
+            </ul>
+
+            <h3>Dati raccolti automaticamente:</h3>
+            <ul>
+                <li>Indirizzo IP</li>
+                <li>Dati di navigazione sul sito web</li>
+                <li>Tipo e versione del browser</li>
+                <li>Sistema operativo utilizzato</li>
+                <li>Pagine visitate e tempo di permanenza</li>
+                <li>Dati derivanti da cookie e tecnologie simili</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="base-giuridica" class="content-section">
+        <div class="container">
+            <h2>3. Base Giuridica del Trattamento</h2>
+            <p>Il trattamento dei dati personali è effettuato sulla base delle seguenti basi giuridiche:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Finalità</th>
+                        <th>Base Giuridica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gestione delle richieste di contatto e preventivi</td>
+                        <td>Art. 6, par. 1, lett. b) GDPR (esecuzione di un contratto)</td>
+                    </tr>
+                    <tr>
+                        <td>Comunicazioni di marketing (se consenso fornito)</td>
+                        <td>Art. 6, par. 1, lett. a) GDPR (consenso)</td>
+                    </tr>
+                    <tr>
+                        <td>Adempimenti obblighi normativi e fiscali</td>
+                        <td>Art. 6, par. 1, lett. c) GDPR (obbligo legale)</td>
+                    </tr>
+                    <tr>
+                        <td>Protezione e sicurezza del sito</td>
+                        <td>Art. 6, par. 1, lett. f) GDPR (interesse legittimo)</td>
+                    </tr>
+                    <tr>
+                        <td>Analisi statistiche e miglioramento servizi</td>
+                        <td>Art. 6, par. 1, lett. f) GDPR (interesse legittimo)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="finalita" class="content-section">
+        <div class="container">
+            <h2>4. Finalità del Trattamento</h2>
+            <p>I dati personali sono trattati per le seguenti finalità:</p>
+            
+            <h3>Gestione delle richieste di contatto e commerciali</h3>
+            <p>Rispondere alle richieste di informazioni, fornire preventivi, gestire proposte commerciali e mantenere rapporti con i clienti potenziali e attuali.</p>
+
+            <h3>Esecuzione dei contratti</h3>
+            <p>Adempiere agli obblighi contrattuali per la fornitura dei servizi di consulenza informatica, emissione di fatture e gestione amministrativa.</p>
+
+            <h3>Adempimenti legali e fiscali</h3>
+            <p>Soddisfare gli obblighi previsti dalla normativa fiscale, contabile e amministrativa italiana.</p>
+
+            <h3>Comunicazioni di marketing</h3>
+            <p>Inviare newsletter, aggiornamenti sui servizi e comunicazioni promozionali, esclusivamente previo consenso esplicito.</p>
+
+            <h3>Miglioramento dei servizi</h3>
+            <p>Effettuare analisi statistiche, monitorare le prestazioni del sito web e raccogliere feedback per migliorare l'esperienza utente.</p>
+
+            <h3>Sicurezza e protezione</h3>
+            <p>Proteggere il sito web da accessi non autorizzati, attacchi informatici e frodi, prevenire abusi e garantire la sicurezza delle informazioni.</p>
+        </div>
+    </section>
+
+    <section id="destinatari" class="content-section">
+        <div class="container">
+            <h2>5. Destinatari dei Dati</h2>
+            <p>I dati personali possono essere condivisi con i seguenti destinatari:</p>
+            
+            <h3>Responsabili del trattamento</h3>
+            <ul>
+                <li>Provider di hosting e servizi cloud (Google Cloud Platform, AWS)</li>
+                <li>Fornitori di servizi email e comunicazione</li>
+                <li>Piattaforme di analisi web (Google Analytics)</li>
+                <li>Fornitori di servizi di pagamento e fatturazione</li>
+            </ul>
+
+            <h3>Autorità pubbliche</h3>
+            <p>I dati possono essere divulgati alle autorità competenti quando richiesto dalla legge, incluse autorità fiscali e di pubblica amministrazione.</p>
+
+            <h3>Terzi</h3>
+            <p>Salvo quanto disposto dalla normativa, i dati non saranno comunicati a terzi senza il consenso esplicito dell'interessato.</p>
+        </div>
+    </section>
+
+    <section id="conservazione" class="content-section">
+        <div class="container">
+            <h2>6. Periodo di Conservazione dei Dati</h2>
+            <p>I dati personali sono conservati per i seguenti periodi:</p>
+            
+            <div class="card">
+                <h4>Dati relativi a richieste di contatto</h4>
+                <p>Conservati fino al completamento della transazione commerciale o fino a 3 anni dall'ultima interazione, salvo consenso per finalità di marketing.</p>
+
+                <h4>Dati di fatturazione e amministrativi</h4>
+                <p>Conservati per il periodo previsto dalla normativa fiscale italiana (10 anni dalla conclusione del contratto).</p>
+
+                <h4>Dati di navigazione e cookie</h4>
+                <p>Conservati per il periodo specificato nella Cookie Policy o fino a revoca del consenso.</p>
+
+                <h4>Dati per comunicazioni di marketing</h4>
+                <p>Conservati fino a revoca del consenso o diniego della comunicazione.</p>
+
+                <h4>Dati di log e sicurezza</h4>
+                <p>Conservati per 30-90 giorni per finalità di sicurezza, successivamente cancellati.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="diritti" class="content-section">
+        <div class="container">
+            <h2>7. Diritti dell'Interessato</h2>
+            <p>Secondo le disposizioni del GDPR, ogni interessato ha i seguenti diritti:</p>
+            
+            <h3>Diritto di accesso (Art. 15 GDPR)</h3>
+            <p>Diritto di accedere ai dati personali che lo riguardano e ricevere informazioni sul loro trattamento.</p>
+
+            <h3>Diritto di rettifica (Art. 16 GDPR)</h3>
+            <p>Diritto di correggere dati personali inesatti o incompleti.</p>
+
+            <h3>Diritto alla cancellazione (Art. 17 GDPR)</h3>
+            <p>Diritto di richiedere la cancellazione dei dati personali, nei casi previsti dalla norma (diritto all'oblio).</p>
+
+            <h3>Diritto di limitazione (Art. 18 GDPR)</h3>
+            <p>Diritto di limitare il trattamento dei dati personali in determinate circostanze.</p>
+
+            <h3>Diritto alla portabilità (Art. 20 GDPR)</h3>
+            <p>Diritto di ricevere i propri dati in formato strutturato, comunemente usato e leggibile da un dispositivo, e diritto di trasmetterli a un altro titolare.</p>
+
+            <h3>Diritto di opposizione (Art. 21 GDPR)</h3>
+            <p>Diritto di opporsi al trattamento dei dati personali per finalità di marketing diretto e altre finalità.</p>
+
+            <h3>Diritti relativi al processo decisionale automatizzato (Art. 22 GDPR)</h3>
+            <p>Diritto di non essere sottoposto a decisioni basate unicamente sul trattamento automatizzato, compresa la profilazione.</p>
+
+            <h3>Come esercitare i diritti</h3>
+            <p>Per esercitare uno qualsiasi di questi diritti, contattare il titolare all'indirizzo email: <a href="mailto:hello@lybercode.com">hello@lybercode.com</a> o tramite raccomandata A/R all'indirizzo: Viale Europa 216, 04019 Terracina (LT).</p>
+        </div>
+    </section>
+
+    <section id="cookie" class="content-section">
+        <div class="container">
+            <h2>8. Cookie e Tecnologie di Tracciamento</h2>
+            <p>LyberCode utilizza cookie e altre tecnologie di tracciamento per migliorare l'esperienza utente e analizzare il comportamento dei visitatori.</p>
+            
+            <h3>Tipologie di cookie utilizzati:</h3>
+            
+            <div class="card">
+                <h4>Cookie tecnici</h4>
+                <p>Necessari per il funzionamento del sito web, non richiedono consenso. Includono cookie di sessione e preferenze di navigazione.</p>
+
+                <h4>Cookie analitici</h4>
+                <p>Utilizzati per analizzare le modalità di utilizzo del sito. Richiedono consenso esplicito e vengono utilizzati servizi come Google Analytics.</p>
+
+                <h4>Cookie di marketing</h4>
+                <p>Utilizzati per monitorare le campagne pubblicitarie e i comportamenti di acquisto. Richiedono consenso esplicito.</p>
+            </div>
+
+            <h3>Gestione dei cookie</h3>
+            <p>L'utente può gestire le preferenze relative ai cookie attraverso le impostazioni del browser. Per ulteriori informazioni consultare la Cookie Policy.</p>
+        </div>
+    </section>
+
+    <section id="sicurezza" class="content-section">
+        <div class="container">
+            <h2>9. Sicurezza dei Dati</h2>
+            <p>LyberCode adotta misure tecniche e organizzative appropriate per proteggere i dati personali da accessi non autorizzati, alterazioni, distruzioni e altre violazioni.</p>
+            
+            <div class="card">
+                <h4>Misure di sicurezza implementate:</h4>
+                <ul>
+                    <li>Crittografia dei dati in transito (HTTPS/TLS)</li>
+                    <li>Firewall e sistemi di protezione delle reti</li>
+                    <li>Controllo degli accessi mediante autenticazione</li>
+                    <li>Backup regolari dei dati</li>
+                    <li>Monitoraggio costante dei sistemi</li>
+                    <li>Formazione del personale sulla sicurezza dei dati</li>
+                    <li>Accordi di riservatezza con i collaboratori e i partner</li>
+                </ul>
+            </div>
+
+            <p>Tuttavia, nessun sistema di sicurezza è completamente impermeabile. LyberCode non può garantire la sicurezza assoluta dei dati trasmessi via internet, anche se adotta tutte le misure ragionevoli per proteggerli.</p>
+        </div>
+    </section>
+
+    <section id="contatti" class="content-section">
+        <div class="container">
+            <h2>10. Contatti e Reclami</h2>
+            <p>Per qualsiasi domanda relativa a questa Privacy Policy, per esercitare i diritti previsti dal GDPR, o per segnalare violazioni del trattamento dei dati:</p>
+            
+            <div class="card">
+                <h4>Contatti del Titolare</h4>
+                <strong>LyberCode</strong><br>
+                Email: <a href="mailto:hello@lybercode.com">hello@lybercode.com</a><br>
+                Telefono: 0773 061194 / 339 2528986<br>
+                Indirizzo: Viale Europa 216, 04019 Terracina (LT), Italia<br>
+                PEC: <a href="mailto:montini@peceasy.com">montini@peceasy.com</a>
+            </div>
+
+            <h3>Diritto di reclamo</h3>
+            <p>L'interessato ha il diritto di presentare reclamo all'autorità di controllo competente, ovvero al Garante per la protezione dei dati personali (Autorità Garante della Privacy):</p>
+            
+            <div class="card">
+                <strong>Garante per la Protezione dei Dati Personali</strong><br>
+                Piazza di Monte Citorio, 121 - 00186 Roma<br>
+                Telefono: 06 69677 1<br>
+                Email: <a href="mailto:protocollo@gpdp.it">protocollo@gpdp.it</a><br>
+                Sito web: <a href="https://www.garanteprivacy.it/" target="_blank">www.garanteprivacy.it</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="modifiche" class="content-section">
+        <div class="container">
+            <h2>11. Modifiche a questa Privacy Policy</h2>
+            <p>LyberCode si riserva il diritto di modificare questa Privacy Policy in qualsiasi momento. Le modifiche saranno comunicate agli interessati e avranno effetto dal momento della pubblicazione sul sito web. Si consiglia di consultare periodicamente questa pagina per rimanere informati delle eventuali variazioni.</p>
+            
+            <p><strong>Data di ultimo aggiornamento: Dicembre 2024</strong></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>Azienda</h4>
+                <a href="index.html">Home</a>
+                <a href="sviluppo.html">Sviluppo</a>
+                <a href="monitor.html">PA</a>
+                <a href="news.html">News</a>
+            </div>
+            <div>
+                <h4>Servizi</h4>
+                <a href="index.html#metodo">Metodo</a>
+                <a href="index.html#competenze">Competenze</a>
+                <a href="index.html#ambiti">Ambiti</a>
+                <a href="index.html#servizi">Servizi</a>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+            </div>
+            <div>
+                <h4>Contatti</h4>
+                <a href="mailto:hello@lybercode.com">hello@lybercode.com</a>
+                <a href="tel:+390773061194">0773 061194</a>
+                <a href="tel:+393392528986">339 2528986</a>
+            </div>
+        </div>
+
+      
+
+        <div class="bottom">
+         © 2025 LyberCode di Angelo Montini. <span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. <a href="privacy.html">Policy Privacy. </a> Tutti i diritti riservati
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Torna in alto">↑</button>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('menu-open');
+            menuToggle.setAttribute('aria-expanded', nav.classList.contains('menu-open'));
+        });
+
+        document.querySelectorAll('nav a:not(.menu-toggle)').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
