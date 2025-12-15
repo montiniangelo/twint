@@ -531,6 +531,90 @@
             color: var(--secondary);
         }
 
+        .price-section {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(35, 165, 177, 0.2);
+        }
+
+        .price-display {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .price-currency {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .price-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: rgba(74, 74, 74, 0.7);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .payment-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .payment-btn-klarna {
+            background: #003366;
+            color: #ffffff;
+            border-color: #003366;
+        }
+
+        .payment-btn-klarna:hover {
+            background: #005588;
+            border-color: #005588;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 51, 102, 0.3);
+        }
+
+        .payment-btn-paypal {
+            background: #0070ba;
+            color: #ffffff;
+            border-color: #0070ba;
+        }
+
+        .payment-btn-paypal:hover {
+            background: #005a94;
+            border-color: #005a94;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 112, 186, 0.3);
+        }
+
+        .payment-icon {
+            font-size: 1.2rem;
+        }
+
         .comparison-section {
             margin-top: 80px;
             padding: 40px;
@@ -929,6 +1013,14 @@
                             <li>Siti istituzionali PA</li>
                         </ul>
                     </div>
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">500</span>
+                        </div>
+                        <p class="price-note">EIncluso hosting primo anno. Pagamento rateale disponibile.</p>
+                        
+                    </div>
                 </div>
 
                 <div class="solution-card">
@@ -952,6 +1044,14 @@
                             <li>Piattaforme collaborative</li>
                             <li>Esperienze utente complesse</li>
                         </ul>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">875</span>
+                        </div>
+                        <p class="price-note">EIncluso hosting primo anno. Pagamento rateale disponibile.</p>
+                        
                     </div>
                 </div>
 
@@ -977,6 +1077,14 @@
                             <li>Piattaforme multi-canale</li>
                         </ul>
                     </div>
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">700</span>
+                        </div>
+                        <p class="price-note">EIncluso hosting primo anno. Pagamento rateale disponibile.</p>
+                        
+                    </div>
                 </div>
 
                 <div class="solution-card">
@@ -1000,6 +1108,14 @@
                             <li>Portali di news</li>
                             <li>Siti con ampio archivio</li>
                         </ul>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">625</span>
+                        </div>
+                        <p class="price-note">EIncluso hosting primo anno. Pagamento rateale disponibile.</p>
+                        
                     </div>
                 </div>
 
@@ -1025,6 +1141,14 @@
                             <li>Documenti interattivi</li>
                         </ul>
                     </div>
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">300</span>
+                        </div>
+                        <p class="price-note">EIncluso hosting primo anno. Pagamento rateale disponibile.</p>
+                        
+                    </div>
                 </div>
 
                 <div class="solution-card">
@@ -1048,6 +1172,14 @@
                             <li>Applicazioni real-time</li>
                             <li>Soluzioni cross-platform</li>
                         </ul>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">1.125</span>
+                        </div>
+                        <p class="price-note">EIncluso hosting primo anno. Pagamento rateale disponibile.</p>
+                        
                     </div>
                 </div>
 
@@ -1073,6 +1205,14 @@
                             <li>Siti performance-critical</li>
                         </ul>
                     </div>
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">800</span>
+                        </div>
+                        <p class="price-note">EIncluso hosting primo anno. Pagamento rateale disponibile.</p>
+                        
+                    </div>
                 </div>
 
                 <div class="solution-card">
@@ -1096,6 +1236,14 @@
                             <li>Applicazioni omnichannel</li>
                             <li>API-driven projects</li>
                         </ul>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-display">
+                            <span class="price-currency">€</span>
+                            <span class="price-amount">800</span>
+                        </div>
+                        <p class="price-note">EIncluso hosting primo anno. Pagamento rateale disponibile.</p>
+                        
                     </div>
                 </div>
             </div>
