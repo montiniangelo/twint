@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopri la Tua Soluzione Web | LyberCode</title>
+    <link rel="icon" type="image/svg+xml" href="faviconz.png">
+    <meta name="description" content="Rispondi a poche domande e scopri la soluzione web perfetta per il tuo progetto">
+    <meta name="keywords" content="quiz web, soluzioni web, consulenza tech">
+    <meta name="author" content="LyberCode di Angelo Montini">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f5f7fa;
+            --secondary: #23a5b1;
+            --accent: #ffffff;
+            --text: #1a1a1a;
+            --muted: #4a4a4a;
+            --dark: #101e2e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8f4f7 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        nav .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 35px;
+            width: auto;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .quiz-container {
+            background: var(--accent);
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(35, 165, 177, 0.15);
+            animation: slideUp 0.6s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .quiz-step {
+            display: none;
+        }
+
+        .quiz-step.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(35, 165, 177, 0.1);
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .question {
+            margin-bottom: 30px;
+        }
+
+        .question h2 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .option {
+            padding: 16px;
+            border: 2px solid rgba(35, 165, 177, 0.2);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(245, 247, 250, 0.5);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .option:hover {
+            border-color: var(--secondary);
+            background: rgba(35, 165, 177, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .option.selected {
+            border-color: var(--secondary);
+            background: rgba(35, 165, 177, 0.15);
+            color: var(--secondary);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: flex-end;
+        }
+
+        button {
+            padding: 12px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 8px 20px rgba(35, 165, 177, 0.3);
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #1a8f9f;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(35, 165, 177, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: rgba(35, 165, 177, 0.1);
+            color: var(--secondary);
+            border: 1px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(35, 165, 177, 0.15);
+        }
+
+        .result-container {
+            display: none;
+        }
+
+        .result-container.active {
+            display: block;
+            animation: slideUp 0.6s ease;
+        }
+
+        .result-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .result-header h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .result-content {
+            background: rgba(35, 165, 177, 0.05);
+            border-left: 4px solid var(--secondary);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .solution-card {
+            background: rgba(245, 247, 250, 0.8);
+            border: 2px solid var(--secondary);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .solution-card h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .solution-card .description {
+            color: var(--muted);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .solution-badge {
+            display: inline-block;
+            background: rgba(35, 165, 177, 0.15);
+            color: var(--secondary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: rgba(35, 165, 177, 0.1);
+            color: var(--muted);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(35, 165, 177, 0.15);
+        }
+
+        .price-display {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 28px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            background: #1a8f9f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(35, 165, 177, 0.3);
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .result-actions a, .result-actions button {
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .result-actions .btn-primary {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 8px 20px rgba(35, 165, 177, 0.3);
+        }
+
+        .result-actions .btn-secondary {
+            background: rgba(35, 165, 177, 0.1);
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(35, 165, 177, 0.2);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 30px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .options {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .result-actions {
+                flex-direction: column;
+            }
+
+            .result-actions a, .result-actions button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="LyberCode">
+                <span>LyberCode</span>
+            </a>
+        </nav>
+
+        <header>
+            <h1>Scopri la Tua Soluzione Web Perfetta 🚀</h1>
+            <p>Rispondi a poche domande sui tuoi bisogni e scopri quale stack tecnologico è più adatto al tuo progetto</p>
+        </header>
+
+        <div class="quiz-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <!-- Domanda 1 -->
+            <div class="quiz-step active" data-step="1">
+                <div class="question">
+                    <h2>Che tipo di progetto stai realizzando?</h2>
+                    <div class="options" id="options1">
+                        <div class="option" data-value="sito-aziendale">Sito Aziendale / Portfolio</div>
+                        <div class="option" data-value="e-commerce">E-Commerce</div>
+                        <div class="option" data-value="landing-page">Landing Page</div>
+                        <div class="option" data-value="web-app">Web App Interattiva</div>
+                        <div class="option" data-value="app-mobile">App Mobile (iOS/Android)</div>
+                        <div class="option" data-value="blog">Blog / Portale Contenuti</div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn-primary" id="next1" disabled>Continua →</button>
+                </div>
+            </div>
+
+            <!-- Domanda 2 -->
+            <div class="quiz-step" data-step="2">
+                <div class="question">
+                    <h2>Quanti contenuti dovrai gestire?</h2>
+                    <div class="options" id="options2">
+                        <div class="option" data-value="staticico">Pochi / Quasi nessuno (statico)</div>
+                        <div class="option" data-value="moderato">Moderato (50-500 pagine)</div>
+                        <div class="option" data-value="grande">Grande (1000+ pagine/articoli)</div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn-secondary" onclick="previousStep()">← Indietro</button>
+                    <button class="btn-primary" id="next2" disabled>Continua →</button>
+                </div>
+            </div>
+
+            <!-- Domanda 3 -->
+            <div class="quiz-step" data-step="3">
+                <div class="question">
+                    <h2>Hai bisogno di una dashboard per gestire i contenuti?</h2>
+                    <div class="options" id="options3">
+                        <div class="option" data-value="no">No, nessuna dashboard</div>
+                        <div class="option" data-value="semplice">Sì, semplice ma intuitiva</div>
+                        <div class="option" data-value="complessa">Sì, complessa con tante funzioni</div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn-secondary" onclick="previousStep()">← Indietro</button>
+                    <button class="btn-primary" id="next3" disabled>Continua →</button>
+                </div>
+            </div>
+
+            <!-- Domanda 4 -->
+            <div class="quiz-step" data-step="4">
+                <div class="question">
+                    <h2>Qual è la tua priorità principale?</h2>
+                    <div class="options" id="options4">
+                        <div class="option" data-value="velocita">Velocità di implementazione</div>
+                        <div class="option" data-value="budget">Budget limitato</div>
+                        <div class="option" data-value="performance">Performance e scalabilità</div>
+                        <div class="option" data-value="flessibilita">Massima flessibilità</div>
+                        <div class="option" data-value="seo">SEO ottimizzato</div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn-secondary" onclick="previousStep()">← Indietro</button>
+                    <button class="btn-primary" id="next4" disabled>Continua →</button>
+                </div>
+            </div>
+
+            <!-- Domanda 5 -->
+            <div class="quiz-step" data-step="5">
+                <div class="question">
+                    <h2>Ti serve interattività e aggiornamenti in tempo reale?</h2>
+                    <div class="options" id="options5">
+                        <div class="option" data-value="no">No, minima interattività</div>
+                        <div class="option" data-value="sì">Sì, moderata</div>
+                        <div class="option" data-value="molto">Sì, molto (real-time, dashboards)</div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn-secondary" onclick="previousStep()">← Indietro</button>
+                    <button class="btn-primary" id="next5" disabled>Scopri la Soluzione →</button>
+                </div>
+            </div>
+
+            <!-- Risultati -->
+            <div class="result-container" id="resultContainer">
+                <div class="result-header">
+                    <h2 id="resultTitle">La tua soluzione ideale</h2>
+                    <p id="resultSubtitle">Perfetta per le tue esigenze</p>
+                </div>
+                <div class="result-content" id="resultContent"></div>
+                <div class="result-actions">
+                    <a href="soluzioni-web.html" class="btn-primary">Vedi Tutte le Soluzioni</a>
+                    <button class="btn-secondary" onclick="restartQuiz()">Ricomincia Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Domande? Contattaci per una consulenza gratuita • <a href="mailto:hello@lybercode.com">hello@lybercode.com</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const solutions = {
+            'html': {
+                title: 'HTML/CSS/JS Senza Dashboard',
+                badge: 'Semplice e Leggero',
+                description: 'La soluzione più leggera e veloce: perfetta per landing page, portfolio e siti statici. Massima velocità, nessun overhead, hosting economicissimo.',
+                tech: ['HTML5', 'CSS3', 'JavaScript Vanilla', 'Static Hosting'],
+                price: '300€',
+                reason: 'Ideale per progetti semplici con pochi contenuti e nessuna necessità di gestione dinamica'
+            },
+            'processwire': {
+                title: 'ProcessWire',
+                badge: 'CMS Completo',
+                description: 'CMS headless flessibile con dashboard intuitiva. Perfetto per gestire contenuti complessi senza limitazioni e con massima personalizzazione.',
+                tech: ['ProcessWire', 'PHP', 'MySQL', 'HTML/CSS/JS'],
+                price: '500€',
+                reason: 'Offre il miglior equilibrio tra semplicità, flessibilità e potenza per siti aziendali con contenuti moderati'
+            },
+            'processwire-react': {
+                title: 'ProcessWire API + React App',
+                badge: 'CMS + Frontend Moderno',
+                description: 'Backend ProcessWire flessibile con frontend React reattivo. Ideale per interfacce utente complesse e web app interattive con dashboard.',
+                tech: ['ProcessWire API', 'React', 'TypeScript', 'Node.js'],
+                price: '875€',
+                reason: 'Combina la flessibilità del backend con la potenza di un frontend moderno per esperienze utente eccezionali'
+            },
+            'payload': {
+                title: 'Payload CMS',
+                badge: 'CMS Moderno',
+                description: 'CMS headless basato su TypeScript con REST API integrata e admin panel moderna. Performance elevate e perfetto per startup e MVP.',
+                tech: ['Payload CMS', 'TypeScript', 'Node.js', 'MongoDB/PostgreSQL'],
+                price: '700€',
+                reason: 'CMS moderno e veloce da implementare, ideale per progetti che richiedono flessibilità e performance'
+            },
+            'wordpress-react': {
+                title: 'WordPress API + React App',
+                badge: 'CMS Diffuso + Frontend Moderno',
+                description: 'WordPress come backend per contenuti con React frontend. Combina l\'ecosistema WordPress con le prestazioni di React.',
+                tech: ['WordPress REST API', 'React', 'Next.js', 'TypeScript'],
+                price: '625€',
+                reason: 'Perfetto se vuoi sfruttare l\'ampio ecosistema WordPress mantenendo un frontend moderno e performante'
+            },
+            'flutter-firebase': {
+                title: 'Flutter App + Firebase',
+                badge: 'Mobile-First + Backend Scalabile',
+                description: 'App mobile native per iOS e Android con backend serverless su Firebase. Sincronizzazione real-time e scalabilità automatica.',
+                tech: ['Flutter', 'Firebase', 'Dart', 'Cloud Functions'],
+                price: '1.125€',
+                reason: 'La soluzione migliore per app mobile native con real-time data synchronization e scalabilità infinita'
+            },
+            'nextjs': {
+                title: 'Next.js + API Backend',
+                badge: 'Next Generation Frontend',
+                description: 'Framework React moderno con SSR, SSG e API routes integrati. Performance superiori, SEO ottimizzato e developer experience eccellente.',
+                tech: ['Next.js', 'React', 'TypeScript', 'API Backend'],
+                price: '825€',
+                reason: 'La scelta per web app moderne che richiedono SEO perfetto, performance elevate e scalabilità'
+            }
+        };
+
+        let answers = {};
+        let currentStep = 1;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setupOptions();
+        });
+
+        function setupOptions() {
+            for (let i = 1; i <= 5; i++) {
+                const optionsContainer = document.getElementById(`options${i}`);
+                const options = optionsContainer.querySelectorAll('.option');
+                
+                options.forEach(option => {
+                    option.addEventListener('click', function() {
+                        options.forEach(opt => opt.classList.remove('selected'));
+                        this.classList.add('selected');
+                        answers[`q${i}`] = this.dataset.value;
+                        document.getElementById(`next${i}`).disabled = false;
+                    });
+                });
+            }
+
+            for (let i = 1; i <= 5; i++) {
+                const nextBtn = document.getElementById(`next${i}`);
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', nextStep);
+                }
+            }
+        }
+
+        function nextStep() {
+            if (currentStep < 5) {
+                document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.remove('active');
+                currentStep++;
+                document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.add('active');
+                updateProgress();
+            } else if (currentStep === 5) {
+                showResults();
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.remove('active');
+                currentStep--;
+                document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.add('active');
+                updateProgress();
+            }
+        }
+
+        function updateProgress() {
+            const progress = (currentStep / 5) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function showResults() {
+            const solution = calculateBestSolution();
+            displaySolution(solution);
+            document.querySelector(`.quiz-step[data-step="5"]`).classList.remove('active');
+            document.getElementById('resultContainer').classList.add('active');
+        }
+
+        function calculateBestSolution() {
+            const q1 = answers.q1;
+            const q2 = answers.q2;
+            const q3 = answers.q3;
+            const q4 = answers.q4;
+            const q5 = answers.q5;
+
+            if (q1 === 'app-mobile') {
+                return 'flutter-firebase';
+            }
+
+            if (q1 === 'landing-page' && q2 === 'staticico') {
+                return 'html';
+            }
+
+            if (q1 === 'web-app' || q5 === 'molto') {
+                if (q4 === 'seo' || q4 === 'performance') {
+                    return 'nextjs';
+                }
+                return 'processwire-react';
+            }
+
+            if (q1 === 'blog' || q1 === 'e-commerce') {
+                if (q4 === 'velocita' || q4 === 'budget') {
+                    return 'wordpress-react';
+                }
+                if (q4 === 'flessibilita') {
+                    return 'processwire-react';
+                }
+                return 'payload';
+            }
+
+            if (q3 === 'no') {
+                return 'html';
+            }
+
+            if (q4 === 'budget') {
+                return 'processwire';
+            }
+
+            if (q4 === 'flessibilita') {
+                return 'processwire';
+            }
+
+            if (q4 === 'seo' || q4 === 'performance') {
+                return 'nextjs';
+            }
+
+            if (q3 === 'complessa') {
+                return 'processwire-react';
+            }
+
+            return 'processwire';
+        }
+
+        function displaySolution(solutionKey) {
+            const solution = solutions[solutionKey];
+            
+            document.getElementById('resultTitle').textContent = solution.title;
+            document.getElementById('resultSubtitle').textContent = solution.reason;
+
+            let html = `
+                <div class="solution-card">
+                    <span class="solution-badge">${solution.badge}</span>
+                    <h3>${solution.title}</h3>
+                    <p class="description">${solution.description}</p>
+                    
+                    <div>
+                        <h4 style="color: var(--secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; margin-top: 20px;">Stack Tecnologico</h4>
+                        <div class="tech-list">
+                            ${solution.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="price-display">
+                        <span>€ ${solution.price}</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--muted); font-style: italic;">Incluso hosting primo anno</p>
+                </div>
+            `;
+
+            document.getElementById('resultContent').innerHTML = html;
+        }
+
+        function restartQuiz() {
+            answers = {};
+            currentStep = 1;
+            
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            document.querySelectorAll('button[id^="next"]').forEach(btn => btn.disabled = true);
+            
+            document.getElementById('resultContainer').classList.remove('active');
+            document.querySelector(`.quiz-step[data-step="1"]`).classList.add('active');
+            
+            updateProgress();
+        }
+    </script>
+</body>
+</html>
