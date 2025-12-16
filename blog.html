@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - LyberCode | Articoli e Approfondimenti</title> <link rel="icon" type="image/svg+xml" href="../faviconz.png"> 
+    <title>Blog - LyberCode | Articoli e Approfondimenti</title>
+    <link rel="icon" type="image/svg+xml" href="../faviconz.png">
     <meta name="description" content="Leggi gli articoli del blog di LyberCode: approfondimenti su trasformazione digitale, innovazione tecnologica e soluzioni IT.">
     <meta name="keywords" content="blog, articoli, approfondimenti, trasformazione digitale, innovazione tecnologica, consulenza IT">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="faviconz.png">
 
     <script type="application/ld+json">
     {
@@ -794,18 +794,14 @@
         </div>
     </header>
 
-    <div class="quiz-banner">
-        <h3>🎯 Scopri la Soluzione Web Perfetta per Te!</h3>
-        <p>Rispondi a 5 semplici domande e trova lo stack tecnologico ideale per il tuo progetto</p>
-        <a href="./bisogno.html">Inizia il Test →</a>
-    </div>
+   
 
     <section class="blog-section">
         <div class="container">
             <div class="blog-intro">
                 <h2>Ultimi Articoli e Approfondimenti sulla Trasformazione Digitale</h2>
                 <p>Benvenuto nel blog di LyberCode, il tuo punto di riferimento per approfondimenti su innovazione tecnologica, trasformazione digitale e soluzioni IT avanzate. I nostri articoli esplorano le ultime tendenze nel cloud computing, intelligenza artificiale, cybersecurity e automazione, fornendo insights pratici per le imprese e la Pubblica Amministrazione.</p>
-                
+
                 <div class="blog-info-grid">
                     <div class="info-card">
                         <h3>Innovazione Tecnologica</h3>
@@ -833,7 +829,7 @@
             <div class="blog-categories-section">
                 <h2>Categorie di Articoli e Approfondimenti</h2>
                 <p>Scopri i principali argomenti affrontati nel blog di LyberCode, suddivisi per categoria tematica. Naviga tra gli articoli per trovare soluzioni, case study e best practices relative ai tuoi interessi di trasformazione digitale.</p>
-                
+
                 <div class="category-cards">
                     <div class="category-card">
                         <h3>Cloud Computing e Architetture Moderne</h3>
@@ -868,7 +864,11 @@
             </div>
         </div>
     </section>
-
+ <div class="quiz-banner">
+        <h3>🎯 Scopri la Soluzione Web Perfetta per Te!</h3>
+        <p>Rispondi a 5 semplici domande e trova lo stack tecnologico ideale per il tuo progetto</p>
+        <a href="./bisogno.html">Inizia il Test →</a>
+    </div>
     <footer>
         <div class="container">
             <div>
@@ -1101,7 +1101,7 @@
             container.innerHTML = '';
             const startIndex = (page - 1) * postsPerPage;
             const endIndex = Math.min(startIndex + postsPerPage, posts.length);
-            
+
             for (let i = startIndex; i < endIndex; i++) {
                 const post = posts[i];
                 const card = document.createElement('a');
@@ -1116,14 +1116,14 @@
                 `;
                 container.appendChild(card);
             }
-            
+
             window.scrollTo({ top: container.offsetTop - 100, behavior: 'smooth' });
         }
 
         function renderPagination() {
             paginationDiv.innerHTML = '';
             const totalPages = Math.ceil(posts.length / postsPerPage);
-            
+
             // Previous button
             const prevBtn = document.createElement('button');
             prevBtn.innerHTML = '← Precedente';
@@ -1136,7 +1136,7 @@
                 }
             });
             paginationDiv.appendChild(prevBtn);
-            
+
             // Page numbers
             for (let i = 1; i <= totalPages; i++) {
                 const btn = document.createElement('button');
@@ -1151,7 +1151,7 @@
                 });
                 paginationDiv.appendChild(btn);
             }
-            
+
             // Next button
             const nextBtn = document.createElement('button');
             nextBtn.innerHTML = 'Successivo →';
@@ -1196,7 +1196,7 @@
         menuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             nav.classList.toggle('menu-open');
-            menuToggle.setAttribute('aria-expanded', 
+            menuToggle.setAttribute('aria-expanded',
                 menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
             );
         });

@@ -417,7 +417,7 @@
             }
         }
     </style>
-    
+
 </head>
 <body>
     <div class="container">
@@ -612,7 +612,7 @@
             for (let i = 1; i <= 5; i++) {
                 const optionsContainer = document.getElementById(`options${i}`);
                 const options = optionsContainer.querySelectorAll('.option');
-                
+
                 options.forEach(option => {
                     option.addEventListener('click', function() {
                         options.forEach(opt => opt.classList.remove('selected'));
@@ -720,7 +720,7 @@
 
         function displaySolution(solutionKey) {
             const solution = solutions[solutionKey];
-            
+
             document.getElementById('resultTitle').textContent = solution.title;
             document.getElementById('resultSubtitle').textContent = solution.reason;
 
@@ -729,7 +729,7 @@
                     <span class="solution-badge">${solution.badge}</span>
                     <h3>${solution.title}</h3>
                     <p class="description">${solution.description}</p>
-                    
+
                     <div>
                         <h4 style="color: var(--secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; margin-top: 20px;">Stack Tecnologico</h4>
                         <div class="tech-list">
@@ -750,13 +750,13 @@
         function restartQuiz() {
             answers = {};
             currentStep = 1;
-            
+
             document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
             document.querySelectorAll('button[id^="next"]').forEach(btn => btn.disabled = true);
-            
+
             document.getElementById('resultContainer').classList.remove('active');
             document.querySelector(`.quiz-step[data-step="1"]`).classList.add('active');
-            
+
             updateProgress();
         }
     </script>
