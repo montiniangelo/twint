@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11200378416"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-11200378416');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - LyberCode | Articoli e Approfondimenti</title>
+    <link rel="icon" type="image/svg+xml" href="faviconz.png">
+    <meta name="description" content="Leggi gli articoli del blog di LyberCode: approfondimenti su trasformazione digitale, innovazione tecnologica e soluzioni IT.">
+    <meta name="keywords" content="blog, articoli, approfondimenti, trasformazione digitale, innovazione tecnologica, consulenza IT">
+    <meta name="author" content="LyberCode di Angelo Montini">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LyberCode">
+    <meta property="og:title" content="Blog - LyberCode | Articoli e Approfondimenti">
+    <meta property="og:description" content="Leggi gli articoli del blog di LyberCode: approfondimenti su trasformazione digitale, innovazione tecnologica e soluzioni IT.">
+    <meta property="og:url" content="https://lybercode.com/blog.html">
+    <meta property="og:image" content="https://lybercode.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - LyberCode | Articoli e Approfondimenti">
+    <meta name="twitter:description" content="Approfondimenti su trasformazione digitale, innovazione tecnologica e soluzioni IT dal blog di LyberCode.">
+    <meta name="twitter:image" content="https://lybercode.com/logo.png">
+    <meta name="twitter:site" content="@LyberCode">
+    <meta name="twitter:creator" content="@LyberCode">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Cos'è la trasformazione digitale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La trasformazione digitale è il processo di integrazione delle tecnologie digitali in tutti gli aspetti della gestione aziendale. Comporta l'adozione di nuovi strumenti, processi e metodologie per migliorare efficienza, innovazione e valore per i clienti."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali sono i vantaggi del Cloud Computing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Il Cloud Computing offre numerosi vantaggi: riduzione dei costi infrastrutturali, scalabilità a seconda delle necessità, accesso da qualsiasi luogo, automatizzazione dei processi, backup e disaster recovery integrati, e sicurezza di livello enterprise."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come l'AI può migliorare i processi aziendali?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'intelligenza artificiale automatizza attività ripetitive, analizza grandi volumi di dati per insights predittivi, personalizza le esperienze cliente, ottimizza la gestione delle risorse e fornisce supporto decisionale basato su dati in tempo reale, aumentando significativamente la produttività aziendale."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qual è l'importanza della cybersecurity moderna?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La cybersecurity è fondamentale per proteggere i dati aziendali e dei clienti da attacchi sempre più sofisticati. Una strategia robusta di sicurezza informatica previene violazioni di dati, mantiene la continuità operativa, protegge la reputazione aziendale e assicura conformità alle normative internazionali."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come scegliere il partner tecnologico giusto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scegli un partner con esperienza provata nel tuo settore, che comprenda le tue esigenze specifiche, offra soluzioni scalabili e sostenibili, garantisca supporto continuativo, e dimostri impegno nell'innovazione e nella trasformazione digitale della tua organizzazione."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #f5f7fa;
+            --secondary: #23a5b1;
+            --accent: #ffffff;
+            --text: #1a1a1a;
+            --muted: #4a4a4a;
+            --surface: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.15), rgba(255, 255, 255, 0.85)), url('y.jpg') center/cover no-repeat;
+            color: var(--text);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(35, 165, 177, 0.1));
+            z-index: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        nav .logo span {
+            line-height: 1;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(26, 26, 26, 0.3);
+            border-radius: 999px;
+            background: rgba(26, 26, 26, 0.06);
+            color: var(--text);
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+            z-index: 2;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav .menu a:hover {
+            opacity: 0.8;
+        }
+
+        .page-header {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        .blog-section {
+            padding: 80px 0;
+        }
+
+        .blog-intro {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: rgba(245, 247, 250, 0.8);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+        }
+
+        .blog-intro h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .blog-intro > p {
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .blog-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: rgba(245, 247, 250, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--secondary);
+        }
+
+        .info-card p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        .blog-categories-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(245, 247, 250, 0.6);
+            border-radius: 12px;
+        }
+
+        .blog-categories-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .blog-categories-section > p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .category-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: rgba(26, 26, 26, 0.08);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(35, 165, 177, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            border-color: rgba(35, 165, 177, 0.3);
+            background: rgba(245, 247, 250, 0.9);
+            transform: translateY(-3px);
+        }
+
+        .category-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .category-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        .blog-resources {
+            background: rgba(35, 165, 177, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .blog-resources h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .blog-resources p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .blog-card {
+            background: rgba(245, 247, 250, 0.75);
+            border: 1px solid rgba(35, 165, 177, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            background: rgba(245, 247, 250, 0.85);
+            border-color: rgba(35, 165, 177, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: rgba(35, 165, 177, 0.2);
+            color: var(--secondary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .blog-date {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .blog-card h2 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: var(--text);
+        }
+
+        .blog-card p {
+            color: rgba(74, 74, 74, 0.8);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            font-size: 0.95rem;
+        }
+
+        .blog-card a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .blog-card a:hover {
+            opacity: 0.8;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .pagination button, .pagination a {
+            padding: 10px 14px;
+            border: 1px solid rgba(35, 165, 177, 0.3);
+            border-radius: 6px;
+            background: rgba(245, 247, 250, 0.8);
+            color: var(--text);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+        }
+
+        .pagination button:hover, .pagination a:hover {
+            background: rgba(35, 165, 177, 0.15);
+            border-color: rgba(35, 165, 177, 0.5);
+        }
+
+        .pagination button.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination button:disabled:hover {
+            background: rgba(245, 247, 250, 0.8);
+            border-color: rgba(35, 165, 177, 0.3);
+        }
+
+        footer {
+            background: var(--primary);
+            border-top: 1px solid rgba(35, 165, 177, 0.2);
+            padding: 50px 0 20px;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        footer h4 {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        footer a, footer p {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        footer .bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(35, 165, 177, 0.2);
+        }
+
+        footer .bottom a {
+            display: inline;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .news-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .news-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        .blog-badge {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 9999;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        @media (max-width: 480px) {
+            .news-badge {
+                bottom: 60px;
+                left: 10px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+
+            .blog-badge {
+                bottom: 115px;
+                left: 10px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .news-badge {
+                bottom: 50px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .blog-badge {
+                bottom: 95px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+        @supports (padding: max(0px)) {
+            .news-badge {
+                bottom: max(20px, env(safe-area-inset-bottom) + 10px);
+            }
+
+            .blog-badge {
+                bottom: max(80px, env(safe-area-inset-bottom) + 70px);
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            }
+            50% {
+                opacity: 0.7;
+                box-shadow: 0 4px 25px rgba(35, 165, 177, 0.8);
+            }
+        }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            color: var(--accent);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        #scrollTop.show {
+            display: flex;
+        }
+
+        #scrollTop:hover {
+            background: #1a8f9f;
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.5);
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 20px;
+                gap: 15px;
+                border-radius: 8px;
+                z-index: 9998;
+            }
+
+            nav.menu-open .menu {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header p {
+                font-size: 0.9rem;
+            }
+
+            .blog-section {
+                padding: 60px 0;
+            }
+
+            .blog-card h2 {
+                font-size: 1.15rem;
+            }
+
+            .blog-card p {
+                font-size: 0.9rem;
+            }
+
+            #scrollTop {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+
+            .pagination {
+                gap: 8px;
+                margin-top: 40px;
+            }
+
+            .pagination button, .pagination a {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+                min-width: 36px;
+            }
+        }
+
+        .quiz-banner {
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.1), rgba(35, 165, 177, 0.05));
+            border: 3px solid var(--secondary);
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin: 40px auto;
+            max-width: 1100px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(35, 165, 177, 0.2);
+            animation: borderGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(35, 165, 177, 0.2), inset 0 0 20px rgba(35, 165, 177, 0.05);
+            }
+            50% {
+                box-shadow: 0 12px 35px rgba(35, 165, 177, 0.35), inset 0 0 30px rgba(35, 165, 177, 0.1);
+            }
+        }
+
+        .quiz-banner h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .quiz-banner p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+
+        .quiz-banner a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), #1a8f9f);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.3);
+        }
+
+        .quiz-banner a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(35, 165, 177, 0.45);
+            background: linear-gradient(135deg, #1a8f9f, #157a89);
+        }
+
+        .campagna-ads {
+            padding: 80px 0;
+            background: linear-gradient(180deg, rgba(245, 247, 250, 0.5), rgba(255, 255, 255, 0.8));
+        }
+
+        .ads-intro {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            text-align: center;
+            padding: 40px;
+            background: rgba(35, 165, 177, 0.08);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+        }
+
+        .ads-intro h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .ads-intro p {
+            font-size: 1.05rem;
+            color: var(--text);
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .pricing-section {
+            margin-bottom: 60px;
+        }
+
+        .pricing-section h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-bottom: 40px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+            padding: 35px 25px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), #1a8f9f);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: rgba(35, 165, 177, 0.35);
+            box-shadow: 0 10px 35px rgba(35, 165, 177, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .pricing-card:hover::before {
+            opacity: 1;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--secondary);
+            box-shadow: 0 8px 30px rgba(35, 165, 177, 0.2);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), #1a8f9f);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .pricing-card h4 {
+            font-size: 1.4rem;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .pricing-description {
+            font-size: 0.9rem;
+            color: rgba(74, 74, 74, 0.7);
+            margin-bottom: 20px;
+            min-height: 40px;
+            line-height: 1.6;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .pricing-period {
+            font-size: 0.9rem;
+            color: rgba(74, 74, 74, 0.6);
+            margin-bottom: 25px;
+        }
+
+        .pricing-features {
+            flex-grow: 1;
+            margin-bottom: 25px;
+        }
+
+        .pricing-features ul {
+            list-style: none;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            font-size: 0.95rem;
+            color: var(--text);
+            opacity: 0.85;
+            border-bottom: 1px solid rgba(35, 165, 177, 0.08);
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: rgba(35, 165, 177, 0.15);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), #1a8f9f);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(35, 165, 177, 0.3);
+            background: linear-gradient(135deg, #1a8f9f, #157a89);
+        }
+
+        .pricing-card.featured .pricing-cta {
+            background: linear-gradient(135deg, #101e2e, #0b1520);
+            color: white;
+        }
+
+        .pricing-card.featured .pricing-cta:hover {
+            background: linear-gradient(135deg, #0b1520, #050a0f);
+            box-shadow: 0 8px 20px rgba(16, 30, 46, 0.4);
+        }
+
+        .ads-features-section {
+            background: rgba(245, 247, 250, 0.7);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .ads-features-section h3 {
+            text-align: center;
+            font-size: 1.6rem;
+            color: var(--secondary);
+            margin-bottom: 35px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 3px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(35, 165, 177, 0.12);
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: rgba(74, 74, 74, 0.8);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .campagna-ads {
+                padding: 60px 0;
+            }
+
+            .ads-intro {
+                padding: 25px;
+                margin-bottom: 40px;
+            }
+
+            .ads-intro h2 {
+                font-size: 1.5rem;
+            }
+
+            .ads-intro p {
+                font-size: 0.95rem;
+            }
+
+            .pricing-section h3 {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+
+            .pricing-grid {
+                gap: 20px;
+            }
+
+            .pricing-card {
+                padding: 25px 20px;
+            }
+
+            .pricing-card h4 {
+                font-size: 1.2rem;
+            }
+
+            .pricing-price {
+                font-size: 2rem;
+            }
+
+            .ads-features-section {
+                padding: 25px;
+            }
+
+            .ads-features-section h3 {
+                font-size: 1.4rem;
+                margin-bottom: 25px;
+            }
+
+            .features-grid {
+                gap: 15px;
+            }
+
+            .feature-item {
+                padding: 18px;
+            }
+
+            .feature-item h4 {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card {
+                padding: 20px;
+            }
+
+            .pricing-price {
+                font-size: 1.8rem;
+            }
+
+            .pricing-cta {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .quiz-banner {
+                padding: 20px 20px;
+                margin: 30px auto;
+            }
+
+            .quiz-banner h3 {
+                font-size: 1.1rem;
+            }
+
+            .quiz-banner p {
+                font-size: 0.9rem;
+            }
+
+            .quiz-banner a {
+                padding: 10px 28px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- News Badge Icon - Lampeggiante -->
+    <a href="news.html" class="news-badge" title="Vai alle News" aria-label="Link alle news" style="font-size:small">NEWS</a>
+
+    <!-- Blog Badge Icon - Lampeggiante -->
+    <a href="blog.html" class="blog-badge" title="Vai al Blog" aria-label="Link al blog" style="font-size:small">BLOG</a>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="LyberCode">
+                    <span>LyberCode</span>
+                </a>
+                <button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="sviluppo.html">Sviluppo</a></li>
+                    <li> <a href="monitor.html">PA</a></li>
+                </ul>
+            </nav>
+            <div class="page-header">
+                <h1>Campagne Google Ads</h1>
+                <p>Strategie e soluzioni per ottimizzare le campagne Google Ads</p>
+            </div>
+        </div>
+    </header>
+
+   
+
+    <section class="campagna-ads">
+        <div class="container">
+            <div class="ads-intro">
+                <h2>Gestione Campagne Google Ads</h2>
+                <p>Massimizza il ROI delle tue campagne pubblicitarie con strategie data-driven e ottimizzazione continua. I nostri esperti gestiscono ogni aspetto delle tue campagne Google Ads per assicurare visibilità, conversioni e crescita del tuo business.</p>
+            </div>
+
+            <div class="pricing-section">
+                <h3>Piani di Gestione Campagne</h3>
+                <div class="pricing-grid">
+                    <!-- Piano Basic -->
+                    <div class="pricing-card">
+                        <span class="pricing-badge">Starter</span>
+                        <h4>Piano Basic</h4>
+                        <p class="pricing-description">Ideale per piccole imprese che desiderano iniziare con Google Ads</p>
+                        <div class="pricing-price">€500</div>
+                        <div class="pricing-period">al mese (minimo 3 mesi)<br><span style="font-size: 0.85rem; font-weight: 600; color: var(--secondary); margin-top: 8px; display: block;">✓ Costo piattaforma incluso</span><span style="font-size: 0.85rem; font-weight: 600; color: #ff6b35; margin-top: 5px; display: block;">📊  70% investito su Google</span></div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Setup campagna iniziale</li>
+                                <li>Gestione fino a 2 campagne</li>
+                                <li>Monitoraggio settimanale</li>
+                                <li>Ottimizzazione bid iniziale</li>
+                                <li>Report mensile completo</li>
+                                <li>Supporto email</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:hello@lybercode.com" class="pricing-cta">Richiedi Consulenza</a>
+                    </div>
+
+                    <!-- Piano Professional -->
+                    <div class="pricing-card featured">
+                        <span class="pricing-badge">Consigliato</span>
+                        <h4>Piano Professional</h4>
+                        <p class="pricing-description">La scelta ideale per imprese in crescita con budget pubblicitario rilevante</p>
+                        <div class="pricing-price">€1.200</div>
+                        <div class="pricing-period">al mese (minimo 3 mesi)<br><span style="font-size: 0.85rem; font-weight: 600; color: var(--secondary); margin-top: 8px; display: block;">✓ Costo piattaforma incluso</span><span style="font-size: 0.85rem; font-weight: 600; color: #ff6b35; margin-top: 5px; display: block;">📊  80% investito su Google</span></div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Gestione completa campagne</li>
+                                <li>Fino a 5 campagne attive</li>
+                                <li>Monitoraggio bi-settimanale</li>
+                                <li>A/B testing landing pages</li>
+                                <li>Ottimizzazione bid avanzata</li>
+                                <li>Analisi della concorrenza</li>
+                                <li>Report settimanale</li>
+                                <li>Supporto email e telefonico</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:hello@lybercode.com" class="pricing-cta">Inizia Subito</a>
+                    </div>
+
+                    <!-- Piano Enterprise -->
+                    <div class="pricing-card">
+                        <span class="pricing-badge">Enterprise</span>
+                        <h4>Piano Enterprise</h4>
+                        <p class="pricing-description">Soluzione premium per aziende con budget significativo e obiettivi complessi</p>
+                        <div class="pricing-price">€2.500+</div>
+                        <div class="pricing-period">al mese (personalizzabile)<br><span style="font-size: 0.85rem; font-weight: 600; color: var(--secondary); margin-top: 8px; display: block;">✓ Costo piattaforma incluso</span><span style="font-size: 0.85rem; font-weight: 600; color: #ff6b35; margin-top: 5px; display: block;">📊  90% investito su Google</span></div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Gestione strategica completa</li>
+                                <li>Illimitate campagne attive</li>
+                                <li>Monitoraggio quotidiano</li>
+                                <li>Strategie multi-canale</li>
+                                <li>Ottimizzazione AI avanzata</li>
+                                <li>Consulenza strategica mensile</li>
+                                <li>Analytics customizzati</li>
+                                <li>Account manager dedicato</li>
+                                <li>Supporto prioritario 24/7</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:hello@lybercode.com" class="pricing-cta">Contattaci per Offerta</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ads-features-section">
+                <h3>Servizi Inclusi in Tutti i Piani</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>🎯 Targeting Precisato</h4>
+                        <p>Definiamo il pubblico ideale attraverso analisi dettagliata di keyword, geo-localizzazione, device e comportamenti per massimizzare le conversioni.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>📊 Analisi Dettagliata</h4>
+                        <p>Monitoraggio continuo di metriche chiave: CTR, CPC, conversion rate, ROI e ROAS con dashboard personalizzati per il tuo business.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>⚡ Ottimizzazione Continua</h4>
+                        <p>Aggiornamento regolare di bid, copy degli annunci, landing pages e strategie di matching per garantire performance ottimali.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>💡 Strategie Innovative</h4>
+                        <p>Implementazione di strategie avanzate: shopping ads, remarketing, lead gen forms, e automazione tramite Google Smart Campaigns.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>📱 Multi-Canale</h4>
+                        <p>Gestione integrata su Search, Display, Shopping, YouTube e App campaigns per una copertura completa del tuo target audience.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>🔍 SEO + SEM</h4>
+                        <p>Coordinamento tra Google Ads e SEO organico per una strategia di visibility completa con budget ottimizzato.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <div class="quiz-banner">
+        <h3>🎯 Scopri la Soluzione Web Perfetta per Te!</h3>
+        <p>Rispondi a 5 semplici domande e trova lo stack tecnologico ideale per il tuo progetto</p>
+        <a href="./bisogno.html">Inizia il Test →</a>
+    </div>
+    <footer>
+        <div class="container">
+            <div>
+                <h4>LyberCode</h4>
+                <p>Servizi di consulenza informatica per imprese e PA: sviluppo software, cloud, cybersecurity, AI e trasformazione digitale, con sede a Roma e Terracina.</p>
+            </div>
+            <div>
+                <h4>Hub</h4>
+                <a href="index.html#metodo">Metodo</a>
+                <a href="index.html#competenze">Competenze</a>
+                <a href="index.html#ambiti">Ambiti</a>
+                <a href="index.html#toolkit">Toolkit</a>
+                <a href="index.html#valore">Perché noi</a>
+            </div>
+            <div>
+                <h4>Contatti</h4>
+                <a href="mailto:hello@lybercode.com">hello@lybercode.com</a>
+                <a href="tel:+390773061194">Tel. 0773 061194</a>
+                <a href="tel:+393392528986">Cell. 339 2528986</a>
+                <a href="mailto:montini@peceasy.com">PEC: montini@peceasy.com</a>
+            </div>
+            <div>
+                <h4>Community</h4>
+                <a href="https://github.com/montiniangelo">GitHub</a>
+                <a href="https://www.linkedin.com/company/lybercode/">LinkedIn</a>
+                <a href="index.html#contatti">Newsletter</a>
+            </div>
+        </div>
+        <div class="bottom">
+         © 2025 LyberCode di Angelo Montini. <span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. <a href="privacy.html">Policy Privacy. </a> Tutti i diritti riservati
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Torna all'inizio" title="Torna su">↑</button>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const scrollBtn = document.getElementById('scrollTop');
+        const headerEl = document.querySelector('header');
+        const headerTop = 0;
+
+        const toggleScrollBtn = () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+        toggleScrollBtn();
+
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: headerTop, behavior: 'smooth' });
+        });
+
+        const posts = [
+            {
+                title: "Innovazione Digitale nella PA",
+                category: "TRASFORMAZIONE DIGITALE",
+                date: "20/10/2025",
+                excerpt: "Scopri come la trasformazione digitale sta rivoluzionando i servizi della Pubblica Amministrazione c...",
+                link: "post/001-innovazione-digitale.html"
+            },
+            {
+                title: "Cloud Computing, AI e Automazione: Driving Modern Web Development",
+                category: "CLOUD & AI",
+                date: "10/10/2025",
+                excerpt: "Scopri come Cloud Computing, AI e Automazione stanno trasformando lo sviluppo web moderno....",
+                link: "post/post-17-November-2025-1763376302.html"
+            },
+            {
+                title: "Cloud Computing e AI: Impatto sulla Modernizzazione IT",
+                category: "CLOUD & AI",
+                date: "25/09/2025",
+                excerpt: "Scopri come il Cloud Computing e l'Intelligenza Artificiale stanno trasformando le imprese....",
+                link: "post/post-17-November-2025-1763376714.html"
+            },
+            {
+                title: "Cloud Computing, AI e Automazione: La Trasformazione Digitale delle Imprese",
+                category: "CLOUD & AI",
+                date: "21/10/2025",
+                excerpt: "Scopri come il cloud computing, l'intelligenza artificiale e l'automazione stanno rivoluzionando il...",
+                link: "post/post-17-November-2025-1763378495.html"
+            },
+            {
+                title: "Cloud Computing, AI e Automazione: Trasformare l'IT Moderno",
+                category: "CLOUD & AI",
+                date: "12/11/2025",
+                excerpt: "Scopri come il cloud computing, l'IA e l'automazione stanno ridefinendo lo sviluppo web moderno....",
+                link: "post/post-17-November-2025-1763378850.html"
+            },
+            {
+                title: "Cloud Computing e Automazione: Il Futuro della Tecnologia",
+                category: "CLOUD & AI",
+                date: "28/10/2025",
+                excerpt: "Scopri come l'integrazione di Cloud Computing e Automazione sta trasformando il mondo IT....",
+                link: "post/post-17-November-2025-1763379177.html"
+            },
+            {
+                title: "La Trasformazione Digitale nella Pubblica Amministrazione",
+                category: "TRASFORMAZIONE DIGITALE",
+                date: "15/10/2025",
+                excerpt: "Scopri come la digital transformation sta rivoluzionando la PA. Contattaci per consulenza!...",
+                link: "post/post-17-November-2025.html"
+            },
+            {
+                title: "Il Futuro della Tecnologia: Cloud Computing, AI e Automazione",
+                category: "CLOUD & AI",
+                date: "25/10/2025",
+                excerpt: "Scopri come il cloud computing, l'Intelligenza Artificiale e l'automazione stanno trasformando il mo...",
+                link: "post/post-18-November-2025-1763420467.html"
+            },
+            {
+                title: "Sfrutta al meglio i tuoi dati con DataDog",
+                category: "MONITORAGGIO",
+                date: "15/09/2022",
+                excerpt: "Scopri come DataDog può aiutarti a monitorare e ottimizzare le prestazioni dei tuoi servizi....",
+                link: "post/post-19-November-2025-1763543344.html"
+            },
+            {
+                title: "Massimizza l'efficienza delle tue integrazioni con Cloudflare Workers",
+                category: "CLOUD & AI",
+                date: "01/12/2025",
+                excerpt: "Scopri come massimizzare l'efficienza delle integrazioni con Cloudflare Workers: edge computing, ser...",
+                link: "post/post-19-November-2025-1763543565.html"
+            },
+            {
+                title: "Servizi Integrati di Automazione Aziendale",
+                category: "APPROFONDIMENTO",
+                date: "05/12/2025",
+                excerpt: "Scopri come i servizi Zapier, n8n, CrewAI e Cloudflare Workers possono trasformare la tua attività a...",
+                link: "post/post-19-November-2025-1763550067.html"
+            },
+            {
+                title: "Servizio Cloudflare Workers: Ottimizza il Tuo Sito Web",
+                category: "CLOUD & AI",
+                date: "02/12/2025",
+                excerpt: "Ottimizza il tuo sito web con Cloudflare Workers: edge computing, serverless, performance e sicurezz...",
+                link: "post/post-20-November-2025-1763636466.html"
+            },
+            {
+                title: "Servizi per l'integrazione: Zapier semplifica il tuo lavoro di automazione",
+                category: "APPROFONDIMENTO",
+                date: "12/11/2025",
+                excerpt: "Automatizza i processi aziendali senza codice con Zapier: integrazione di 6000+ app, risparmio tempo...",
+                link: "post/post-21-November-2025-1763722863.html"
+            },
+            {
+                title: "Massimizza l'efficienza del tuo team con Airbyte",
+                category: "INTELLIGENZA ARTIFICIALE",
+                date: "15/11/2023",
+                excerpt: "Scopri come Airbyte può aiutarti a sincronizzare i tuoi dati in modo efficiente....",
+                link: "post/post-22-November-2025-1763809261.html"
+            },
+            {
+                title: "Semplificare l'integrazione dei servizi con CrewAI",
+                category: "INTELLIGENZA ARTIFICIALE",
+                date: "29/11/2025",
+                excerpt: "Scopri come CrewAI può semplificare l'integrazione dei servizi nella tua azienda....",
+                link: "post/post-23-November-2025-1763895656.html"
+            },
+            {
+                title: "Massimizza la tua produttività con Workato",
+                category: "APPROFONDIMENTO",
+                date: "05/11/2023",
+                excerpt: "Scopri come Workato può migliorare l'efficienza del tuo business....",
+                link: "post/post-24-November-2025-1763982060.html"
+            },
+            {
+                title: "Automatizza i tuoi processi con Make.com",
+                category: "APPROFONDIMENTO",
+                date: "16/09/2024",
+                excerpt: "Scopri come Make.com può aiutarti ad automatizzare i tuoi processi aziendali....",
+                link: "post/post-25-November-2025-1764068462.html"
+            },
+            {
+                title: "Massimizza l'efficienza dei tuoi processi con Zapier",
+                category: "APPROFONDIMENTO",
+                date: "27/11/2023",
+                excerpt: "Scopri come Zapier può automatizzare i tuoi flussi di lavoro aziendali...",
+                link: "post/post-26-November-2025-1764154869.html"
+            },
+            {
+                title: "Massimizza l'efficienza del tuo team con Make.com",
+                category: "APPROFONDIMENTO",
+                date: "30/11/2025",
+                excerpt: "Scopri come Make.com può trasformare il modo in cui lavori e collabori con il tuo team....",
+                link: "post/post-27-November-2025-1764241259.html"
+            },
+            {
+                title: "Servizi Integrati per la tua Azienda",
+                category: "APPROFONDIMENTO",
+                date: "25/11/2025",
+                excerpt: "Scopri come Zapier può automatizzare i processi della tua azienda per migliorare l'efficienza....",
+                link: "post/post-28-November-2025-1764327669.html"
+            },
+            {
+                title: "Servizio Cloudflare Workers: Ottimizza il tuo Sito Web",
+                category: "CLOUD & AI",
+                date: "25/11/2022",
+                excerpt: "Scopri come Cloudflare Workers può migliorare le performance del tuo sito web....",
+                link: "post/post-29-November-2025-1764414055.html"
+            },
+            {
+                title: "Servizio di integrazione dati con DataDog",
+                category: "MONITORAGGIO",
+                date: "23/11/2023",
+                excerpt: "Scopri come DataDog può ottimizzare l'integrazione dei dati aziendali...",
+                link: "post/post-30-November-2025-1764500456.html"
+            }
+        ];
+
+        // Sort posts by date in descending order (most recent first)
+        posts.sort((a, b) => {
+            const parseDate = (dateStr) => {
+                const [day, month, year] = dateStr.split('/');
+                return new Date(year, month - 1, day);
+            };
+            return parseDate(b.date) - parseDate(a.date);
+        });
+
+        const container = document.getElementById('blog-container');
+        const paginationDiv = document.getElementById('pagination');
+        const postsPerPage = 9;
+        let currentPage = 1;
+
+        function renderPosts(page) {
+            container.innerHTML = '';
+            const startIndex = (page - 1) * postsPerPage;
+            const endIndex = Math.min(startIndex + postsPerPage, posts.length);
+
+            for (let i = startIndex; i < endIndex; i++) {
+                const post = posts[i];
+                const card = document.createElement('a');
+                card.href = post.link;
+                card.className = 'blog-card';
+                card.innerHTML = `
+                    <span class="blog-category">${post.category}</span>
+                    <div class="blog-date">📅 ${post.date}</div>
+                    <h2>${post.title}</h2>
+                    <p>${post.excerpt}</p>
+                    <a href="${post.link}" style="color: var(--secondary); font-weight: 600;">Leggi l'articolo →</a>
+                `;
+                container.appendChild(card);
+            }
+
+            window.scrollTo({ top: container.offsetTop - 100, behavior: 'smooth' });
+        }
+
+        function renderPagination() {
+            paginationDiv.innerHTML = '';
+            const totalPages = Math.ceil(posts.length / postsPerPage);
+
+            // Previous button
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '← Precedente';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderPosts(currentPage);
+                    renderPagination();
+                }
+            });
+            paginationDiv.appendChild(prevBtn);
+
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i;
+                if (i === currentPage) {
+                    btn.classList.add('active');
+                }
+                btn.addEventListener('click', () => {
+                    currentPage = i;
+                    renderPosts(currentPage);
+                    renderPagination();
+                });
+                paginationDiv.appendChild(btn);
+            }
+
+            // Next button
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = 'Successivo →';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderPosts(currentPage);
+                    renderPagination();
+                }
+            });
+            paginationDiv.appendChild(nextBtn);
+        }
+
+        // Initial render
+        renderPosts(currentPage);
+        renderPagination();
+    </script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//esempio.angelomontini.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '42']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+<script>
+(function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav .menu');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            nav.classList.toggle('menu-open');
+            menuToggle.setAttribute('aria-expanded',
+                menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+            );
+        });
+
+        navMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+})();
+</script>
+
+</body>
+</html>
