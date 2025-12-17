@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templates Next.js | LyberCode - Soluzioni Vercel DEMO</title>
+    <link rel="icon" type="image/svg+xml" href="faviconz.png" />
+
+    <meta name="description" content="Scopri i migliori templates Next.js e React disponibili su Vercel. Piattaforme SaaS, Portfolio, Blog, AI Chatbot e molto altro. Pronti all'uso con supporto tecnico LyberCode." />
+    <meta name="keywords" content="Next.js templates, React templates, Vercel, SaaS starter kit, portfolio, blog, AI chatbot" />
+    <meta name="author" content="LyberCode di Angelo Montini" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+    <style>
+        :root {
+            --primary: #f5f7fa;
+            --secondary: #23a5b1;
+            --accent: #ffffff;
+            --text: #1a1a1a;
+            --muted: #4a4a4a;
+            --border-subtle: rgba(35, 165, 177, 0.15);
+            --border-strong: rgba(35, 165, 177, 0.2);
+            --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-strong: 0 12px 30px rgba(35, 165, 177, 0.2);
+            --radius-lg: 12px;
+            --radius-md: 8px;
+            --radius-pill: 20px;
+            --transition-fast: 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.15), rgba(176, 63, 251, 0.85)), url('dash.jpg') center/cover no-repeat;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-strong);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        nav .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav .menu a:hover {
+            opacity: 0.8;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(26, 26, 26, 0.3);
+            border-radius: 999px;
+            background: rgba(26, 26, 26, 0.06);
+            color: var(--text);
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text);
+            margin-bottom: 32px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .section-lead {
+            max-width: 720px;
+            margin: 0 auto 32px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        /* Templates Section */
+        .templates-section {
+            padding: 20px 0;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 8px 18px;
+            border: 2px solid rgba(35, 165, 177, 0.3);
+            background: #ffffff;
+            color: var(--text);
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--secondary);
+            color: #ffffff;
+            border-color: var(--secondary);
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .template-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-fast);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: var(--shadow-soft);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .template-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-strong);
+            border-color: var(--secondary);
+        }
+
+        .template-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .template-tag {
+            display: inline-block;
+            background: rgba(35, 165, 177, 0.1);
+            color: var(--secondary);
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .template-card h3 {
+            font-size: 1.3rem;
+            color: var(--text);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .template-description {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+            flex: 1;
+            line-height: 1.5;
+        }
+
+        .template-features {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature-tag {
+            font-size: 0.8rem;
+            background: #f5f7fa;
+            color: var(--text);
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid var(--border-strong);
+        }
+
+        .template-cta {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            text-align: center;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1ba8a0 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(35, 165, 177, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.4);
+        }
+
+        /* Pricing Section */
+        .pricing-info {
+            background: transparent;
+            padding: 0 0 40px;
+            margin: 0 auto 60px;
+            max-width: 1000px;
+        }
+
+        .pricing-info h2 {
+            font-size: 2rem;
+            color: var(--text);
+            margin-bottom: 12px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .pricing-info .section-lead {
+            margin-bottom: 50px;
+        }
+
+        .pricing-setup-box {
+            background: linear-gradient(135deg, #ffffff 0%, rgba(35, 165, 177, 0.02) 100%);
+            border: 1.5px solid var(--secondary);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            margin-bottom: 55px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(35, 165, 177, 0.08);
+            transition: all var(--transition-fast);
+        }
+
+        .pricing-setup-box:hover {
+            box-shadow: 0 8px 28px rgba(35, 165, 177, 0.12);
+            border-color: var(--secondary);
+        }
+
+        .pricing-setup-box h3 {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .pricing-setup-box .price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text);
+            margin: 8px 0;
+        }
+
+        .pricing-setup-box .price-note {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        .pricing-setup-box ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 0;
+        }
+
+        .pricing-setup-box li {
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .pricing-setup-box li::before {
+            content: "✓ ";
+            color: var(--secondary);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .pricing-divider {
+            position: relative;
+            text-align: center;
+            margin: 50px 0;
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .pricing-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary) 15%, var(--secondary) 85%, transparent);
+            z-index: 1;
+        }
+
+        .pricing-divider span {
+            background: #ffffff;
+            padding: 0 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .pricing-card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            border: 1.5px solid var(--border-subtle);
+            text-align: center;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary), rgba(35, 165, 177, 0.5));
+            transform: scaleX(0);
+            transition: transform var(--transition-fast);
+            transform-origin: left;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 12px 40px rgba(35, 165, 177, 0.15);
+            transform: translateY(-6px);
+        }
+
+        .pricing-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pricing-card:nth-child(1) {
+            position: relative;
+            border-color: var(--secondary);
+            box-shadow: 0 8px 32px rgba(35, 165, 177, 0.12);
+        }
+
+        .pricing-card:nth-child(1)::after {
+            content: "Avvio";
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--secondary), #1ba8a0);
+            color: #ffffff;
+            padding: 4px 16px;
+            border-radius: var(--radius-pill);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            box-shadow: 0 4px 12px rgba(35, 165, 177, 0.25);
+        }
+
+        .pricing-card h3 {
+            color: var(--text);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .pricing-card .price {
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--secondary), #1ba8a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 12px 0;
+        }
+
+        .pricing-card .price-note {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin: 0;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(35, 165, 177, 0.08);
+            font-size: 0.9rem;
+            color: var(--text);
+            transition: color var(--transition-fast);
+        }
+
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-card:hover li {
+            color: var(--muted);
+        }
+
+        .pricing-card li::before {
+            content: "✓ ";
+            color: var(--secondary);
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        /* Delivery Section */
+        .delivery-section {
+            padding: 40px 0 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .delivery-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .delivery-section ul {
+            margin-left: 20px;
+            color: var(--text);
+        }
+
+        .delivery-section li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(16, 30, 46, 0.95);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 20px 20px;
+            border-top: 1px solid var(--border-strong);
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer h4 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            display: block;
+            color: var(--secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+        }
+
+        .bottom {
+            padding-top: 20px;
+            border-top: 1px solid var(--border-strong);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .bottom a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav .menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                flex-direction: column;
+                gap: 10px;
+                background: white;
+                padding: 20px;
+                border: 1px solid var(--border-strong);
+                border-radius: var(--radius-lg);
+                min-width: 200px;
+                box-shadow: var(--shadow-strong);
+            }
+
+            nav .menu.active {
+                display: flex;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card:nth-child(2)::after {
+                font-size: 0.65rem;
+                padding: 3px 12px;
+            }
+
+            .pricing-card .price {
+                font-size: 2rem;
+            }
+
+            .templates-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            footer .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            header {
+                padding: 40px 15px;
+            }
+
+            nav {
+                margin-bottom: 20px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .pricing-setup-box ul {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card {
+                padding: 24px;
+            }
+
+            .templates-grid {
+                gap: 15px;
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .logo   {
+                font-size: 1.2em!important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="LyberCode">
+                    <span>LyberCode</span>
+                </a>
+                <button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="sviluppo.html">Sviluppo</a></li>
+                    <li><a href="monitor.html">PA</a></li>
+                </ul>
+            </nav>
+            <div class="page-header">
+                <h1>Piani di abbonamento</h1>
+                <p>Attiva un piano di abbonamento per sviluppare il tuo progetto senza dover preoccuparti di nulla</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="templates-section">
+                <div class="delivery-section">
+                    <p>Trasforma un semplice template in una piattaforma digitale completa: LyberCode seleziona e configura per te i migliori starter kit professionali da Vercel per SaaS, blog, siti vetrina, portfolio e chatbot AI, curando setup tecnico, personalizzazioni e supporto continuativo per il tuo progetto digitale.</p>
+                    <h4 style="font-size: large; margin: 20px 0;"><strong>Parti da uno starter kit collaudato e concentrati su contenuti e business: al deploy e alla parte tecnica pensa LyberCode.</strong></h4>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Tutti</button>
+                    <button class="filter-btn" data-filter="blog">Blog &amp; Siti</button>
+                    <button class="filter-btn" data-filter="ai">AI &amp; Chatbot</button>
+                    <button class="filter-btn" data-filter="saas">SaaS</button>
+                </div>
+
+                <div class="templates-grid">
+                    <article class="template-card" data-category="blog">
+                        <div class="template-content">
+                            <span class="template-tag">Blog &amp; Siti</span>
+                            <h3>Next.js Sito Web</h3>
+                            <p class="template-description">Inizia con Next.js e React. Template base completo per progetti web moderni.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Next.js</span>
+                                <span class="feature-tag">React</span>
+                                <span class="feature-tag">Vercel</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://nextjs-template.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="blog">
+                        <div class="template-content">
+                            <span class="template-tag">Blog &amp; Siti</span>
+                            <h3>Sito fotogallery</h3>
+                            <p class="template-description">Galleria immagini costruita con Next.js e Cloudinary. Perfetta per fotografi e creativi.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Next.js</span>
+                                <span class="feature-tag">Cloudinary</span>
+                                <span class="feature-tag">Media</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://nextjsconf-pics.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="ai">
+                        <div class="template-content">
+                            <span class="template-tag">AI &amp; Chatbot</span>
+                            <h3>Next.js AI Chatbot</h3>
+                            <p class="template-description">Chatbot AI completo e configurabile creato da Vercel. Integra conversazioni intelligenti nel tuo sito.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">AI</span>
+                                <span class="feature-tag">Chatbot</span>
+                                <span class="feature-tag">API</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://demo.chat-sdk.dev/" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="blog">
+                        <div class="template-content">
+                            <span class="template-tag">Blog &amp; Siti</span>
+                            <h3>Blog minimal elegante</h3>
+                            <p class="template-description">Blog minimalista con Next.js e Markdown. Semplice, veloce ed elegante.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Portfolio</span>
+                                <span class="feature-tag">Markdown</span>
+                                <span class="feature-tag">Next.js</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://portfolio-blog-starter.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="blog">
+                        <div class="template-content">
+                            <span class="template-tag">Blog &amp; Siti</span>
+                            <h3>Next.js + WordPress</h3>
+                            <p class="template-description">Blog con Static Regeneration e WordPress come CMS. Contenuti dinamici e prestazioni ottimali.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">WordPress</span>
+                                <span class="feature-tag">ISR</span>
+                                <span class="feature-tag">Headless</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://vercel.com/new/montiniangelos-projects/templates/blog/isr-blog-nextjs-wordpress" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="blog">
+                        <div class="template-content">
+                            <span class="template-tag">Blog &amp; Siti</span>
+                            <h3>Sito vetrina</h3>
+                            <p class="template-description">Sito web statico generato con Next.js e Markdown. Ideale per presentare servizi e attività.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Static</span>
+                                <span class="feature-tag">Markdown</span>
+                                <span class="feature-tag">Next.js</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://next-blog-starter.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="blog">
+                        <div class="template-content">
+                            <span class="template-tag">Blog &amp; Siti</span>
+                            <h3>Blog minimalista</h3>
+                            <p class="template-description">Blog moderno con Next.js App Router, Contentlayer, Tailwind CSS e dark mode.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Contentlayer</span>
+                                <span class="feature-tag">Tailwind CSS</span>
+                                <span class="feature-tag">Dark Mode</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://next-contentlayer.vercel.app/" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="ai">
+                        <div class="template-content">
+                            <span class="template-tag">AI &amp; Chatbot</span>
+                            <h3>Morphic AI</h3>
+                            <p class="template-description">Motore di risposta AI con Generative UI. Interfaccia moderna per query intelligenti.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">AI</span>
+                                <span class="feature-tag">Generative UI</span>
+                                <span class="feature-tag">Answer Engine</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://vercel.com/new/montiniangelos-projects/templates/ai/morphic-ai-answer-engine-generative-ui" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="saas">
+                        <div class="template-content">
+                            <span class="template-tag">Collaborativo</span>
+                            <h3>App collaborativa</h3>
+                            <p class="template-description">App collaborativa real-time basata su Liveblocks. Perfetta per team distribuiti.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Real-time</span>
+                                <span class="feature-tag">Liveblocks</span>
+                                <span class="feature-tag">Collab</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://nextjs-starter-kit.liveblocks.app/api/auth/signin?callbackUrl=https%3A%2F%2Fnextjs-starter-kit.liveblocks.app%2F" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="ai">
+                        <div class="template-content">
+                            <span class="template-tag">AI &amp; Chatbot</span>
+                            <h3>Gemini AI Chatbot</h3>
+                            <p class="template-description">Chatbot powered da Google Gemini con Vercel AI SDK, Next.js e React.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Gemini</span>
+                                <span class="feature-tag">AI</span>
+                                <span class="feature-tag">Chatbot</span>
+                            </div>
+                            <div class="template-cta">
+                                <a href="https://vercel.com/new/montiniangelos-projects/templates/ai/gemini-ai-chatbot" target="_blank" class="btn btn-primary" rel="noopener noreferrer">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="pricing-info" aria-labelledby="pricing-title">
+                <h2 id="pricing-title">📊 Piani di abbonamento</h2>
+                <p class="section-lead">Un setup iniziale una tantum e due piani di mantenimento per gestire nel tempo il tuo progetto Next.js su Vercel. I termini di abbonamento sono definiti a partire dal momento del primo pagamento secondo le condizioni indicate nei <a href="./terminiab.html">termini di abbonamento</a>.</p>
+
+                
+
+                <div class="pricing-divider">
+                    <span>Scegli il tuo piano di mantenimento</span>
+                </div>
+
+                <div class="pricing-grid">
+                      <article class="pricing-card">
+                        <h3>🚀 Setup iniziale </h3>
+                        <div class="price">€ 200</div>
+                        <div class="price-note">una tantum</div>
+                        <ul>
+                            <li>Configurazione iniziale</li>
+                            <li>Setup dominio personalizzato</li>
+                            <li>Backup iniziale</li>
+                           
+                        </ul>
+                    </article>
+                    <article class="pricing-card">
+                        <h3>💰 Basic</h3>
+                        <div class="price">€ 29</div>
+                        <div class="price-note">al mese</div>
+                        <ul>
+                            <li>Mantenimento tecnico</li>
+                            <li>Monitoraggio uptime</li>
+                            <li>Backup automatici</li>
+                            <li>Supporto email</li>
+                        </ul>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3>⭐ Pro</h3>
+                        <div class="price">€ 75</div>
+                        <div class="price-note">al mese</div>
+                        <ul>
+                            <li>Tutto il piano Basic</li>
+                            <li>Creazione testi professionali</li>
+                            <li>Immagini stock gratuite</li>
+                            <li>Supporto prioritario</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="pricing-divider">
+                    <span>Procedi al pagamento</span>
+                </div>
+
+                <div class="pricing-grid">
+                    <article class="pricing-card" style="padding: 10px;"> 
+                        <stripe-buy-button buy-button-id="buy_btn_1SfIdJEESWP2RflQ3d7kHNae" publishable-key="pk_live_y7e0KBwSyzGWI8292OTmdXlI00B3svsqYZ"></stripe-buy-button>
+                    </article>
+
+                    <article class="pricing-card" style="padding: 10px;">
+                        <stripe-buy-button buy-button-id="buy_btn_1SfIotEESWP2RflQ8K4lEW38" publishable-key="pk_live_y7e0KBwSyzGWI8292OTmdXlI00B3svsqYZ"></stripe-buy-button>
+                    </article>
+
+                    <article class="pricing-card" style="padding: 10px;"> 
+                        <stripe-buy-button buy-button-id="buy_btn_1SfIqpEESWP2RflQCZQ3oxqi" publishable-key="pk_live_y7e0KBwSyzGWI8292OTmdXlI00B3svsqYZ"></stripe-buy-button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="delivery-section">
+                <h2 class="section-title">Come funziona il servizio</h2>
+                <p>Ogni progetto parte dalla scelta del template più adatto tra quelli ufficiali Vercel per Next.js e React, che viene poi configurato su misura con dominio, contenuti e integrazioni richieste per la tua attività.</p>
+                <p>Dopo il setup iniziale, LyberCode gestisce per te il mantenimento tecnico: monitoraggio uptime, backup e aggiornamenti, con la possibilità di aggiungere creazione testi, immagini e supporto prioritario tramite i piani di abbonamento mensili Basic e Pro.</p>
+                <ul>
+                    <li>Pagamento setup iniziale e rilascio fattura.</li>
+                    <li>Analisi delle esigenze e scelta del template più adatto.</li>
+                    <li>Setup tecnico su Vercel con dominio personalizzato.</li>
+                    <li>Personalizzazione di contenuti, sezioni e integrazioni richieste.</li>
+                    <li>Pagamento piano di mantenimento mensile.</li>
+                    <li>Attivazione del piano di mantenimento (Basic o Pro) per la gestione continuativa.</li>
+                </ul>
+                <p>Il servizio è completamente online e disponibile anche durante le vacanze estive.</p>
+                <p>I tempi di consegna dipendono dalle esigenze specifiche del cliente e possono variare da poche ore a qualche giorno lavorativo.</p>
+                <p>Se hai bisogno di aiuto o hai domande riguardanti il nostro servizio, non esitare a contattarci utilizzando il form sul sito oppure inviando una mail a <a href="mailto:hello@lybercode.com">hello@lybercode.com.</a></p>
+                
+                <p><strong>Nota:</strong> Il servizio è soggetto alle condizioni legali indicate nella pagina <a href="./terminiab.html">Termini di Abbonamento</a>.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h4>LyberCode</h4>
+                <p>Servizi di consulenza informatica per imprese e PA: sviluppo software, cloud, cybersecurity, AI e trasformazione digitale, con sede a Roma e Terracina.</p>
+            </div>
+            <div>
+                <h4>Hub</h4>
+                <a href="index.html#metodo">Metodo</a>
+                <a href="index.html#competenze">Competenze</a>
+                <a href="index.html#ambiti">Ambiti</a>
+                <a href="index.html#toolkit">Toolkit</a>
+                <a href="index.html#valore">Perché noi</a>
+            </div>
+            <div>
+                <h4>Contatti</h4>
+                <a href="mailto:hello@lybercode.com">hello@lybercode.com</a>
+                <a href="tel:+390773061194">Tel. 0773 061194</a>
+                <a href="tel:+393392528986">Cell. 339 2528986</a>
+                <a href="mailto:montini@peceasy.com">PEC: montini@peceasy.com</a>
+            </div>
+            <div>
+                <h4>Community</h4>
+                <a href="https://github.com/montiniangelo">GitHub</a>
+                <a href="https://www.linkedin.com/company/lybercode/">LinkedIn</a>
+                <a href="index.html#contatti">Newsletter</a>
+            </div>
+        </div>
+        <div class="bottom">
+            © 2025 LyberCode di Angelo Montini. <span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. <a href="privacy.html">Policy Privacy.</a> Tutti i diritti riservati
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('nav .menu');
+
+        menuToggle?.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menu?.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('active'));
+        });
+
+        document.querySelectorAll('nav .menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle?.classList.remove('active');
+                menu?.classList.remove('active');
+                menuToggle?.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+            btn.addEventListener("click", function () {
+                const filter = this.getAttribute("data-filter");
+
+                document
+                    .querySelectorAll(".filter-btn")
+                    .forEach((b) => b.classList.remove("active"));
+                this.classList.add("active");
+
+                document.querySelectorAll(".template-card").forEach((card) => {
+                    const category = card.getAttribute("data-category");
+                    card.style.display =
+                        filter === "all" || category === filter ? "flex" : "none";
+                });
+            });
+        });
+    </script>
+       
+</body>
+</html>

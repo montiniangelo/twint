@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11200378416"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-11200378416');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - LyberCode | Ultimi Aggiornamenti e Progetti</title>
+    <link rel="icon" type="image/svg+xml" href="../faviconz.png">
+    <meta name="description" content="Scopri le ultime notizie, aggiornamenti e progetti di LyberCode: sviluppi software, formazione informatica e servizi per la PA.">
+    <meta name="keywords" content="LyberCode news, progetti, aggiornamenti, formazione, sviluppo software, pubblica amministrazione">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quali sono gli ultimi servizi di LyberCode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LyberCode offre servizi innovativi di consulenza IT inclusa sviluppo web con Next.js, workflow AI per automazioni aziendali, monitoraggio infrastrutture, cybersecurity, cloud computing e formazione specializzata. Scopri le nostre ultime soluzioni per imprese e Pubblica Amministrazione."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come LyberCode supporta la trasformazione digitale della PA?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LyberCode è specializzata nella trasformazione digitale della Pubblica Amministrazione, offrendo soluzioni MEPA, monitoring di appalti pubblici secondo AGID, gestione documentale, modernizzazione di servizi web istituzionali e formazione su cybersecurity e Office automation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali progetti recenti ha realizzato LyberCode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Recentemente LyberCode ha sviluppato menu digitali interattivi per ristorazione, gestione gallery fotografiche per istituzioni scolastiche, dashboard per sistemi idrici, servizi web per gallerie d'arte internazionali, e workflow AI per automazioni complesse di processi aziendali."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come contattare LyberCode per una consulenza?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Puoi contattare LyberCode tramite email a hello@lybercode.com, oppure telefonicamente al 0773 061194 o al 339 2528986. Per le comunicazioni ufficiali verso la PA utilizza PEC: montini@peceasy.com. Siamo disponibili per valutare le tue esigenze di trasformazione digitale."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #f5f7fa;
+            --secondary: #23a5b1;
+            --accent: #ffffff;
+            --text: #1a1a1a;
+            --muted: #4a4a4a;
+            --surface: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* News badge - Lampeggiante */
+        .news-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .news-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        .blog-badge {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        @media (max-width: 480px) {
+            .news-badge {
+                bottom: 60px;
+                left: 10px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+
+            .blog-badge {
+                bottom: 115px;
+                left: 10px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .news-badge {
+                bottom: 50px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .blog-badge {
+                bottom: 95px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+        @supports (padding: max(0px)) {
+            .news-badge {
+                bottom: max(20px, env(safe-area-inset-bottom) + 10px);
+            }
+
+            .blog-badge {
+                bottom: max(80px, env(safe-area-inset-bottom) + 70px);
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            }
+            50% {
+                opacity: 0.6;
+                box-shadow: 0 4px 25px rgba(35, 165, 177, 0.8);
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.15), rgba(255, 255, 255, 0.85)), url('dash.jpg') center/cover no-repeat;
+            color: var(--text);
+            padding: 60px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(74, 74, 74, 0.6), rgba(35, 165, 177, 0.1));
+            z-index: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        nav .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        nav .logo span {
+            line-height: 1;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(26, 26, 26, 0.3);
+            border-radius: 999px;
+            background: rgba(26, 26, 26, 0.06);
+            color: var(--text);
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav .menu a:hover {
+            opacity: 0.8;
+        }
+
+        .page-header {
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        /* News Section */
+        .news-section {
+            padding: 80px 0;
+        }
+
+        .news-intro {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: rgba(245, 247, 250, 0.8);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 12px;
+        }
+
+        .news-intro h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .news-intro > p {
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .news-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .highlight-item {
+            background: rgba(245, 247, 250, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .highlight-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--secondary);
+        }
+
+        .highlight-item p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        .news-context-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(245, 247, 250, 0.6);
+            border-radius: 12px;
+        }
+
+        .news-context-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .news-context-section > p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .context-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .context-card {
+            background: rgba(26, 26, 26, 0.08);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(35, 165, 177, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .context-card:hover {
+            border-color: rgba(35, 165, 177, 0.3);
+            background: rgba(245, 247, 250, 0.9);
+            transform: translateY(-3px);
+        }
+
+        .context-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .context-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        .news-impact {
+            background: rgba(35, 165, 177, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .news-impact h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .news-impact p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .news-card {
+            background: rgba(245, 247, 250, 0.75);
+            border: 1px solid rgba(35, 165, 177, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            background: rgba(245, 247, 250, 0.85);
+            border-color: rgba(35, 165, 177, 0.4);
+        }
+
+        .news-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), rgba(35, 165, 177, 0.8));
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            width: fit-content;
+            box-shadow: 0 2px 8px rgba(35, 165, 177, 0.3);
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: rgba(74, 74, 74, 0.6);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .news-date::before {
+            content: "🗒️";
+        }
+
+        .news-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: var(--text);
+        }
+
+        .news-card p {
+            font-size: 0.95rem;
+            color: rgba(74, 74, 74, 0.8);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .news-card a {
+            display: inline-block;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+            margin-top: auto;
+        }
+
+        .news-card a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            border-top: 1px solid rgba(35, 165, 177, 0.2);
+            padding: 50px 0 20px;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        footer h4 {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        footer a, footer p {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        footer .bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(35, 165, 177, 0.2);
+        }
+
+        footer .bottom a {
+            display: inline;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* Scroll to top button */
+        #scrollTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: #ffffff;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #scrollTop:hover {
+            transform: translateY(-3px);
+        }
+
+        #scrollTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                margin-bottom: 30px;
+            }
+
+            nav .logo {
+                font-size: 1.5rem;
+            }
+
+            nav .logo img {
+                height: 32px;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav .menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: #fff;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                z-index: 1000;
+            }
+
+            nav.menu-open .menu {
+                max-height: 500px;
+            }
+
+            nav .menu a {
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(35, 165, 177, 0.1);
+                display: block;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header p {
+                font-size: 0.95rem;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-card {
+                padding: 25px;
+            }
+
+            #scrollTop {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav .logo {
+                font-size: 1.2rem;
+            }
+
+            nav .logo img {
+                height: 28px;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+
+            .page-header p {
+                font-size: 0.9rem;
+            }
+
+            .news-section {
+                padding: 60px 0;
+            }
+
+            .news-card h2 {
+                font-size: 1.15rem;
+            }
+
+            .news-card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .quiz-banner {
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.1), rgba(35, 165, 177, 0.05));
+            border: 3px solid var(--secondary);
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin: 40px auto;
+            max-width: 1100px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(35, 165, 177, 0.2);
+            animation: borderGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(35, 165, 177, 0.2), inset 0 0 20px rgba(35, 165, 177, 0.05);
+            }
+            50% {
+                box-shadow: 0 12px 35px rgba(35, 165, 177, 0.35), inset 0 0 30px rgba(35, 165, 177, 0.1);
+            }
+        }
+
+        .quiz-banner h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .quiz-banner p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+
+        .quiz-banner a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), #1a8f9f);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.3);
+        }
+
+        .quiz-banner a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(35, 165, 177, 0.45);
+            background: linear-gradient(135deg, #1a8f9f, #157a89);
+        }
+
+        @media (max-width: 768px) {
+            .quiz-banner {
+                padding: 20px 20px;
+                margin: 30px auto;
+            }
+
+            .quiz-banner h3 {
+                font-size: 1.1rem;
+            }
+
+            .quiz-banner p {
+                font-size: 0.9rem;
+            }
+
+            .quiz-banner a {
+                padding: 10px 28px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- News Badge Icon - Lampeggiante -->
+    <a href="news.html" class="news-badge" title="Vai alle News" aria-label="Link alle news" style="font-size:small">NEWS</a>
+
+    <!-- Blog Badge Icon - Lampeggiante -->
+    <a href="blog.html" class="blog-badge" title="Vai al Blog" aria-label="Link al blog" style="font-size:small">BLOG</a>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="LyberCode">
+                    <span>LyberCode</span>
+                </a>
+                <button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="sviluppo.html">Sviluppo</a></li>
+                    <li> <a href="monitor.html">PA</a></li>
+                </ul>
+            </nav>
+            <div class="page-header">
+                <h1>Abbonamenti LyberCode: Basic e Pro</h1>
+                <p>Termini di abbonamento</p>
+            </div>
+        </div>
+    </header>
+
+   <section class="subscription-plans" id="abbonamenti" style="padding:60px 0;background:#f5f7fa;">
+  <div class="container">
+     
+    <p style="font-size:1rem;margin-bottom:30px;color:#4a4a4a;">
+      Ogni progetto parte dalla scelta del template più adatto tra quelli ufficiali proposti nella pagina vercel.html, che viene poi configurato su misura con dominio, contenuti e integrazioni richieste. Dopo il setup iniziale, LyberCode gestisce il mantenimento tecnico: monitoraggio, backup e aggiornamenti, con la possibilità di aggiungere creazione testi, immagini e supporto prioritario tramite i piani di abbonamento mensili Basic e Pro.
+    </p>
+
+    <h3 style="font-size:1.4rem;margin:25px 0 10px;">Cosa include il setup iniziale</h3>
+    <ul style="margin-left:1.2rem;margin-bottom:30px;color:#4a4a4a;line-height:1.7;">
+      <li>Analisi delle esigenze, obiettivi di business e contesto digitale del cliente.</li>
+      <li>Scelta condivisa del template ufficiale Vercel per Next.js/React più adatto al caso d’uso (sito vetrina, blog, landing, mini‑ecommerce, area riservata, ecc.).</li>
+      <li>Setup tecnico su Vercel con dominio personalizzato, certificato HTTPS e configurazione DNS.</li>
+      <li>Integrazione degli strumenti essenziali: analytics, tracciamento conversioni, form di contatto ed eventuali integrazioni di terze parti (newsletter, CRM, strumenti di automazione).</li>
+      <li>Personalizzazione di contenuti, sezioni e navigazione in base al brand (testi, palette colori, loghi, call‑to‑action, struttura pagine).</li>
+      <li>Ottimizzazione base per performance, SEO on‑page e accessibilità (tag fondamentali, meta principali, struttura heading coerente).</li>
+      <li>Pagamento del setup iniziale con rilascio della relativa fattura elettronica.</li>
+    </ul>
+
+    <h3 style="font-size:1.4rem;margin:25px 0 10px;">Attivazione e logica dell’abbonamento</h3>
+    <ul style="margin-left:1.2rem;margin-bottom:30px;color:#4a4a4a;line-height:1.7;">
+      <li>Scelta del piano di mantenimento mensile (Basic o Pro) in base al livello di aggiornamento e supporto desiderato.</li>
+      <li>Pagamento ricorrente mensile tramite metodo concordato (fatturazione elettronica con cadenza fissa, nessun vincolo pluriennale).</li>
+      <li>Attivazione del piano alla messa online del progetto o alla data concordata in fase di offerta.</li>
+      <li>Possibilità di upgrade/downgrade del piano (da Basic a Pro e viceversa) con preavviso minimo di un ciclo di fatturazione.</li>
+      <li>Disdetta possibile con preavviso (es. 30 giorni) e rilascio di backup dei file e delle configurazioni essenziali del sito.</li>
+    </ul>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:10px;">
+      <!-- Piano Basic -->
+      <article style="background:#ffffff;border:1px solid rgba(35,165,177,0.15);border-radius:10px;padding:25px;">
+        <h3 style="font-size:1.3rem;margin-bottom:8px;color:#23a5b1;">Piano Basic</h3>
+        <p style="font-size:0.95rem;margin-bottom:12px;color:#4a4a4a;">
+          Pensato per micro‑imprese e professionisti che vogliono un sito sempre online e aggiornato sul piano tecnico, 
+          senza doversi occupare della manutenzione quotidiana.
+        </p>
+        <ul style="margin-left:1.1rem;color:#4a4a4a;line-height:1.7;font-size:0.95rem;">
+          <li>Monitoraggio uptime e intervento in caso di malfunzionamenti.</li>
+          <li>Aggiornamenti periodici dell’infrastruttura (runtime, dipendenze, build) e controllo errori critici.</li>
+          <li>Backup regolari del progetto e supporto per eventuali restore.</li>
+          <li>Supporto tecnico via email con tempi di risposta standard.</li>
+          <li>Piccoli aggiornamenti di contenuto (es. testo di una sezione, sostituzione di un’immagine) entro un monte ore concordato al mese pari a 1 ora.</li>
+        </ul>
+      </article>
+
+      <!-- Piano Pro -->
+      <article style="background:#ffffff;border:1px solid rgba(35,165,177,0.15);border-radius:10px;padding:25px;">
+        <h3 style="font-size:1.3rem;margin-bottom:8px;color:#23a5b1;">Piano Pro</h3>
+        <p style="font-size:0.95rem;margin-bottom:12px;color:#4a4a4a;">
+          Ideale per realtà che vogliono un sito vivo, aggiornato e orientato ai risultati, con affiancamento continuativo su contenuti e automazioni.
+        </p>
+        <ul style="margin-left:1.1rem;color:#4a4a4a;line-height:1.7;font-size:0.95rem;">
+          <li>Tutti i servizi del piano Basic (monitoraggio, backup, aggiornamenti tecnici).</li>
+          <li>Creazione e revisione testi web ottimizzati per SEO e conversioni (articoli, pagine, sezioni news) entro il monte ore mensile previsto pari a 2 ore.</li>
+          <li>Produzione o selezione guidata di immagini (stock, generative AI, ottimizzazione formato e peso per il web).</li>
+          <li>Supporto prioritario via email e canali concordati, con tempi di risposta ridotti.</li>
+          <li>Affinamento in base ai risultati ottenuti.</li>
+        </ul>
+      </article>
+    </div>
+
+    <h3 style="font-size:1.2rem;margin-top:35px;margin-bottom:10px;">
+      Flusso di lavoro in sintesi
+    </h3>
+    <ol style="margin-left:1.2rem;color:#4a4a4a;line-height:1.7;font-size:0.95rem;">
+      <li>Analisi delle esigenze e scelta del template più adatto.</li>
+      <li>Setup tecnico su Vercel con dominio personalizzato e prime integrazioni.</li>
+      <li>Personalizzazione di contenuti, sezioni e funzionalità richieste.</li>
+      <li>Pagamento del setup iniziale (non rimborsabile) e rilascio fattura.</li>
+      <li>Scelta e pagamento del piano di mantenimento mensile.</li>
+      <li>Attivazione del piano Basic o Pro per la gestione continuativa del progetto.</li>
+    </ol>
+  </div>
+</section>
+
+
+   
+    <footer>
+        <div class="container">
+            <div>
+                <h4>LyberCode</h4>
+                <p>Servizi di consulenza informatica per imprese e PA: sviluppo software, cloud, cybersecurity, AI e trasformazione digitale, con sede a Roma e Terracina.</p>
+            </div>
+            <div>
+                <h4>Hub</h4>
+                <a href="index.html#metodo">Metodo</a>
+                <a href="index.html#competenze">Competenze</a>
+                <a href="index.html#ambiti">Ambiti</a>
+                <a href="index.html#toolkit">Toolkit</a>
+                <a href="index.html#valore">Perché noi</a>
+            </div>
+            <div>
+                <h4>Contatti</h4>
+                <a href="mailto:hello@lybercode.com">hello@lybercode.com</a>
+                <a href="tel:+390773061194">Tel. 0773 061194</a>
+                <a href="tel:+393392528986">Cell. 339 2528986</a>
+                <a href="mailto:montini@peceasy.com">PEC: montini@peceasy.com</a>
+            </div>
+            <div>
+                <h4>Community</h4>
+                <a href="https://github.com/montiniangelo">GitHub</a>
+                <a href="https://www.linkedin.com/company/lybercode/">LinkedIn</a>
+                <a href="index.html#contatti">Newsletter</a>
+            </div>
+        </div>
+        <div class="bottom">
+         © 2025 LyberCode di Angelo Montini. <span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. <a href="privacy.html">Policy Privacy. </a> Tutti i diritti riservati
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Torna all'inizio" title="Torna su">↑</button>
+
+    <script>
+        // Scroll-to-top button logic
+        const scrollBtn = document.getElementById('scrollTop');
+        const headerEl = document.querySelector('header');
+        const headerTop = 0;
+
+        const toggleScrollBtn = () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+        toggleScrollBtn();
+
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: headerTop, behavior: 'smooth' });
+        });
+    </script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//esempio.angelomontini.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '42']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+<script>
+(function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav .menu');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            nav.classList.toggle('menu-open');
+            menuToggle.setAttribute('aria-expanded',
+                menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+            );
+        });
+
+        navMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+})();
+</script>
+
+</body>
+</html>
