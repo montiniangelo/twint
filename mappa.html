@@ -1597,6 +1597,30 @@
                 align-self: flex-start;
             }
         }
+
+
+          /* Delivery Section */
+        .delivery-section {
+            padding: 40px 0 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .delivery-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .delivery-section ul {
+            margin-left: 20px;
+            color: var(--text);
+        }
+
+        .delivery-section li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
     </style>
 </head>
 <body>
@@ -1635,13 +1659,25 @@
 
     <section class="mappa">
         <div class="container">
-           
-         
 
+             <div class="delivery-section">
+                
+                <p>LyberCode offre diverse soluzioni di realizzazione di mappe digitali, ciascuna ottimizzata per specifici casi d'uso, requisiti di scalabilità, manutenzione e budget. Scegli la soluzione più adatta al tuo progetto tra le nostre opzioni comprovate e moderne.</p>
+            </div>
+       
+         
+<!-- 
             <div class="mappa-image-container">
                 <img src="./mappa.png" alt="Mappa interattiva Google Maps - Visualizzazione sedi Roma Terracina" loading="lazy">
             </div>
-
+ -->
+<h3 style="text-align: center;">Tempi di percorrenza (clicca sulla mappa e scopri i tempi di percorrenza)</h3>  
+   <iframe src="https://storage.googleapis.com/maps-solutions-cihe8mwg0a/neighborhood-discovery/d9v8/neighborhood-discovery.html"
+  width="100%" height="600px"
+  style="border:0;margin-bottom: 2em;"
+  loading="lazy">
+   
+</iframe>
             <div class="mappa-filters">
                 <button class="filter-btn active" data-category="all">
                     <span class="icon">⭐</span> Tutte le sezioni
@@ -1837,21 +1873,9 @@
             window.scrollTo({ top: headerTop, behavior: 'smooth' });
         });
     </script>
-<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//esempio.angelomontini.com/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '42']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
+
+
+
 
 <script>
 (function() {
