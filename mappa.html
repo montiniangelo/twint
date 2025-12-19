@@ -721,6 +721,13 @@
             margin-bottom: 10px;
         }
 
+#x-maps h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
         .quiz-banner p {
             color: var(--muted);
             font-size: 0.95rem;
@@ -1563,7 +1570,8 @@
 
             .mappa-filters {
                 margin-bottom: 25px;
-                gap: 8px;
+                gap: 2px;
+                 flex-wrap: nowrap;
             }
 
             .filter-btn {
@@ -1626,6 +1634,46 @@
             max-width: 100%;
         }
 
+        .mappa-examples-cta {
+            text-align: center;
+            padding: 50px 30px;
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.08) 0%, rgba(35, 165, 177, 0.04) 100%);
+            border: 2px solid rgba(35, 165, 177, 0.2);
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .mappa-examples-cta h2 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .mappa-examples-cta p {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 24px rgba(35, 165, 177, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 32px rgba(35, 165, 177, 0.4);
+        }
+
         @media (max-width: 768px) {
             iframe[src*="nextjs-droghe"],
             iframe[src*="neighborhood-discovery"] {
@@ -1633,10 +1681,45 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .mappa-examples-cta {
+                padding: 40px 20px;
+            }
+
+            .mappa-examples-cta h2 {
+                font-size: 1.5rem;
+            }
+
+            .mappa-examples-cta p {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                padding: 12px 28px;
+                font-size: 0.95rem;
+            }
+        }
+
         @media (max-width: 480px) {
-            iframe[src*="nextjs-droghe"],
-            iframe[src*="neighborhood-discovery"] {
-                height: 40vh !important;
+            #x-maps {
+                display: none;
+            }
+
+            .mappa-examples-cta {
+                padding: 30px 15px;
+            }
+
+            .mappa-examples-cta h2 {
+                font-size: 1.3rem;
+            }
+
+            .mappa-examples-cta p {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 11px 24px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -1683,8 +1766,18 @@
                 <p>LyberCode offre diverse soluzioni di realizzazione di mappe digitali, ciascuna ottimizzata per specifici casi d'uso, requisiti di scalabilità, manutenzione e budget. Scegli la soluzione più adatta al tuo progetto tra le nostre opzioni comprovate e moderne.</p>
             </div>
        
-         
- <h3 style="text-align: center;">Esempio di mappa delle dipendenze in Italia nel 2024</h3> 
+       <div id="mappa-examples">
+           <div class="mappa-examples-cta">
+               <h2>Esempi di mappa interattiva  </h2>
+               <p>Visualizza e interagisci con la mappa  delle dipendenze in Italia nel 2024</p>
+               <a href="https://nextjs-droghe.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-button">
+                   Accedi alla Mappa Web <span style="margin-left: 8px;">→</span>
+               </a>
+           </div>
+       </div>
+
+<div id="x-maps" > 
+ <h3 >Esempio: Mappa delle dipendenze in Italia nel 2024</h3> 
           <iframe
   src="https://nextjs-droghe.vercel.app/"
   frameborder="0"
@@ -1692,13 +1785,14 @@
   style="width: 100%; height: 60vh; border: none;margin-bottom: 3em;"
 ></iframe>
  
-<h3 style="text-align: center;">Tempi di percorrenza (clicca sulla mappa e scopri i tempi di percorrenza)</h3>  
+<h3 >Esempio: Tempi di percorrenza: clicca sulla mappa e scopri i tempi di percorrenza</h3>  
    <iframe src="https://storage.googleapis.com/maps-solutions-cihe8mwg0a/neighborhood-discovery/d9v8/neighborhood-discovery.html"
   width="100%" height="600px"
   style="border:0;margin-bottom: 2em;"
   loading="lazy">
    
 </iframe>
+</div>
             <div class="mappa-filters">
                 <button class="filter-btn active" data-category="all">
                     <span class="icon">⭐</span> Tutte le sezioni
