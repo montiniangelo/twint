@@ -85,6 +85,26 @@
         <priority>0.9</priority>
     </url>
     
+    <!-- Local Landing Pages -->
+    <url>
+        <loc>https://lybercode.com/siti-web-roma.html</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://lybercode.com/siti-web-latina.html</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://lybercode.com/siti-web-terracina.html</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Content Hub -->
     <url>
         <loc>https://lybercode.com/news.html</loc>
