@@ -14,8 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LyberCode | Consulenza Web e Sistemi Digitali</title>
     <link rel="icon" type="image/svg+xml" href="faviconz.png">
-    <meta name="description" content="Consulenza web e sistemi digitali orientati a risultati misurabili. Riduciamo errori, sprechi e costi nei sistemi web di aziende e Pubblica Amministrazione. Esperienza che evita scelte sbagliate.">
-    <meta name="keywords" content="LyberCode, consulenza web, consulenza informatica, sistemi digitali, architetture web, audit IT, aziende, PA">
+    <meta name="description" content="Costruiamo risultati, non presenze online. La maggior parte dei siti web non serve a nulla. Noi costruiamo solo ciò che serve davvero al tuo business, basandoci sul tuo budget e obiettivi reali.">
+    <meta name="keywords" content="LyberCode, agenzia web, risultati online, siti web professionali, acquisizione clienti, marketing digitale, ROI web">
     <meta name="author" content="LyberCode di Angelo Montini">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
@@ -689,6 +689,14 @@
             font-size: 1.5rem;
             margin-bottom: 20px;
             line-height: 1.2em;
+        }
+
+        h3 small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--muted);
+            display: block;
+            margin-top: 5px;
         }
 
         p {
@@ -1417,6 +1425,18 @@
             background: linear-gradient(135deg, #1a8f9f, #157a89);
         }
 
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             .quiz-banner {
                 padding: 20px 20px;
@@ -1563,39 +1583,22 @@
             </nav>
             <div class="hero">
                 <div>
-                    <h1>Riduci sprechi e costi nei tuoi sistemi web – Ottieni risultati concreti</h1>
-                    <p>Consulenza digitale per aziende e Pubblica Amministrazione che vogliono decisioni rapide, sicure e misurabili. Non più ore sprecate in sperimentazioni: ti diciamo cosa tenere, cosa rifare e cosa eliminare, così investi solo dove serve davvero.</p>
+                    <h1 class="reveal">Costruiamo risultati, non “presenze online”.</h1>
+                    <p class="reveal" style="transition-delay: 0.1s;">La maggior parte dei siti web non serve a nulla. Sono belli, costosi, e non portano clienti. Noi lavoriamo solo su una domanda: quanto deve rendere il tuo progetto online, con il budget che hai.</p>
+                    <p class="reveal" style="transition-delay: 0.2s;">Non vendiamo pacchetti standard. Analizziamo il tuo obiettivo, il mercato e il margine reale. Poi costruiamo solo ciò che serve.</p>
                     
-                    <h3 style="font-size: 1.05rem; margin-top: 30px; margin-bottom: 15px; font-weight: 600; color: var(--text);">Cosa ottieni subito</h3>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 25px; font-size: 0.95rem; line-height: 1.9;">
-                        <li style="margin-bottom: 8px;">✔ Audit Strategico Web in 15 giorni</li>
-                        <li style="margin-bottom: 8px;">✔ Output chiaro e operativo, pronto all'uso</li>
-                        <li style="margin-bottom: 8px;">✔ Riduzione di errori, sprechi e costi</li>
-                        <li>✔ Supporto decisionale concreto, basato su dati reali</li>
-                    </ul>
-                    
-                    <h3 style="font-size: 1.05rem; margin-top: 25px; margin-bottom: 15px; font-weight: 600; color: var(--text);">Chi può beneficiarne</h3>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 0.95rem; line-height: 1.9;">
-                        <li style="margin-bottom: 8px;">• Aziende con sistemi digitali complessi</li>
-                        <li style="margin-bottom: 8px;">• Pubblica Amministrazione e enti strutturati</li>
-                        
-                    </ul>
-                    
-                    <div class="cta-group">
-                        <a class="btn btn-smart" href="https://wa.me/3392528986" target="_blank" rel="noopener" style="display: inline-block; margin-right: 15px;">Richiedi il tuo Audit Strategico Web →</a>
-                       
+                    <div class="cta-group reveal" style="margin-top: 30px; transition-delay: 0.3s;">
+                        <a class="btn btn-smart" href="https://wa.me/3392528986" target="_blank" rel="noopener">Parliamo di obiettivi →</a>
                     </div>
-                   
                 </div>
-                <div class="card">
-                    <h3>Il nostro valore</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.8;">Non è scrivere codice più veloce.</p>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); font-weight: 600; margin-top: 20px;">È evitare scelte sbagliate che costano anni.</p>
+                <div class="card reveal">
+                    <h3>Verità scomoda</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">Un sito web senza una strategia di acquisizione è solo un costo.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); font-weight: 600; margin-top: 20px;">Noi ti diciamo se conviene farlo. E se no, perché.</p>
                     <hr style="margin: 30px 0; border: none; border-top: 1px solid rgba(0,0,0,0.1);">
-                    <p style="font-size: 0.95rem; margin-top: 20px; font-weight: 500;">Progetti in evidenza realizzati nel 2025:</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 15px; font-size: 0.9rem; line-height: 1.9;">
-                        <li style="margin-bottom: 10px;"><strong>Formazione:</strong> Percorso formativo Granatieri "Guardie"</li>
-                        <li><strong>Istituzionale:</strong> Gestione servizi web Gallerie degli Uffizi</li>
+                    <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 1.9;">
+                        <li style="margin-bottom: 10px;"><strong>Niente fuffa:</strong> Solo ciò che porta numeri.</li>
+                        <li><strong>Trasparenza:</strong> Analisi secca di mercato e margini.</li>
                     </ul>
                 </div>
             </div>
@@ -1603,75 +1606,76 @@
     </header>
     <section id="cosa-facciamo">
         <div class="container">
-            <span class="section-title">Il valore di LyberCode</span>
-            <h2>Cosa facciamo davvero</h2>
+            <span class="section-title">Trasparenza totale</span>
+            <h2>Cosa cambia davvero in base al budget</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>Consulenza strategica web</h3>
-                    <p>Analizziamo piattaforme, processi e flussi digitali per individuare colli di bottiglia, rischi e sprechi.</p>
-                    <p style="margin-top: 15px; font-size: 0.95rem; color: var(--text);"><strong>Output chiaro:</strong> cosa tenere, cosa rifare, cosa eliminare.</p>
+                <div class="card reveal">
+                    <h3>200–500 € <small>l’anno</small></h3>
+                    <p><strong>Base solida:</strong> sito essenziale, dominio, email professionale. È il minimo per essere credibile.</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--muted);">Non promettiamo clienti: sarebbe una bugia. Qui l’obiettivo è non danneggiarti.</p>
                 </div>
-                <div class="card">
-                    <h3>Sistemi web e applicazioni</h3>
-                    <p>Progettiamo e governiamo lo sviluppo di applicazioni web, dashboard, sistemi informativi e piattaforme integrate.</p>
-                    <p style="margin-top: 15px; font-size: 0.95rem; color: var(--text);"><strong>Il nostro approccio:</strong> non partiamo dal codice, partiamo dal problema.</p>
+             
+                <div class="card reveal">
+                    <h3>1000-2000 € <small>l’anno</small></h3>
+                    <p><strong>Sostenibilità:</strong> Funnel, automazioni, SEO continuativa, canali di traffico non social.</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--muted);">L’acquisizione non è più un evento: è un processo. Sai cosa funziona e cosa no.</p>
                 </div>
-                <div class="card">
-                    <h3>Automazione e dati</h3>
-                    <p>Automatizziamo processi ripetitivi e rendiamo i dati leggibili e utili per chi deve decidere.</p>
-                    <p style="margin-top: 15px; font-size: 0.95rem; color: var(--text);"><strong>Il risultato:</strong> meno lavoro manuale, meno errori, più controllo.</p>
+                <div class="card reveal">
+                    <h3>5000 € <small>l’anno</small></h3>
+                    <p><strong>Accelerazione:</strong> Copy professionale, campagne search ottimizzate, analisi dei dati, miglioramenti continui.</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--muted);">Se il tuo servizio è valido, cresci. Se non cresce, lo scopri subito.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>10.000 €+ <small>l’anno</small></h3>
+                    <p><strong>Scala e Autorità:</strong> Team dedicato, test continui, automazione avanzata, posizionamento.</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--muted);">A questo livello il web non è il limite: lo è solo il tuo modello di business.</p>
                 </div>
             </div>
         </div>
     </section>
     <section id="come-lavoriamo">
         <div class="container">
-            <span class="section-title">Il nostro metodo</span>
+            <span class="section-title">Niente giri di parole</span>
             <h2>Come lavoriamo</h2>
             <div class="process">
-                <div class="process-step">
-                    <h4>Analisi</h4>
-                    <p>Capire prima di costruire</p>
+                <div class="process-step reveal">
+                    <h4>1. Analisi secca</h4>
+                    <p>Mercato, offerta, numeri. Senza abbellimenti.</p>
                 </div>
-                <div class="process-step">
-                    <h4>Scelte</h4>
-                    <p>Tecniche e strategiche, motivate</p>
+                <div class="process-step reveal">
+                    <h4>2. Scelta della leva</h4>
+                    <p>Non facciamo tutto, solo ciò che serve davvero.</p>
                 </div>
-                <div class="process-step">
-                    <h4>Implementazione</h4>
-                    <p>Solo ciò che serve davvero</p>
+                <div class="process-step reveal">
+                    <h4>3. Costruzione rapida</h4>
+                    <p>Mettiamo online velocemente e misuriamo.</p>
                 </div>
-                <div class="process-step">
-                    <h4>Controllo</h4>
-                    <p>Risultati, stabilità, sostenibilità</p>
+                <div class="process-step reveal">
+                    <h4>4. Ottimizzazione o Stop</h4>
+                    <p>Miglioriamo o chiudiamo se non conviene più.</p>
                 </div>
             </div>
-            <p style="margin-top: 40px; color: var(--text);"><strong>Questo approccio riduce costi nascosti e debito tecnico.</strong></p>
+            <p style="margin-top: 40px; color: var(--text); font-size: 1.1rem; text-align: center;"><strong>Se un progetto non ha senso, lo diciamo. Anche se perdiamo il cliente.</strong></p>
         </div>
     </section>
-    <section id="risultati">
+    <section id="quando-siamo-adatti">
         <div class="container">
-            <span class="section-title">Il nostro track record</span>
-            <h2>Risultati tipici</h2>
+            <span class="section-title">Selezione</span>
+            <h2>Per chi è questo servizio</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>Riduzione dei tempi operativi</h3>
-                    <p>Fino al <strong>40%</strong> attraverso automazione e ottimizzazione dei processi</p>
+                <div class="card reveal">
+                    <h3>Clienti, non “visibilità”</h3>
+                    <p>Per professionisti e aziende che hanno bisogno di risultati misurabili e nuovi clienti, non di semplici like o visite fini a se stesse.</p>
                 </div>
-                <div class="card">
-                    <h3>Razionalizzazione dei sistemi</h3>
-                    <p>Consolidamento dell'infrastruttura IT e eliminazione di ridondanze</p>
+                <div class="card reveal">
+                    <h3>Orientamento ai numeri</h3>
+                    <p>Per chi accetta che il web è fatto di dati, conversioni e margini reali. I numeri non mentono mai.</p>
                 </div>
-                <div class="card">
-                    <h3>Conformità normativa</h3>
-                    <p>Migliore controllo dei processi e allineamento alle normative vigenti</p>
-                </div>
-                <div class="card">
-                    <h3>Riduzione dei costi IT</h3>
-                    <p>Diminuzione della spesa per gestione nel medio periodo</p>
+                <div class="card reveal">
+                    <h3>Verità vs Promesse</h3>
+                    <p>Per chi preferisce una verità scomoda (tipo "questo progetto non funzionerà") a una promessa vuota venduta solo per chiudere un contratto.</p>
                 </div>
             </div>
-            <p style="margin-top: 40px; text-align: center; color: var(--text); font-size: 1.1rem;"><strong>Non promettiamo miracoli. Produciamo miglioramenti concreti.</strong></p>
         </div>
     </section><!--  <section id="percorsi">
         <div class="container">
@@ -1809,28 +1813,7 @@
             </div>
         </div>
     </section>
-    <section id="audit">
-        <div class="container">
-            <span class="section-title">Punto di partenza</span>
-            <h2>Audit Strategico Web</h2>
-            <p style="margin-bottom: 30px;">Un intervento mirato per fare chiarezza, senza impegni a lungo termine.</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>Cosa facciamo</h3>
-                    <ul class="feature-list">
-                        <li><span class="feature-icon">ANA</span><span class="feature-text">Analisi tecnica e funzionale</span></li>
-                        <li><span class="feature-icon">VAL</span><span class="feature-text">Valutazione rischi e costi futuri</span></li>
-                        <li><span class="feature-icon">DOC</span><span class="feature-text">Documento decisionale utilizzabile subito</span></li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Il risultato</h3>
-                    <p><strong>Tempo:</strong> 15 giorni</p>
-                    <p><strong>Output:</strong> scelte chiare, niente fumo</p>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <section class="clienti-istituzionali">
         <div class="container">
             <span class="section-title">Partner istituzionali</span>
@@ -1941,25 +1924,15 @@
             </div>
         </div>
     </section>
-
-    <section id="riepilogo">
-        <div class="container">
-            <span class="section-title">In sintesi</span>
-            <h2>Dopo anni di lavoro su sistemi digitali complessi</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8;">Il nostro valore non è scrivere codice più veloce.</p>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); font-weight: 600;">È evitare scelte sbagliate che costano anni.</p>
-            <div style="margin-top: 50px;">
-                <a class="btn btn-smart" href="https://wa.me/3392528986" target="_blank" rel="noopener" style="display: inline-block;">Parliamone su WhatsApp →</a>
-            </div>
-        </div>
-    </section>
+ 
     <section id="contatti">
         <div class="container contact">
-            <span class="section-title">Il primo passo</span>
-            <h2>Se hai un progetto complesso o un sistema che non funziona come dovrebbe, parliamone.</h2>
-            <p style="margin-top: 25px; font-size: 1.05rem;">Scrivici con una descrizione sommaria del contesto. Valuteremo se siamo il partner giusto e come possiamo aiutarti.</p><br>
+            <span class="section-title">Contatto diretto</span>
+            <h2>Niente fuffa, solo obiettivi.</h2>
+            <p style="margin-top: 25px; font-size: 1.05rem;">Scrivici per una valutazione secca del tuo progetto. Non vendiamo fumo, vendiamo risultati.</p><br>
             <br>
-            <a class="btn btn-primary" href="mailto:hello@lybercode.com">hello@lybercode.com</a>
+          
+                 <a class="btn btn-smart" href="https://wa.me/3392528986" target="_blank" rel="noopener" style="display: inline-block;">Parliamo del tuo progetto →</a>
             <div class="legal" style="margin-top: 40px;">
                 <strong>LyberCode di <a href="https://angelomontini.com" target="_blank" rel="noopener">Angelo Montini</a></strong> <span>Roma · Terracina<br>
                 Viale Europa 216 · 04019 Terracina (LT)</span><br>
@@ -2043,6 +2016,29 @@
         });
     }
     })();
+    </script>
+    <script>
+        // Intersection Observer for Reveal animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Once animated, no need to observe anymore
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
     </script>
 </body>
 </html>
