@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Apple macOS version 5.8.0">
+    <meta charset="UTF-8"><!-- Google tag (gtag.js) -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11200378416"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-11200378416');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LyberCode | Consulenza Web e Sistemi Digitali</title>
+    <link rel="icon" type="image/svg+xml" href="faviconz.png">
+    <meta name="description" content="Costruiamo risultati, non presenze online. La maggior parte dei siti web non serve a nulla. Noi costruiamo solo ciò che serve davvero al tuo business, basandoci sul tuo budget e obiettivi reali.">
+    <meta name="keywords" content="LyberCode, agenzia web, risultati online, siti web professionali, acquisizione clienti, marketing digitale, ROI web">
+    <meta name="author" content="LyberCode di Angelo Montini">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LyberCode">
+    <meta property="og:title" content="LyberCode | Consulenza Web e Sistemi Digitali">
+    <meta property="og:description" content="Consulenza web e sistemi digitali orientati a risultati misurabili. Riduciamo errori, sprechi e costi nei sistemi web di aziende e Pubblica Amministrazione.">
+    <meta property="og:url" content="https://lybercode.com/">
+    <meta property="og:image" content="https://lybercode.com/y.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LyberCode | Consulenza Web e Sistemi Digitali">
+    <meta name="twitter:description" content="Consulenza web e sistemi digitali. Riduciamo errori, sprechi e costi nei sistemi web di aziende e PA.">
+    <meta name="twitter:image" content="https://lybercode.com/y.jpg">
+    <meta name="twitter:site" content="@LyberCode">
+    <meta name="twitter:creator" content="@LyberCode">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Chi è LyberCode e quali servizi offre?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LyberCode è una società italiana di consulenza informatica con sede a Roma e Terracina. Operando in totale remote work con un approccio vibe coding, offre servizi completi di trasformazione digitale: sviluppo software, cloud computing, cybersecurity, intelligenza artificiale, data analytics, formazione specializzata e monitoraggio di appalti pubblici per imprese e Pubblica Amministrazione."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali soluzioni cloud offre LyberCode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LyberCode offre soluzioni cloud complete basate su Google Cloud Platform, architetture serverless, microservizi, containerizzazione con Docker e Kubernetes. Supportiamo migrazione cloud, ottimizzazione infrastrutture, disaster recovery e automazione di processi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come LyberCode aiuta la Pubblica Amministrazione?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LyberCode supporta la PA attraverso monitoraggio di appalti pubblici secondo AGID, soluzioni MEPA, gestione documentale, modernizzazione siti web istituzionali, conformità WCAG, cybersecurity e formazione su Office automation e sicurezza informatica."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quali tecnologie e toolkit utilizza LyberCode?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LyberCode utilizza tecnologie moderne: Next.js, React, TypeScript, Python, Node.js, Google Cloud Platform, Datadog, Cloudflare Workers, sistemi di monitoraggio e CI/CD. Applichiamo best practices di sviluppo, testing automatizzato, architetture cloud-native e DevOps."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Come contattare LyberCode per una consulenza?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Puoi contattare LyberCode tramite email hello@lybercode.com, telefonicamente al 0773 061194 o 339 2528986. Per comunicazioni ufficiali verso la PA: PEC hello@lybercode.com. Siamo disponibili per valutare le tue esigenze di trasformazione digitale e proporre soluzioni su misura."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --primary: #f5f7fa;
+            --secondary: #23a5b1;
+            --accent: #ffffff;
+            --text: #1a1a1a;
+            --muted: #4a4a4a;
+            --surface: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* News badge - Lampeggiante */
+        .news-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.6);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .news-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        .blog-badge {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            animation: pulse-glow 1.5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.8);
+        }
+
+        @media (max-width: 480px) {
+            .news-badge {
+                bottom: 60px;
+                left: 10px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+
+            .blog-badge {
+                bottom: 115px;
+                left: 10px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .news-badge {
+                bottom: 50px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .blog-badge {
+                bottom: 95px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+        @supports (padding: max(0px)) {
+            .news-badge {
+                bottom: max(20px, env(safe-area-inset-bottom) + 10px);
+            }
+
+            .blog-badge {
+                bottom: max(80px, env(safe-area-inset-bottom) + 70px);
+            }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 4px 15px rgba(35, 165, 177, 0.5);
+            }
+            50% {
+                opacity: 0.6;
+                box-shadow: 0 4px 25px rgba(35, 165, 177, 0.8);
+            }
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(35, 165, 177, 0.6), 0 0 40px rgba(35, 165, 177, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(35, 165, 177, 0.9), 0 0 60px rgba(35, 165, 177, 0.5);
+                transform: scale(1.02);
+            }
+        }
+
+        .btn-smart {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1ba8a0 100%);
+            border-color: var(--secondary) !important;
+            color: #fff !important;
+            box-shadow: 0 0 20px rgba(35, 165, 177, 0.6), 0 0 40px rgba(35, 165, 177, 0.3);
+            animation: glow-pulse 2s ease-in-out infinite;
+            font-weight: 700;
+        }
+
+        .btn-smart:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 30px rgba(35, 165, 177, 0.9), 0 0 60px rgba(35, 165, 177, 0.5) !important;
+        }
+
+        /* Clienti istituzionali styles */
+
+
+
+        .clienti-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .cliente-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            background: #fff;
+            border: 1px solid rgba(16, 30, 46, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+        }
+
+        .cliente-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(16, 30, 46, 0.1);
+        }
+
+        .cliente-logo {
+            object-fit: cover;
+            max-width: 120px;
+            height: auto;
+
+        }
+
+        .cliente-item:hover .cliente-logo {
+            filter: brightness(1);
+        }
+
+        .cliente-nome {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.3;
+        }
+
+        /* News ticker styles */
+        .news-ticker {
+            background: rgba(245, 247, 250, 0.95);
+            border-bottom: 1px solid rgba(35, 165, 177, 0.2);
+            padding: 8px 0;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+            display: block;
+            width: 100%;
+            min-height: 32px;
+        }
+
+        .ticker-wrapper {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: scroll-left 30s linear infinite 1s;
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 60px;
+            font-size: 0.85rem;
+            color: rgba(26, 26, 26, 0.85);
+            font-weight: 500;
+        }
+
+        .ticker-item::before {
+            content: "●";
+            color: var(--secondary);
+            margin-right: 12px;
+            font-size: 0.6rem;
+        }
+
+        a.ticker-item {
+            text-decoration: none;
+            color: rgba(26, 26, 26, 0.85);
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        a.ticker-item:hover {
+            opacity: 0.7;
+        }
+
+        .ticker-label {
+            background: linear-gradient(135deg, var(--secondary), rgba(35, 165, 177, 0.8));
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 15px;
+            box-shadow: 0 2px 8px rgba(35, 165, 177, 0.3);
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .news-ticker:hover .ticker-wrapper {
+            animation-play-state: paused;
+        }
+
+        /* Second ticker styles with different colors */
+        .news-ticker-2 {
+            background: rgba(245, 247, 250, 0.95);
+            border-bottom: 1px solid rgba(35, 165, 177, 0.2);
+            padding: 8px 0;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+            display: block;
+            width: 100%;
+            min-height: 32px;
+        }
+
+        .ticker-wrapper-2 {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: scroll-right 30s linear infinite 1s;
+        }
+
+        .ticker-item-2 {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 60px;
+            font-size: 0.85rem;
+            color: rgba(26, 26, 26, 0.85);
+            font-weight: 500;
+        }
+
+        .ticker-item-2::before {
+            content: "●";
+            color: #ffffff;
+            margin-right: 12px;
+            font-size: 0.6rem;
+        }
+
+        .ticker-label-2 {
+            background: linear-gradient(135deg, var(--secondary), rgba(35, 165, 177, 0.8));
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 15px;
+            box-shadow: 0 2px 8px rgba(123, 44, 191, 0.3);
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .news-ticker-2:hover .ticker-wrapper-2 {
+            animation-play-state: paused;
+        }
+
+        header {
+            background: radial-gradient(circle at top left, rgba(35, 165, 177, 0.15), rgba(255, 255, 255, 0.85)), url('y.jpg') center/cover no-repeat;
+            color: var(--text);
+            padding: 90px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(35, 165, 177, 0.1));
+            z-index: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        nav .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+
+        nav .logo span {
+            line-height: 1;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(26, 26, 26, 0.3);
+            border-radius: 999px;
+            background: rgba(26, 26, 26, 0.06);
+            color: var(--text);
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        nav .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Secondary subnav */
+        .subnav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            margin-bottom: 16px;
+        }
+        .subnav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            width: auto;
+            height: 44px;
+            padding:0 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background: rgba(26, 26, 26, 0.04);
+            border: 1px solid rgba(26, 26, 26, 0.12);
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+        }
+        .subnav a:hover {
+            background: rgba(26, 26, 26, 0.08);
+            border-color: rgba(26, 26, 26, 0.25);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .subnav {
+                flex-wrap: nowrap;
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 12px;
+            }
+
+
+    .subnav a {
+        width: auto;
+        height: 36px;
+        font-size: 0.75rem;
+        padding: 0 1em;
+    }
+    }
+
+
+        @media (max-width: 480px) {
+            .subnav {
+                flex-wrap: nowrap;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            .subnav a {
+                width: auto;
+                height: 36px;
+                font-size: 0.75rem;
+                padding: 0 1em;
+            }
+        }
+
+        nav .menu a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            max-width: 540px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 30px;
+            border-radius: 32px;
+            border: 2px solid transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(35, 165, 177, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: rgba(69, 69, 70, 0.723);
+            color: #292525;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(35, 165, 177, 0.25);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2em;
+        }
+
+        h3 small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--muted);
+            display: block;
+            margin-top: 5px;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(245, 247, 250, 0.8);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 16px;
+            padding: 30px;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .card-green .badge {
+            background: rgba(101, 214, 160, 0.12);
+            border: 1px solid rgba(101, 214, 160, 0.35);
+            color: #8fffd5;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .card:hover {
+            border-color: rgba(35, 165, 177, 0.6);
+            transform: translateY(-6px);
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .process-step {
+            background: rgba(35, 165, 177, 0.08);
+            border-left: 4px solid var(--secondary);
+            padding: 20px 24px;
+            border-radius: 12px;
+            color: var(--muted);
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .metric {
+            padding: 24px;
+            border-radius: 16px;
+            background: rgba(245, 247, 250, 0.8);
+            text-align: center;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .feature-list li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            gap: 14px;
+            color: var(--muted);
+        }
+
+        .feature-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.15), rgba(35, 165, 177, 0.35));
+            display: grid;
+            place-items: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #1a1919;
+            text-transform: uppercase;
+            box-shadow: 0 6px 16px rgba(35, 165, 177, 0.15);
+        }
+
+        .feature-text {
+            color: var(--muted);
+        }
+
+        .ai-team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .ai-agent {
+            background: rgba(245, 247, 250, 0.8);
+            border: 1px solid rgba(35, 165, 177, 0.15);
+            border-radius: 18px;
+            padding: 28px 22px;
+            text-align: center;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ai-agent:hover {
+            border-color: rgba(35, 165, 177, 0.6);
+            transform: translateY(-6px);
+            box-shadow: 0 18px 36px rgba(35, 165, 177, 0.18);
+        }
+
+        .ai-agent img {
+            width: 82px;
+            height: 82px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 18px;
+            border: 3px solid rgba(35, 165, 177, 0.45);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .ai-agent h4 {
+            color: var(--text);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .ai-agent span {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(74, 74, 74, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .ai-agent p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, rgb(246, 246, 246), rgb(245, 247, 250));
+            border-radius: 20px;
+            padding: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .contact {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact {
+                padding: 30px 16px;
+            }
+        }
+
+        footer {
+            background: #f5f7fa;
+            padding: 50px 0;
+            color: var(--muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto 30px;
+        }
+
+        footer h4 {
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: var(--muted);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        .legal {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: rgba(74, 74, 74, 0.7);
+            line-height: 1.5;
+        }
+
+        .legal strong {
+            color: var(--text);
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .legal a {
+            color: rgba(74, 74, 74, 0.85);
+            text-decoration: none;
+        }
+
+        .legal a:hover {
+            color: var(--secondary);
+        }
+
+        .bottom {
+            margin-top: 5em;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(74, 74, 74, 0.4);
+        }
+
+        /* Section background colors - progressive shades */
+
+        #cosa-facciamo {
+            background-color: #ffffff;
+        }
+
+        #come-lavoriamo {
+            background-color: #f9fafb;
+        }
+
+        #risultati {
+            background-color: #f3f5f8;
+        }
+
+        #quando-siamo-adatti {
+            background-color: #edf0f5;
+        }
+
+        #audit {
+            background-color: #e8ecf2;
+        }
+
+        #chi-siamo {
+            background-color: #e3eaf0;
+        }
+
+        #riepilogo {
+            background-color: #dde4eb;
+        }
+
+        #contatti {
+            background-color: #d8dfe9;
+        }
+
+        .clienti-istituzionali {
+            background-color: #23a5b1 !important;
+        }
+
+        .google-ads-section {
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.12), rgba(35, 165, 177, 0.08));
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .ads-cta-box {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(35, 165, 177, 0.25);
+            border-radius: 16px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 12px 35px rgba(35, 165, 177, 0.12);
+            max-width: 900px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .ads-cta-box:hover {
+            border-color: rgba(35, 165, 177, 0.4);
+            box-shadow: 0 16px 45px rgba(35, 165, 177, 0.18);
+            transform: translateY(-3px);
+        }
+
+        .ads-cta-box h2 {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .ads-cta-box p {
+            font-size: 1.05rem;
+            color: rgba(26, 26, 26, 0.85);
+            margin-bottom: 35px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .ads-features-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-badge {
+            background: rgba(35, 165, 177, 0.08);
+            border: 1px solid rgba(35, 165, 177, 0.2);
+            border-radius: 10px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-badge:hover {
+            background: rgba(35, 165, 177, 0.15);
+            border-color: rgba(35, 165, 177, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .badge-icon {
+            font-size: 1.8rem;
+            display: inline-block;
+        }
+
+        .badge-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+            text-align: center;
+        }
+
+        .btn-large {
+            font-size: 1.05rem;
+            padding: 14px 40px !important;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(35, 165, 177, 0.3) !important;
+        }
+
+        @media (max-width: 768px) {
+            .google-ads-section {
+                padding: 60px 0;
+            }
+
+            .ads-cta-box {
+                padding: 35px 25px;
+            }
+
+            .ads-cta-box h2 {
+                font-size: 1.7rem;
+            }
+
+            .ads-cta-box p {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+
+            .ads-features-highlight {
+                gap: 15px;
+                margin-bottom: 30px;
+            }
+
+            .feature-badge {
+                padding: 14px;
+            }
+
+            .badge-icon {
+                font-size: 1.4rem;
+            }
+
+            .badge-text {
+                font-size: 0.85rem;
+            }
+
+            .btn-large {
+                font-size: 0.95rem;
+                padding: 12px 32px !important;
+            }
+        }
+
+        #contatti {
+            background-color: #d3dae7;
+        }
+
+        @media (max-width: 720px) {
+            nav {
+                gap: 14px;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+
+            nav .menu {
+                position: absolute;
+                top: calc(100% + 14px);
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+                padding: 22px;
+                background: rgba(255, 255, 255, 0.96);
+                border: 1px solid rgba(26, 26, 26, 0.08);
+                border-radius: 18px;
+                min-width: 220px;
+                box-shadow: 0 22px 45px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-12px);
+                pointer-events: none;
+                transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+            }
+
+            nav .menu li {
+                margin: 0;
+            }
+
+            nav .menu a {
+                font-size: 0.95rem;
+                opacity: 0.9;
+            }
+
+            nav.menu-open .menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+                        z-index: 100;
+            }
+
+            nav.menu-open .menu-toggle {
+                border-color: rgba(35, 165, 177, 0.6);
+                background: rgba(35, 165, 177, 0.12);
+            }
+
+            nav.menu-open .menu-toggle span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            nav.menu-open .menu-toggle span:nth-child(2) {
+                opacity: 0;
+            }
+
+            nav.menu-open .menu-toggle span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+        }
+        /* Scroll-to-top button */
+        #scrollTop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            border: 1px solid rgba(26, 26, 26, 0.3);
+            background: rgba(26, 26, 26, 0.08);
+            color: var(--secondary);
+            cursor: pointer;
+            display: none; /* hidden by default */
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            z-index: 999;
+        }
+        #scrollTop.show { display: inline-flex; opacity: 1; }
+        #scrollTop:hover { transform: translateY(-2px); }
+        @media (max-width: 768px) { #scrollTop { right: 14px; bottom: 14px; } }
+
+        /* News ticker responsive styles */
+        @media (max-width: 768px) {
+            .news-ticker {
+                padding: 6px 0;
+                display: block; /* Ensure visibility */
+            }
+
+            .news-ticker-2 {
+                padding: 6px 0;
+                display: none; /* Ensure visibility */
+            }
+
+            .ticker-label {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+                margin-right: 10px;
+                flex-shrink: 0; /* Prevent label from shrinking */
+            }
+
+            .ticker-label-2 {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+                margin-right: 10px;
+                flex-shrink: 0; /* Prevent label from shrinking */
+            }
+
+            .ticker-item {
+                font-size: 0.8rem;
+                margin-right: 50px; /* More space between items */
+                flex-shrink: 0; /* Prevent items from shrinking */
+                min-width: max-content; /* Ensure full width */
+            }
+
+            .ticker-item-2 {
+                font-size: 0.8rem;
+                margin-right: 50px; /* More space between items */
+                flex-shrink: 0; /* Prevent items from shrinking */
+                min-width: max-content; /* Ensure full width */
+            }
+
+            .ticker-wrapper {
+                display: none;
+            }
+
+            .ticker-wrapper-2 {
+                display: none;
+            }
+        }
+
+        /* Clienti istituzionali responsive styles */
+        @media (max-width: 768px) {
+            .clienti-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 25px;
+            }
+
+            .cliente-logo {
+                max-width: 100px;
+                max-height: 70px;
+            }
+
+            .cliente-nome {
+                font-size: 0.8rem;
+            }
+
+            /* Reduce ticker speed by 50% on tablets */
+            .ticker-wrapper {
+                animation-duration: 60s;
+            }
+
+            .ticker-wrapper-2 {
+                animation-duration: 60s;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .clienti-istituzionali {
+                padding: 60px 0;
+            }
+
+            .clienti-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 20px;
+            }
+
+            .cliente-item {
+                padding: 15px;
+                max-width: 160px;
+            }
+
+            .cliente-logo {
+                max-width: 80px;
+                max-height: 60px;
+            }
+
+            .cliente-nome {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .news-ticker {
+                padding: 5px 0;
+                display: none !important; /* Force visibility on very small screens */
+            }
+
+            .news-ticker-2 {
+                padding: 5px 0;
+                display: none !important; /* Force visibility on very small screens */
+            }
+
+            .ticker-label {
+                font-size: 0.65rem;
+                padding: 2px 6px;
+                margin-right: 8px;
+                flex-shrink: 0;
+            }
+
+            .ticker-label-2 {
+                font-size: 0.65rem;
+                padding: 2px 6px;
+                margin-right: 8px;
+                flex-shrink: 0;
+            }
+
+            .ticker-item {
+                font-size: 0.75rem;
+                margin-right: 40px; /* Sufficient spacing */
+                flex-shrink: 0;
+                min-width: max-content;
+            }
+
+            .ticker-item-2 {
+                font-size: 0.75rem;
+                margin-right: 40px; /* Sufficient spacing */
+                flex-shrink: 0;
+                min-width: max-content;
+            }
+
+            .ticker-wrapper {
+                animation-duration: 90s; /* Reduced speed by 50% for mobile devices */
+                width: max-content;
+                min-width: calc(100vw + 250vw); /* Extended width for full content visibility */
+            }
+
+            .ticker-wrapper-2 {
+                animation-duration: 90s; /* Reduced speed by 50% for mobile devices */
+                width: max-content;
+                min-width: calc(100vw + 250vw); /* Extended width for full content visibility */
+            }
+        }
+
+          .clienti-istituzionali {
+            background: #24a5b1;
+            padding: 80px 0;
+        }
+
+
+        /* Icon spacing inside buttons */
+        .btn .icon-left { margin-right: 10px; display: inline-flex; align-items: center; }
+
+        .quiz-banner {
+            background: linear-gradient(135deg, rgba(35, 165, 177, 0.1), rgba(35, 165, 177, 0.05));
+            border: 3px solid var(--secondary);
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin: 40px auto;
+            max-width: 1100px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(35, 165, 177, 0.2);
+            animation: borderGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(35, 165, 177, 0.2), inset 0 0 20px rgba(35, 165, 177, 0.05);
+            }
+            50% {
+                box-shadow: 0 12px 35px rgba(35, 165, 177, 0.35), inset 0 0 30px rgba(35, 165, 177, 0.1);
+            }
+        }
+
+        .quiz-banner h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .quiz-banner p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+
+        .quiz-banner a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), #1a8f9f);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.3);
+        }
+
+        .quiz-banner a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(35, 165, 177, 0.45);
+            background: linear-gradient(135deg, #1a8f9f, #157a89);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .quiz-banner {
+                padding: 20px 20px;
+                margin: 30px auto;
+            }
+
+            .quiz-banner h3 {
+                font-size: 1.1rem;
+            }
+
+            .quiz-banner p {
+                font-size: 0.9rem;
+            }
+
+            .quiz-banner a {
+                padding: 10px 28px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LyberCode",
+    "url": "https://lybercode.com/",
+    "logo": "https://lybercode.com/logo.png",
+    "email": "hello@lybercode.com",
+    "founder": "Angelo Montini",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Viale Europa 216",
+        "addressLocality": "Terracina",
+        "addressRegion": "LT",
+        "postalCode": "04019",
+        "addressCountry": "IT"
+    },
+    "sameAs": [
+        "https://lybercode.com/",
+        "https://github.com/lybercode",
+        "https://www.linkedin.com/company/lybercode"
+    ],
+    "description": "LyberCode offre servizi di consulenza informatica completi: sviluppo software, cloud computing, cybersecurity, data analytics e AI per imprese e pubblica amministrazione."
+    }
+    </script>
+</head>
+<body>
+    <!-- News Badge Icon - Lampeggiante -->
+    <a href="news.html" class="news-badge" title="Vai alle News" aria-label="Link alle news" style="font-size:small">NEWS</a>
+
+    <!-- Blog Badge Icon - Lampeggiante -->
+    <a href="blog.html" class="blog-badge" title="Vai al Blog" aria-label="Link al blog" style="font-size:small">BLOG</a>
+
+    <!-- News Ticker -->
+   
+    <div class="news-ticker-2" aria-hidden="true">
+        <div class="ticker-wrapper">
+           
+            <span class="ticker-label">PUBBLICA AMMINISTRAZIONE</span>
+            <a href="monitor.html#mepa" class="ticker-item">
+                🎯 Soluzioni MEPA pronte all'uso per enti pubblici e amministrazioni strutturate
+            </a>
+
+            <span class="ticker-label">PRIMO PIANO</span>
+            <div class="ticker-item">
+                Governance e gestione evoluta dei servizi web delle Gallerie degli Uffizi
+            </div>
+
+            <span class="ticker-label">FORMAZIONE</span>
+            <div class="ticker-item">
+                Formazione operativa su strumenti digitali e sicurezza Esercito Italiano            </div>
+            <span class="ticker-label">PUBBLICA AMMINISTRAZIONE</span>
+            <a href="monitor.html#mepa" class="ticker-item">
+                🎯 Offerte MEPA orientate a riduzione dei costi e stabilità dei sistemi digitali
+            </a>
+
+            <span class="ticker-label">PRIMO PIANO</span>
+            <div class="ticker-item">
+                Governance e gestione evoluta dei servizi web delle Gallerie degli Uffizi
+            </div>
+
+            <span class="ticker-label">FORMAZIONE</span>
+            <div class="ticker-item">
+                Formazione operativa su strumenti digitali e sicurezza Esercito Italiano 
+            </div>
+        </div>
+    </div>
+<!-- 
+    <div class="news-ticker-2">
+        <div class="ticker-wrapper-2">
+            <span class="ticker-label-2">CLIENTI ISTITUZIONALI</span>
+            <div class="ticker-item-2">IFEL</div>
+            <div class="ticker-item-2">ANCI</div>
+            <div class="ticker-item-2">ANCITEL EA</div>
+            <div class="ticker-item-2">COMUNE DI CASTELNUOVO DI FARFA</div>
+            <div class="ticker-item-2">REGIONE LAZIO</div>
+            <div class="ticker-item-2">PARCO REGIONALE VALLE DEL TREJA</div>
+            <span class="ticker-label-2">CLIENTI ISTITUZIONALI</span>
+            <div class="ticker-item-2">IFEL</div>
+            <div class="ticker-item-2">ANCI</div>
+            <div class="ticker-item-2">ANCITEL EA</div>
+            <div class="ticker-item-2">COMUNE DI CASTELNUOVO DI FARFA</div>
+            <div class="ticker-item-2">REGIONE LAZIO</div>
+            <div class="ticker-item-2">PARCO REGIONALE VALLE DEL TREJA</div>
+            <span class="ticker-label-2">CLIENTI ISTITUZIONALI</span>
+        </div>
+    </div>
+    -->
+
+    <header>
+        <div class="container">
+            <div class="subnav" aria-label="Secondaria">
+                <a href="index.html">Home</a>
+                <a href="sviluppo.html">Sviluppo</a>
+                <a href="ads.html">Marketing</a> <!-- <a href="monitor.html">PA</a> -->
+            </div>
+            <nav>
+                <a href="index.html" class="logo"><img src="logo.png" alt="LyberCode" style="height: 48px; width: auto;"><span>LyberCode</span></a> 
+                <button class="menu-toggle" aria-expanded="false" aria-label="Apri il menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="sviluppo.html">Soluzioni</a>
+                    </li>
+                    <li>
+                        <a href="ads.html">Marketing</a>
+                    </li>
+                    <li>
+                        <!-- <a href="monitor.html">PA</a> -->
+                    </li>
+                    <li>
+                        <a href="news.html">News</a>
+                    </li>
+                    <li>
+                        <a href="#contatti">Contatti</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <div>
+                    <span class="section-title">Agenzia di Marketing Digitale B2B</span>
+                    <h1 class="reveal">Web Marketing che guida la crescita.</h1>
+                    <p class="reveal" style="transition-delay: 0.1s;">Ottieni più lead e risultati concreti grazie a una strategia di marketing su misura, sviluppata da un partner su cui puoi contare.</p>
+                    
+                    <div class="cta-group reveal" style="margin-top: 30px; transition-delay: 0.3s;">
+                        <a class="btn btn-smart" href="ads.html">Ottieni più contatti →</a>
+                        <a class="btn btn-outline" href="sviluppo.html">Le nostre soluzioni</a>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <h3>Risultati reali</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">Aiutiamo le aziende tecnologiche B2B a crescere risolvendo le sfide di marketing più complesse.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); font-weight: 600; margin-top: 20px;">Trasformiamo la tua presenza online in un motore di crescita.</p>
+                    <hr style="margin: 30px 0; border: none; border-top: 1px solid rgba(0,0,0,0.1);">
+                    <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 1.9;">
+                        <li style="margin-bottom: 10px;"><strong>Strategia:</strong> Piani basati su dati e strategia.</li>
+                        <li><strong>Esecuzione:</strong> Sviluppo e design di alta qualità.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="sfide">
+        <div class="container">
+            <span class="section-title">Sfide di marketing</span>
+            <h2>Aiutiamo le aziende tecnologiche B2B a crescere risolvendo queste sfide:</h2>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Mercato affollato</h3>
+                    <p>Ti trovi di fronte a numerosi concorrenti che offrono prodotti o servizi simili, rendendo difficile distinguerti e differenziarti.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Ciclo di vendita lungo</h3>
+                    <p>Il tuo ciclo di vendita è lungo e richiede l'approvazione di più stakeholder. Ognuno ha interessi diversi che devono essere allineati.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Pubblico irraggiungibile</h3>
+                    <p>Hai identificato il tuo profilo cliente ideale (ICP) e hai una soluzione convincente, ma loro non sanno che esisti.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Pipeline vuota</h3>
+                    <p>Il tuo sito riceve traffico, ma nessuno ti contatta. Tutte le tue vendite provengono solo da iniziative outbound.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="valori">
+        <div class="container">
+            <span class="section-title">I nostri valori</span>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Un partner sempre presente</h3>
+                    <p>Meriti un team che si preoccupi quanto te. Sai sempre a che punto siamo, cosa accadrà dopo e perché. Niente si ferma, niente si perde.</p>
+                    <ul style="margin-top: 15px; font-size: 0.9rem;">
+                        <li><strong>Trasparenza:</strong> Feedback chiari e conversazioni oneste.</li>
+                        <li><strong>Proattività:</strong> Le tue priorità rimangono in movimento senza bisogno di sollecitazioni.</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <h3>Creatività e Tecnica</h3>
+                    <p>Il marketing intelligente unisce strategia, creatività e codice. Ottieni tutto ciò che conta sotto un unico tetto: strategia acuta e sviluppo pulito.</p>
+                    <ul style="margin-top: 15px; font-size: 0.9rem;">
+                        <li><strong>Olistico:</strong> Il tuo marketing si lega a un piano che mantiene ogni canale allineato.</li>
+                        <li><strong>Tecnico:</strong> Creatività supportata da profonde competenze tecniche.</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <h3>Guidati dai Dati</h3>
+                    <p>Un sistema di marketing ripetibile basato sul comportamento umano reale. Portiamo ogni parte del tuo marketing in linea: messaggio, pubblico e sito web.</p>
+                    <ul style="margin-top: 15px; font-size: 0.9rem;">
+                        <li><strong>Framework Provato:</strong> Una struttura chiara che lega gli elementi essenziali per costruire un motore potente.</li>
+                        <li><strong>Strategia:</strong> Messaggi che seguono il modo naturale in cui le persone pensano e agiscono.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="esperienza">
+        <div class="container">
+            <span class="section-title">Esperienza nel settore</span>
+            <h2>Profonda competenza nelle tecnologie B2B</h2>
+            <p>Abbiamo trascorso gli ultimi 15+ anni aiutando aziende tecnologiche a crescere. Possiamo aiutare anche te.</p>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Software e Hardware B2B</h3>
+                    <p>Software aziendali, SaaS B2B, software personalizzati.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Tecnologia Industriale</h3>
+                    <p>Produttori di apparecchiature industriali, servizi di produzione e materiali avanzati.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Biotecnologia e Scienza</h3>
+                    <p>Biotech, prodotti e servizi per la ricerca scientifica, aziende farmaceutiche.</p>
+                </div>
+            </div>
+            
+            <!-- <div class="metrics reveal" style="margin-top: 60px;">
+                <div class="metric">
+                    <strong>7.900%</strong>
+                    <p>Aumento dei lead dopo il lancio del nuovo sito ottimizzato SEO.</p>
+                </div>
+                <div class="metric">
+                    <strong>400%</strong>
+                    <p>Incremento del traffico di ricerca organico con nuove strategie di contenuto.</p>
+                </div>
+                <div class="metric">
+                    <strong>500%</strong>
+                    <p>Crescita della generazione di lead aumentando i tassi di conversione.</p>
+                </div>
+                <div class="metric">
+                    <strong>€700K</strong>
+                    <p>Aumento delle entrate dopo il lancio della piattaforma e-commerce.</p>
+                </div>
+            </div> -->
+        </div>
+    </section>    <section id="servizi">
+        <div class="container">
+            <span class="section-title">I nostri servizi</span>
+            <h2>Soluzioni complete per la tua crescita</h2>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Team di Marketing Frazionale</h3>
+                    <p>Possiamo estendere la funzione di marketing del tuo brand o gestirla interamente per una frazione del costo di un team interno.</p>
+                    <a href="ads.html" class="btn btn-outline" style="margin-top: 20px;">Scopri di più</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Strategia Marketing</h3>
+                    <p>Processo di scoperta e pianificazione per comprendere a fondo il tuo pubblico e il panorama del settore.</p>
+                    <a href="ads.html" class="btn btn-outline" style="margin-top: 20px;">Pianifica ora</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Web Design & Sviluppo</h3>
+                    <p>Siti web personalizzati progettati per guidare i risultati aziendali, con focus su UX, UI e performance.</p>
+                    <a href="sviluppo.html" class="btn btn-outline" style="margin-top: 20px;">Guarda le capacità</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Marketing B2B</h3>
+                    <p>Generazione di lead e consapevolezza del brand per riempire la tua pipeline di vendita attraverso strategie collaudate.</p>
+                    <a href="ads.html" class="btn btn-outline" style="margin-top: 20px;">Genera lead</a>
+                </div>
+              <!--   <div class="card reveal">
+                    <h3>HubSpot & CRM</h3>
+                    <p>Ottimizziamo HubSpot per renderlo un vero supporto alle tue vendite e al tuo marketing.</p>
+                    <a href="sviluppo.html" class="btn btn-outline" style="margin-top: 20px;">Ottimizza CRM</a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+   
+    <section class="clienti-istituzionali">
+        <div class="container">
+            <span class="section-title">Partner istituzionali</span>
+            <h2>Clienti istituzionali di riferimento</h2>
+            <p>Collaboriamo con enti pubblici e organizzazioni che operano per lo sviluppo del territorio, offrendo soluzioni IT specializzate per la pubblica amministrazione e gli enti locali.</p>
+            <div class="clienti-grid">
+                <div class="cliente-item">
+                    <img src="loghi/gallerie.png" alt="Gallerie" class="cliente-logo">
+                    <div class="cliente-nome">
+                        Gallerie degli Uffizi
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/granatieri.png" alt="Granatieri" class="cliente-logo">
+                    <div class="cliente-nome">
+                        Granatieri “Guardie”
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/anci.png" alt="ANCI" class="cliente-logo">
+                    <div class="cliente-nome">
+                        ASS. NAZIONALE COMUNI ITALIANI
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/ifel.png" alt="IFEL" class="cliente-logo">
+                    <div class="cliente-nome">
+                        Fondazione IFEL
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/ancitelea.png" alt="Ancitel EA" class="cliente-logo">
+                    <div class="cliente-nome">
+                        Ancitel EA spa
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/ancitel.png" alt="Ancitel" class="cliente-logo">
+                    <div class="cliente-nome">
+                        Ancitel spa
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/anciservizi.png" alt="ANCI Servizi" class="cliente-logo">
+                    <div class="cliente-nome">
+                        ANCI Servizi spa
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/aps.png" alt="APS" class="cliente-logo">
+                    <div class="cliente-nome">
+                        Acqua Pubblica Sabina
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/bic.png" alt="BIC" class="cliente-logo">
+                    <div class="cliente-nome">
+                        BIC Lazio
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="loghi/socio.png" alt="Facoltà di Sociologia" class="cliente-logo">
+                    <div class="cliente-nome">
+                        Facoltà di Sociologia La Sapienza
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="casi-studio">
+        <div class="container">
+            <span class="section-title">Casi di studio</span>
+            <h2>Aziende tecnologiche B2B che abbiamo aiutato a prosperare</h2>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>MS BIOWORKS</h3>
+                    <p>Trasformare la scienza con la strategia.</p>
+                    <div class="metrics" style="margin-top: 15px; grid-template-columns: 1fr;">
+                        <div class="metric" style="padding: 10px;"><strong>10.000%</strong> aumento conversioni</div>
+                        <div class="metric" style="padding: 10px;"><strong>75%</strong> aumento tempo di engagement</div>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <h3>INSULGARDA</h3>
+                    <p>Progettare la strada verso soluzioni di sicurezza architettonica più intelligenti.</p>
+                    <div class="metrics" style="margin-top: 15px; grid-template-columns: 1fr;">
+                        <div class="metric" style="padding: 10px;"><strong>400%</strong> aumento traffico organico</div>
+                        <div class="metric" style="padding: 10px;"><strong>1.000%</strong> aumento lead</div>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <h3>ETAREZ</h3>
+                    <p>Costruire un sito web vincente e una strategia di inbound marketing da zero.</p>
+                    <div class="metrics" style="margin-top: 15px; grid-template-columns: 1fr;">
+                        <div class="metric" style="padding: 10px;"><strong>293%</strong> aumento traffico organico</div>
+                        <div class="metric" style="padding: 10px;"><strong>400%</strong> aumento tasso di conversione</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonianze">
+        <div class="container">
+            <span class="section-title">Testimonianze</span>
+            <h2>Cosa dicono i nostri clienti</h2>
+            <div class="grid">
+                <div class="card reveal">
+                    <p>“LyberCode è stato un grande partner nella progettazione e implementazione del nostro nuovo sito web. Hanno personalizzato l'esperienza identificando ciò che ci differenziava dalla concorrenza.”</p>
+                    <p style="margin-top: 20px;"><strong>Aldo Fornara</strong><br><small>General Manager presso Insulgard</small></p>
+                </div>
+                <div class="card reveal">
+                    <p>“Nell'anno in cui abbiamo lavorato con loro, possiamo dire con certezza di aver raggiunto il 100% degli obiettivi che ci eravamo prefissati. Non ci sono molte altre aziende con cui abbiamo lavorato di cui possiamo dire lo stesso.”</p>
+                    <p style="margin-top: 20px;"><strong>Roberto Sario</strong><br><small>Direttore Vendite Software presso ETAREZ</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chi-siamo">
+        <div class="container">
+            <span class="section-title">La nostra storia</span>
+            <h2>Chi siamo</h2>
+            <div class="split">
+                <div>
+                    <h3>LyberCode: esperienza strutturata</h3>
+                    <p>LyberCode è una società di consulenza specializzata in servizi IT per la trasformazione digitale, con sede a Terracina (LT). La nostra missione è offrire soluzioni complete in sviluppo software, cloud computing, intelligenza artificiale e data analytics, aiutando imprese e pubblica amministrazione a innovare e ottimizzare i processi. Siamo responsabili della gestione dei servizi web evoluti delle Gallerie degli Uffizi. Eroghiamo formazione specialistica per l'Esercito Italiano. Siamo il punto di riferimento locale per la <a href="siti-web-terracina.html" style="color: var(--secondary); font-weight: 600;">realizzazione siti web a Terracina</a>, <a href="siti-web-latina.html" style="color: var(--secondary); font-weight: 600;">per la realizzazione siti web a Latina</a> e <a href="siti-web-roma.html" style="color: var(--secondary); font-weight: 600;">per la realizzazione siti web a Roma</a>.</p>
+                    <p style="margin-top: 20px;">La nostra esperienza è costruita su anni di lavoro nei sistemi pubblici più complessi: dal 2001 abbiamo operato con ANCI, Anciform, IFEL, Ancitel e le loro società operative, curando progetti di riassetto organizzativo e servizi digitali per grandi amministrazioni.</p>
+                    <p style="margin-top: 20px;">Sappiamo cosa significa lavorare in contesti dove affidabilità e continuità contano più dell'hype. Per questo progettiamo architetture che durano nel tempo.</p>
+                    <div style="margin-top: 40px;">
+                        <a class="btn btn-primary" href="curriculum.pdf" target="_blank" rel="noopener">
+                            <span style="margin-right: 8px;">📄</span>Curriculum aziendale
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Aree di specializzazione</h3>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-icon">WEB</span>
+                            <span class="feature-text"><strong>Sviluppo web:</strong> applicazioni moderne, cloud (GCP), AI/ML, web marketing sostenibile</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">MON</span>
+                            <span class="feature-text"><strong>Monitoraggio ICT:</strong> contratti PA, audit AGID, cruscotti digitali, conformità</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">STR</span>
+                            <span class="feature-text"><strong>Consulenza strategica:</strong> audit web, architetture, automazione processi</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">FRM</span>
+                            <span class="feature-text"><strong>Formazione:</strong> change management, adozione incrementale di tecnologie</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section id="territorio">
+        <div class="container">
+            <span class="section-title">Presenza Nazionale</span>
+            <h2>Radicati in Italia, Affidabili Ovunque</h2>
+            <p>Fondata in Italia, LyberCode è cresciuta dalle radici locali fino a diventare un'agenzia di sviluppo e marketing digitale con una portata nazionale. Siamo orgogliosi del nostro lavoro che abbraccia diverse realtà in tutto il paese.</p>
+            <p style="margin-top: 20px;">Il nostro approccio strategico e guidato dalla strategia offre risultati misurabili per aziende di tutte le dimensioni, sia che si trovino vicino a noi o dall'altra parte dell'Italia. Combiniamo l'affidabilità e i valori della nostra fondazione con l'esperienza e la prospettiva necessarie per guidare la crescita su scala nazionale.</p>
+        </div>
+    </section>
+
+    <section id="contatti">
+        <div class="container contact">
+            <span class="section-title">Contatto diretto</span>
+            <h2>Niente fuffa, solo obiettivi.</h2>
+            <p style="margin-top: 25px; font-size: 1.05rem;">Scopri come possiamo spingerti verso i tuoi obiettivi. Sei pronto per iniziare?</p><br>
+            <br>
+          
+                 <a class="btn btn-smart" href="https://wa.me/3392528986" target="_blank" rel="noopener" style="display: inline-block;">Prenota una chiamata strategica gratuita →</a>
+            <div class="legal" style="margin-top: 40px;">
+                <strong>LyberCode di <a href="https://angelomontini.com" target="_blank" rel="noopener">Angelo Montini</a></strong> <span>Roma · Terracina<br>
+                Viale Europa 216 · 04019 Terracina (LT)</span><br>
+                <a href="tel:+390773061194">☎ 0773 061194</a> <a href="tel:+390686169575">☎ 06 86 16 95 75</a> · <a href="tel:+393392528986">📱 339 2528986</a><br>
+                <span>P. IVA 11822551005</span> · <span>REA LT-331862</span><br>
+                <a href="mailto:hello@lybercode.com">E-mail: hello@lybercode.com</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4><a href="https://angelomontini.com" target="_blank" rel="noopener">LyberCode</a></h4>
+                <p>Consulenza web e sistemi digitali orientati a risultati misurabili. Riduciamo errori, sprechi e costi nei sistemi web di aziende e Pubblica Amministrazione.</p>
+            </div>
+            <div>
+                <h4>Navigazione</h4>
+                <a href="index.html">Home</a>
+                <a href="sviluppo.html">Soluzioni</a>
+                <a href="ads.html">Marketing</a>
+                <!-- <a href="monitor.html">PA</a> -->
+                <a href="news.html">News</a>
+                <a href="#sfide">Sfide</a>
+                <a href="#valori">Valori</a>
+                <a href="#esperienza">Esperienza</a>
+                <a href="#servizi">Servizi</a>
+                <a href="#casi-studio">Casi Studio</a>
+                <a href="#testimonianze">Testimonianze</a>
+                <a href="#chi-siamo">Chi siamo</a>
+            </div>
+            <div>
+                <h4>Contatti</h4><a href="mailto:hello@lybercode.com">hello@lybercode.com</a> <a href="tel:+390773061194">☎ 0773 061194</a> <a href="tel:+393392528986">📱 339 2528986</a>
+            </div>
+            <div>
+                <h4>Social</h4><a href="https://github.com/montiniangelo">GitHub</a> <a href="https://www.linkedin.com/company/lybercode/">LinkedIn</a>
+            </div>
+        </div>
+        <div class="bottom">
+            © 2026 LyberCode di Angelo Montini<span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. <a href="privacy.html">Policy Privacy</a> Tutti i diritti riservati
+        </div>
+    </footer><button id="scrollTop" aria-label="Torna all'inizio" title="Torna su">↑</button> 
+    <script>
+
+        // Scroll-to-top minimal logic
+        const scrollBtn = document.getElementById('scrollTop');
+        const headerEl = document.querySelector('header');
+        const headerTop = 0; // top of page
+
+        const toggleScrollBtn = () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+        window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+        toggleScrollBtn();
+
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Smoothly scroll to the top (header)
+            window.scrollTo({ top: headerTop, behavior: 'smooth' });
+        });
+    </script> 
+    <script>
+
+    (function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav .menu');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            nav.classList.toggle('menu-open');
+            menuToggle.setAttribute('aria-expanded',
+                menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+            );
+        });
+
+        navMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                nav.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+    })();
+    </script>
+    <script>
+        // Intersection Observer for Reveal animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Once animated, no need to observe anymore
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
