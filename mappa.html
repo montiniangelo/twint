@@ -866,9 +866,9 @@
         }
 
         .pricing-price {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--secondary);
+            color: #000;
             margin-bottom: 5px;
         }
 
@@ -1772,7 +1772,7 @@
        <div id="mappa-examples">
            <div class="mappa-examples-cta">
                <h2>Esempi di mappa interattiva  </h2>
-               <p>Visualizza e interagisci con la mappa  delle dipendenze in Italia nel 2024</p>
+               <p>Visualizza e interagisci con la mappa  delle dipendenze in Italia nel 2024 - Elaborazione su Dati Aperti</p>
                <a href="https://nextjs-droghe.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-button">
                    Accedi alla Mappa Web <span style="margin-left: 8px;">→</span>
                </a>
@@ -1780,7 +1780,7 @@
        </div>
 
 <div id="x-maps" > 
- <h3 >Esempio: Mappa delle dipendenze in Italia nel 2024</h3> 
+ <h4 >Esempio: Mappa delle dipendenze in Italia nel 2024 - Elaborazione su Dati Aperti</h4> 
           <iframe
   src="https://nextjs-droghe.vercel.app/"
   frameborder="0"
@@ -1788,13 +1788,7 @@
   style="width: 100%; height: 60vh; border: none;margin-bottom: 3em;"
 ></iframe>
  
-<h3 >Esempio: Tempi di percorrenza: clicca sulla mappa e scopri i tempi di percorrenza</h3>  
-   <iframe src="https://storage.googleapis.com/maps-solutions-cihe8mwg0a/neighborhood-discovery/d9v8/neighborhood-discovery.html"
-  width="100%" height="600px"
-  style="border:0;margin-bottom: 2em;"
-  loading="lazy">
-   
-</iframe>
+ 
 </div>
             <div class="mappa-filters">
                 <button class="filter-btn active" data-category="all">
@@ -1834,16 +1828,6 @@
                     </ul>
                 </div>
 
-                <div class="content-card" data-category="analysis">
-                    <div class="card-header">
-                        <h3>Requisiti non funzionali</h3>
-                        <span class="category-badge">Analisi</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li><strong>Performance:</strong> caricamento rapido su desktop e mobile, uso di caricamento asincrono delle librerie Maps.</li>
-                        <li><strong>Sicurezza e affidabilità:</strong> uso di chiave API con restrizioni di dominio, rispetto delle quote e monitoraggio uso.</li>
-                    </ul>
-                </div>
 
                 <div class="content-card" data-category="technical">
                     <div class="card-header">
@@ -1855,39 +1839,7 @@
                         <li><strong>Servizi esterni:</strong> Google Maps JavaScript API per rendering mappa, marker, geocoding/places se necessari.</li>
                     </ul>
                 </div>
-
-                <div class="content-card" data-category="technical">
-                    <div class="card-header">
-                        <h3>Integrazione Google Maps API</h3>
-                        <span class="category-badge">Tecnico</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Ottenimento chiave API da Google Cloud Console e attivazione Maps JavaScript API.</li>
-                        <li>Inizializzazione mappa con <code>new google.maps.Map(...)</code> e opzioni di base (center, zoom, controls).</li>
-                    </ul>
-                </div>
-
-                <div class="content-card" data-category="technical">
-                    <div class="card-header">
-                        <h3>Modellazione dati geografici</h3>
-                        <span class="category-badge">Tecnico</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li><strong>Struttura dati per i punti:</strong> id, nome, coordinate (lat, lng), categoria, descrizione, eventuali metadati.</li>
-                        <li><strong>Alimentazione:</strong> possibile alimentazione da database o file JSON, con endpoint API per aggiornamenti dinamici.</li>
-                    </ul>
-                </div>
-
-                <div class="content-card" data-category="development">
-                    <div class="card-header">
-                        <h3>Funzionalità avanzate</h3>
-                        <span class="category-badge">Imprese</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Ricerca indirizzi/luoghi con Places API, suggerimenti automatici e centratura mappa sul risultato.</li>
-                        <li>Possibile calcolo percorsi / indicazioni stradali (Directions API) e visualizzazione su mappa.</li>
-                    </ul>
-                </div>
+  
 
                 <div class="content-card" data-category="development">
                     <div class="card-header">
@@ -1930,6 +1882,100 @@
         </div>
         
     </section>
+    
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h4>Tariffario</h4>
+            <div class="pricing-grid">
+                <!-- BASE -->
+                <div class="pricing-card">
+                    <span class="pricing-badge">BASE</span>
+                    <h3>Mappa Web Base</h3>
+                    <div class="pricing-price">200€ – 600€</div>
+                    <p class="pricing-description"><strong>Esempi:</strong> pagina contatti, mappa negozio, singola location</p>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>1 mappa (Leaflet o Google Maps)</li>
+                            <li>marker o punti base</li>
+                            <li>popup informativi semplici</li>
+                            <li>integrazione su sito web</li>
+                            <li>1 revisione</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:hello@lybercode.com" class="pricing-cta">Richiedi Base</a>
+                </div>
+
+                <!-- STANDARD -->
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">STANDARD</span>
+                    <h3>Mappa Custom Web</h3>
+                    <div class="pricing-price">600€ – 1.500€</div>
+                    <p class="pricing-description"><strong>Esempi:</strong> mappe eventi, directory locali, mappe immobili</p>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Mapbox o Leaflet personalizzata</li>
+                            <li>fino a 3 layer dati (GeoJSON)</li>
+                            <li>styling custom della mappa</li>
+                            <li>filtri base (categorie, punti)</li>
+                            <li>responsive design</li>
+                            <li>2 revisioni</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:hello@lybercode.com" class="pricing-cta">Richiedi Standard</a>
+                </div>
+
+                <!-- AVANZATO -->
+                <div class="pricing-card">
+                    <span class="pricing-badge">AVANZATO</span>
+                    <h3>Mappa Interattiva  </h3>
+                    <div class="pricing-price">1.500€ – 3.500€</div>
+                    <p class="pricing-description"><strong>Esempi:</strong> mappe logistiche, analisi territorio, piattaforme dati</p>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Mapbox GL JS avanzato o Leaflet complesso</li>
+                            <li>dati dinamici (API o GeoJSON complessi)</li>
+                            <li>clustering punti</li>
+                            <li>filtri avanzati</li>
+                            <li>interazioni (hover, click, sidebar info)</li>
+                            <li>ottimizzazione performance</li>
+                        </ul>
+                    </div>
+                    <a href="mailto:hello@lybercode.com" class="pricing-cta">Richiedi Avanzato</a>
+                </div>
+
+             
+            </div>
+
+            <div class="ads-features-section">
+                <h3>Servizi Extra & Esclusioni</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>EXTRA</h4>
+                        <ul class="bullet-list">
+                            
+                            <li>Hosting + manutenzione: 50–300€/mese</li>
+                            <li>Dataset complessi: da 200€</li>
+                            <li>Urgenza: +30%</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <h4>ESCLUSI DAL PREZZO</h4>
+                        <ul class="bullet-list">
+                            <li>Costi delle piattaforme terze (es. Google Maps API, Mapbox usage, hosting tile server)</li>
+                            <li>Eventuali servizi esterni a pagamento (API di geocoding, routing, dati premium)</li>
+                          
+                            <li>Licenze di dati geografici di terze parti</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top: 30px; padding: 25px; background: rgba(35, 165, 177, 0.1); border-radius: 12px; border-left: 4px solid var(--secondary);">
+                    <p style="font-weight: 600; color: var(--text); margin-bottom: 8px;">Nota importante:</p>
+                    <p>I costi di utilizzo delle piattaforme (Google Maps, Mapbox o servizi esterni) non sono inclusi nel preventivo e vengono fatturati direttamente dai rispettivi provider o sostenuti dal cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
  <div class="quiz-banner">
         <h3>🎯 Scopri la Soluzione Web Perfetta per Te!</h3>
         <p>Rispondi a 5 semplici domande e trova lo stack tecnologico ideale per il tuo progetto</p>
