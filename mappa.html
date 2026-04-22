@@ -602,6 +602,62 @@
             }
         }
 
+        .clienti-istituzionali {
+            padding: 80px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .clienti-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .cliente-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            background: #fff;
+            border: 1px solid rgba(16, 30, 46, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+        }
+
+        .cliente-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(16, 30, 46, 0.1);
+        }
+
+        .cliente-logo {
+            object-fit: contain;
+            max-width: 120px;
+            max-height: 80px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .cliente-item:hover .cliente-logo {
+            filter: brightness(1);
+        }
+
+        .cliente-nome {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.3;
+        }
+
         #scrollTop {
             position: fixed;
             bottom: 30px;
@@ -1976,6 +2032,7 @@
         </div>
     </section>
 
+   
  <div class="quiz-banner">
         <h3>🎯 Scopri la Soluzione Web Perfetta per Te!</h3>
         <p>Rispondi a 5 semplici domande e trova lo stack tecnologico ideale per il tuo progetto</p>
