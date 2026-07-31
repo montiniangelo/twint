@@ -29,15 +29,17 @@
     <meta name="twitter:image" content="https://lybercode.com/y.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #f5f7fa;
-            --secondary: #23a5b1;
-            --accent: #ffffff;
-            --text: #1a1a1a;
-            --muted: #4a4a4a;
+            --primary: #ffffff;
+            --secondary: #0066cc;
+            --accent: #0066cc;
+            --text: #0a0a0a;
+            --muted: #5b5f66;
+            --muted-bg: #f5f5f7;
+            --border: #e5e5e5;
             --surface: rgba(255, 255, 255, 0.9);
         }
 
@@ -45,7 +47,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -73,11 +75,27 @@
             z-index: 1;
         }
 
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+            padding: 22px 0;
+        }
+
+        header.nav-scrolled {
+            border-bottom-color: var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            padding: 12px 0;
+        }
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 60px;
             position: relative;
         }
 
@@ -85,15 +103,15 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: -0.01em;
             color: var(--text);
             text-decoration: none;
         }
 
         nav .logo img {
-            height: 48px;
+            height: 40px;
             width: auto;
             display: block;
         }
@@ -110,9 +128,9 @@
             gap: 5px;
             width: 44px;
             height: 44px;
-            border: 1px solid rgba(26, 26, 26, 0.3);
+            border: 1px solid rgba(10, 10, 10, 0.15);
             border-radius: 999px;
-            background: rgba(26, 26, 26, 0.06);
+            background: rgba(10, 10, 10, 0.04);
             color: var(--text);
             cursor: pointer;
             transition: border-color 0.3s ease, background 0.3s ease;
@@ -130,74 +148,35 @@
         nav .menu {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 30px;
         }
 
         nav .menu a {
-            color: var(--text);
+            color: var(--muted);
             text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.3s ease;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
 
         nav .menu a:hover {
-            opacity: 0.8;
-        }
-
-        .subnav {
-            display: flex;
-            gap: 10px;
-            flex-wrap: nowrap;
-            justify-content: flex-end;
-            margin-bottom: 16px;
-        }
-
-        .subnav a {
             color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            width: auto;
-            height: 44px;
-            padding: 0 1em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            background: rgba(26, 26, 26, 0.04);
-            border: 1px solid rgba(26, 26, 26, 0.12);
-            transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
         }
 
-        .subnav a:hover {
-            background: rgba(26, 26, 26, 0.08);
-            border-color: rgba(26, 26, 26, 0.25);
-            transform: translateY(-1px);
+        .page-title {
+            padding: 60px 0 50px;
+            background: #ffffff;
         }
 
-        header {
-            background: linear-gradient(135deg, rgba(35, 165, 177, 0.08), rgba(255, 255, 255, 0.95));
-            color: var(--text);
-            padding: 60px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(35, 165, 177, 0.05));
-            z-index: 0;
-        }
-
-        header h1 {
+        .page-title h1 {
             font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
             margin-bottom: 15px;
             line-height: 1.2em;
         }
 
-        header p {
+        .page-title p {
             font-size: 1.1rem;
             color: var(--muted);
             max-width: 700px;
@@ -263,7 +242,7 @@
 
         .card {
             background: rgba(245, 247, 250, 0.8);
-            border: 1px solid rgba(35, 165, 177, 0.15);
+            border: 1px solid rgba(0, 102, 204, 0.15);
             border-radius: 16px;
             padding: 30px;
             margin: 25px 0;
@@ -271,7 +250,7 @@
         }
 
         .card:hover {
-            border-color: rgba(35, 165, 177, 0.6);
+            border-color: rgba(0, 102, 204, 0.6);
             transform: translateY(-3px);
         }
 
@@ -292,12 +271,12 @@
         .btn-primary {
             background: var(--secondary);
             color: #fff;
-            box-shadow: 0 12px 30px rgba(35, 165, 177, 0.35);
+            box-shadow: 0 12px 30px rgba(0, 102, 204, 0.35);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 18px 40px rgba(35, 165, 177, 0.25);
+            box-shadow: 0 18px 40px rgba(0, 102, 204, 0.25);
         }
 
         .content-section {
@@ -320,17 +299,17 @@
         }
 
         th {
-            background: rgba(35, 165, 177, 0.1);
+            background: rgba(0, 102, 204, 0.1);
             padding: 12px;
             text-align: left;
             font-weight: 600;
             color: var(--text);
-            border-bottom: 2px solid rgba(35, 165, 177, 0.3);
+            border-bottom: 2px solid rgba(0, 102, 204, 0.3);
         }
 
         td {
             padding: 12px;
-            border-bottom: 1px solid rgba(35, 165, 177, 0.1);
+            border-bottom: 1px solid rgba(0, 102, 204, 0.1);
             color: var(--muted);
         }
 
@@ -339,8 +318,8 @@
         }
 
         footer {
-            background: #f5f7fa;
-            padding: 50px 0;
+            background: #f5f5f7;
+            padding: 55px 0 30px;
             color: var(--muted);
         }
 
@@ -349,14 +328,11 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             width: 90%;
-            max-width: 1100px;
+            max-width: 1160px;
             margin: 0 auto 30px;
         }
 
-        footer h4 {
-            color: var(--text);
-            margin-bottom: 15px;
-        }
+        footer h4 { color: var(--text); margin-bottom: 15px; }
 
         footer a {
             color: var(--muted);
@@ -366,34 +342,26 @@
             transition: color 0.3s ease;
         }
 
-        footer a:hover {
-            color: var(--secondary);
-        }
+        footer a:hover { color: var(--accent); }
 
         .legal {
-            margin-top: 25px;
-            font-size: 0.9rem;
-            color: rgba(74, 74, 74, 0.7);
-            line-height: 1.5;
-        }
-
-        .legal strong {
-            color: var(--text);
-            display: block;
-            font-size: 1rem;
-            margin-bottom: 6px;
-        }
-
-        .bottom {
-            margin-top: 5em;
-            text-align: center;
+            width: 90%;
+            max-width: 1160px;
+            margin: 25px auto 0;
             font-size: 0.85rem;
-            color: rgba(74, 74, 74, 0.4);
+            color: rgba(91, 95, 102, 0.8);
+            line-height: 1.5;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
         }
+
+        .legal a { color: rgba(91, 95, 102, 0.9); text-decoration: underline; }
+        .legal a:hover { color: var(--text); }
 
         .toc {
             background: rgba(245, 247, 250, 0.8);
-            border: 1px solid rgba(35, 165, 177, 0.15);
+            border: 1px solid rgba(0, 102, 204, 0.15);
             border-radius: 16px;
             padding: 30px;
             margin: 40px 0;
@@ -464,8 +432,8 @@
             }
 
             nav.menu-open .menu-toggle {
-                border-color: rgba(35, 165, 177, 0.6);
-                background: rgba(35, 165, 177, 0.12);
+                border-color: rgba(0, 102, 204, 0.6);
+                background: rgba(0, 102, 204, 0.12);
             }
 
             nav.menu-open .menu-toggle span:nth-child(1) {
@@ -482,7 +450,7 @@
         }
 
         @media (max-width: 640px) {
-            header h1 {
+            .page-title h1 {
                 font-size: 2rem;
             }
 
@@ -493,32 +461,18 @@
             h3 {
                 font-size: 1.2rem;
             }
-
-            .subnav {
-                flex-wrap: nowrap;
-                justify-content: center;
-                gap: 8px;
-                margin-bottom: 12px;
-            }
-
-            .subnav a {
-                width: auto;
-                height: 36px;
-                font-size: 0.75rem;
-                padding: 0 1em;
-            }
         }
 
         @media (max-width: 480px) {
-            header {
-                padding: 40px 0 60px;
+            .page-title {
+                padding: 40px 0 30px;
             }
 
-            header h1 {
+            .page-title h1 {
                 font-size: 1.6rem;
             }
 
-            header p {
+            .page-title p {
                 font-size: 1rem;
             }
 
@@ -580,90 +534,13 @@
             transform: translateY(-2px);
         }
 
-        .quiz-banner {
-            background: linear-gradient(135deg, rgba(35, 165, 177, 0.1), rgba(35, 165, 177, 0.05));
-            border: 3px solid var(--secondary);
-            border-radius: 12px;
-            padding: 25px 30px;
-            margin: 40px auto;
-            max-width: 1100px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(35, 165, 177, 0.2);
-            animation: borderGlow 2s ease-in-out infinite;
-        }
-
-        @keyframes borderGlow {
-            0%, 100% {
-                box-shadow: 0 8px 25px rgba(35, 165, 177, 0.2), inset 0 0 20px rgba(35, 165, 177, 0.05);
-            }
-            50% {
-                box-shadow: 0 12px 35px rgba(35, 165, 177, 0.35), inset 0 0 30px rgba(35, 165, 177, 0.1);
-            }
-        }
-
-        .quiz-banner h3 {
-            color: var(--secondary);
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .quiz-banner p {
-            color: var(--muted);
-            font-size: 0.95rem;
-            margin-bottom: 18px;
-        }
-
-        .quiz-banner a {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--secondary), #1a8f9f);
-            color: white;
-            padding: 12px 35px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(35, 165, 177, 0.3);
-        }
-
-        .quiz-banner a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(35, 165, 177, 0.45);
-            background: linear-gradient(135deg, #1a8f9f, #157a89);
-        }
-
-        @media (max-width: 768px) {
-            .quiz-banner {
-                padding: 20px 20px;
-                margin: 30px auto;
-            }
-
-            .quiz-banner h3 {
-                font-size: 1.1rem;
-            }
-
-            .quiz-banner p {
-                font-size: 0.9rem;
-            }
-
-            .quiz-banner a {
-                padding: 10px 28px;
-                font-size: 0.9rem;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="subnav" aria-label="Secondaria">
-                <a href="index.html">Home</a>
-                 <a href="sviluppo.html">Sviluppo</a>
-                <a href="ads.html">Marketing</a> <!-- <a href="monitor.html">PA</a> -->
-                
-            </div>
             <nav>
-                <a href="index.html" class="logo"><img src="logo.png" alt="LyberCode" style="height: 48px; width: auto;"><span>LyberCode</span></a>
+                <a href="index.html" class="logo"><img src="logo.png" alt="LyberCode"><span>LyberCode</span></a>
                 <button class="menu-toggle" aria-expanded="false" aria-label="Apri il menu">
                     <span></span>
                     <span></span>
@@ -672,20 +549,19 @@
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#metodo">Metodo</a></li>
-                    <li><a href="index.html#competenze">Competenze</a></li>
-                    <li><a href="index.html#contatti">Contatti</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="index.html#servizi">Servizi</a></li>
+                    <li><a href="index.html#perche">Perché noi</a></li>
+                    <li><a href="index.html#footer">Contatti</a></li>
                 </ul>
             </nav>
-            <h1>Privacy Policy</h1>
-            <p>Informativa sul trattamento dei dati personali secondo il GDPR e le normative italiane sulla privacy.</p>
         </div>
     </header>
 
-    <div class="quiz-banner">
-        <h3>🎯 Scopri la Soluzione Web Perfetta per Te!</h3>
-        <p>Rispondi a 5 semplici domande e trova lo stack tecnologico ideale per il tuo progetto</p>
-        <a href="./bisogno.html">Inizia il Test →</a>
+    <div class="page-title">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Informativa sul trattamento dei dati personali secondo il GDPR e le normative italiane sulla privacy.</p>
+        </div>
     </div>
 
     <div class="container">
@@ -968,42 +844,33 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="footer-grid">
             <div>
-                <h4>Azienda</h4>
-                <a href="index.html">Home</a>
-                 <a href="sviluppo.html">Sviluppo</a>
-                <a href="ads.html">Marketing</a> <!-- <a href="monitor.html">PA</a> -->
-                
-                <a href="news.html">News</a>
+                <h4><a href="https://angelomontini.com" target="_blank" rel="noopener">LyberCode</a></h4>
+                <p>Servizio specialistico di accessibilità digitale per siti web, emanazione di Officina Digitale di Angelo Montini, con sede a Roma e Terracina.</p>
             </div>
             <div>
-                <h4>Servizi</h4>
+                <h4>Hub</h4>
                 <a href="index.html#metodo">Metodo</a>
-                <a href="index.html#competenze">Competenze</a>
-                <a href="index.html#ambiti">Ambiti</a>
                 <a href="index.html#servizi">Servizi</a>
-            </div>
-            <div>
-                <h4>Legal</h4>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="cookies.html">Cookie Policy</a>
-                <a href="terms.html">Termini di Servizio</a>
+                <a href="index.html#perche">Perché noi</a>
+                <a href="index.html#footer">Contatti</a>
             </div>
             <div>
                 <h4>Contatti</h4>
                 <a href="mailto:hello@lybercode.com">hello@lybercode.com</a>
-                <a href="tel:+390773061194">0773 061194</a>
-                <a href="tel:+393392528986">339 2528986</a>
+                <a href="tel:+390773061194">☎ 0773 061194</a>
+                <a href="tel:+390686169575">☎ 06 86 16 95 75</a>
+                <a href="tel:+393392528986">📱 339 2528986</a>
+            </div>
+            <div>
+                <h4>Community</h4>
+                <a href="https://github.com/montiniangelo">GitHub</a>
+                <a href="https://www.linkedin.com/company/lybercode/">LinkedIn</a>
             </div>
         </div>
-
-
-
-        <div class="bottom">
-         © 2025 LyberCode di Angelo Montini. <span>P. IVA 11822551005</span> - <span>REA LT-331862</span>. <a href="privacy.html">Policy Privacy. </a> Tutti i diritti riservati
-        </div>
+        <div class="legal">© 2025 LyberCode di Angelo Montini · P. IVA 11822551005 · REA LT-331862 · <a href="privacy.html">Policy Privacy</a> · Tutti i diritti riservati</div>
     </footer>
 
     <button id="scrollTop" aria-label="Torna in alto">↑</button>
@@ -1012,6 +879,13 @@
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('nav');
         const scrollTopBtn = document.getElementById('scrollTop');
+        const headerEl = document.querySelector('header');
+
+        const toggleHeaderScrolled = () => {
+            headerEl.classList.toggle('nav-scrolled', window.scrollY > 40);
+        };
+        window.addEventListener('scroll', toggleHeaderScrolled, { passive: true });
+        toggleHeaderScrolled();
 
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('menu-open');
