@@ -719,6 +719,104 @@
             .contact { padding: 44px 22px; }
         }
 
+
+        /* Officina Digitale — sito collegato */
+        #officina { background-color: #ffffff; }
+
+        .officina-card {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 44px;
+            align-items: center;
+            background: linear-gradient(135deg, #004c99, #00223f);
+            border-radius: 32px;
+            padding: 60px 52px;
+            color: #fff;
+            box-shadow: 0 24px 60px rgba(0, 34, 63, 0.28);
+        }
+
+        .officina-card .section-title { color: #bfe0ff; }
+        .officina-card h2 { color: #fff; margin-bottom: 16px; }
+        .officina-card p { color: rgba(255, 255, 255, 0.88); }
+
+        .officina-list {
+            list-style: none;
+            margin: 26px 0 0;
+            padding: 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .officina-list li {
+            position: relative;
+            padding-left: 28px;
+            color: rgba(255, 255, 255, 0.94);
+        }
+
+        .officina-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #bfe0ff;
+            font-weight: 700;
+        }
+
+        .officina-side {
+            background: rgba(255, 255, 255, 0.09);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 34px 28px;
+            text-align: center;
+        }
+
+        .officina-side .officina-eyebrow {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #bfe0ff;
+            margin-bottom: 12px;
+        }
+
+        .officina-url {
+            display: inline-block;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            word-break: break-word;
+        }
+
+        .officina-url:hover { text-decoration: underline; }
+
+        .officina-side p { font-size: 0.94rem; margin-bottom: 26px; }
+
+        .btn-officina {
+            width: 100%;
+            background: #ffffff;
+            color: #00458c;
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+        }
+
+        .btn-officina:hover {
+            background: #eaf3ff;
+            color: #00223f;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 900px) {
+            .officina-card {
+                grid-template-columns: 1fr;
+                padding: 44px 26px;
+                gap: 32px;
+            }
+
+            .officina-side { padding: 30px 20px; }
+            .btn-officina { padding: 14px 18px; font-size: 0.9rem; }
+        }
+
         footer {
             background: #f5f5f7;
             padding: 55px 0 30px;
@@ -876,6 +974,7 @@
                     <li><a href="#metodo" class="nav-link" data-target="metodo">Metodo</a></li>
                     <li><a href="#servizi" class="nav-link" data-target="servizi">Servizi</a></li>
                     <li><a href="#perche" class="nav-link" data-target="perche">Perché noi</a></li>
+                    <li><a href="#officina" class="nav-link" data-target="officina">Officina Digitale</a></li>
                     <li><a href="#footer" class="nav-link" data-target="footer">Contatti</a></li>
                 </ul>
             </nav>
@@ -1062,6 +1161,30 @@
         </div>
     </section>
 
+    <section id="officina">
+        <div class="container">
+            <div class="officina-card reveal">
+                <div>
+                    <span class="section-title">◈ Sito collegato</span>
+                    <h2>Officina Digitale &mdash; angelomontini.com</h2>
+                    <p>LyberCode nasce come servizio specialistico di accessibilit&agrave; digitale all'interno di <strong>Officina Digitale di Angelo Montini</strong>. Sul sito principale trovi il metodo completo <em>Analizza &rarr; Recupera &rarr; Evolvi</em> e tutti gli altri servizi.</p>
+                    <ul class="officina-list">
+                        <li>Recupero e trasformazione di siti web gi&agrave; esistenti</li>
+                        <li>Sviluppo web, applicazioni e automazioni su misura</li>
+                        <li>Consulenza IT per Pubblica Amministrazione ed enti locali</li>
+                        <li>Portfolio, casi studio e contatti diretti</li>
+                    </ul>
+                </div>
+                <div class="officina-side">
+                    <span class="officina-eyebrow">Vai al sito principale</span>
+                    <a class="officina-url" href="https://angelomontini.com" target="_blank" rel="noopener">angelomontini.com</a>
+                    <p>Il punto di partenza per chi cerca un intervento completo sul proprio sito, non solo l'adeguamento all'accessibilit&agrave;.</p>
+                    <a class="btn btn-officina" href="https://angelomontini.com" target="_blank" rel="noopener">Visita Officina&nbsp;Digitale&nbsp;&rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="clienti-istituzionali">
         <div class="container">
             <span class="section-title">Partner istituzionali</span>
@@ -1157,6 +1280,8 @@
                 <a href="#metodo">Metodo</a>
                 <a href="#servizi">Servizi</a>
                 <a href="#perche">Perché noi</a>
+                <a href="#officina">Officina Digitale</a>
+                <a href="https://angelomontini.com" target="_blank" rel="noopener">angelomontini.com ↗</a>
                 <a href="#footer">Contatti</a>
             </div>
             <div>

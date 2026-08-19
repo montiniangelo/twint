@@ -46,7 +46,8 @@ describe('localhostai.html - n8n Solutions Catalog', () => {
     });
 
     test('should have robots meta tag', () => {
-      expect(htmlContent).toMatch(/<meta name="robots" content="index, follow"/);
+      // Pagina archiviata: deve essere esclusa dall'indicizzazione
+      expect(htmlContent).toMatch(/<meta name="robots" content="noindex, nofollow/);
     });
 
     test('should have Open Graph tags', () => {

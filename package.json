@@ -2,10 +2,10 @@
   "name": "lybercode",
   "version": "1.0.0",
   "description": "",
-  "main": "localhostai.test.js",
+  "main": "archivio/localhostai.test.js",
   "scripts": {
     "test": "jest",
-    "lint": "htmlhint localhostai.html"
+    "lint": "htmlhint index.html privacy.html"
   },
   "keywords": [],
   "author": "",

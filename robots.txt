@@ -1,12 +1,17 @@
 User-agent: *
 Allow: /
-Disallow: /grazie.html
-Disallow: /bisogno.html
+Disallow: /archivio/
 Disallow: /admin/
 Disallow: /private/
 Disallow: /*.pdf$
 
 Sitemap: https://lybercode.com/sitemap.xml
+
+User-agent: Googlebot
+Disallow: /archivio/
+
+User-agent: Bingbot
+Disallow: /archivio/
 
 User-agent: GPTBot
 Disallow: /
@@ -21,4 +26,16 @@ User-agent: anthropic-ai
 Disallow: /
 
 User-agent: Claude-Web
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
 Disallow: /
