@@ -274,6 +274,11 @@
             gap: 30px;
         }
 
+        @media (min-width: 861px) and (max-width: 1024px) {
+            nav .menu { gap: 20px; }
+            nav .menu a { font-size: 0.9rem; }
+        }
+
         nav .menu a {
             color: var(--muted);
             text-decoration: none;
@@ -806,6 +811,27 @@
             transform: translateY(-3px);
         }
 
+        .officina-sep {
+            display: block;
+            margin: 14px 0 12px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .btn-officina-ghost {
+            width: 100%;
+            background: transparent;
+            border-color: rgba(255, 255, 255, 0.6);
+            color: #ffffff;
+        }
+
+        .btn-officina-ghost:hover {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: #ffffff;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
         @media (max-width: 900px) {
             .officina-card {
                 grid-template-columns: 1fr;
@@ -814,7 +840,8 @@
             }
 
             .officina-side { padding: 30px 20px; }
-            .btn-officina { padding: 14px 18px; font-size: 0.9rem; }
+            .btn-officina,
+            .btn-officina-ghost { padding: 14px 18px; font-size: 0.9rem; }
         }
 
         footer {
@@ -859,7 +886,7 @@
         .legal a { color: rgba(91, 95, 102, 0.9); text-decoration: underline; }
         .legal a:hover { color: var(--text); }
 
-        @media (max-width: 720px) {
+        @media (max-width: 860px) {
             .menu-toggle { display: inline-flex; }
 
             nav .menu {
@@ -975,6 +1002,7 @@
                     <li><a href="#servizi" class="nav-link" data-target="servizi">Servizi</a></li>
                     <li><a href="#perche" class="nav-link" data-target="perche">Perché noi</a></li>
                     <li><a href="#officina" class="nav-link" data-target="officina">Officina Digitale</a></li>
+                    <li><a href="presentazione-servizi/">Presentazione</a></li>
                     <li><a href="#footer" class="nav-link" data-target="footer">Contatti</a></li>
                 </ul>
             </nav>
@@ -1180,6 +1208,8 @@
                     <a class="officina-url" href="https://angelomontini.com" target="_blank" rel="noopener">angelomontini.com</a>
                     <p>Il punto di partenza per chi cerca un intervento completo sul proprio sito, non solo l'adeguamento all'accessibilit&agrave;.</p>
                     <a class="btn btn-officina" href="https://angelomontini.com" target="_blank" rel="noopener">Visita Officina&nbsp;Digitale&nbsp;&rarr;</a>
+                    <span class="officina-sep">oppure</span>
+                    <a class="btn btn-officina-ghost" href="presentazione-servizi/">Presentazione servizi 2026/2027&nbsp;&rarr;</a>
                 </div>
             </div>
         </div>
@@ -1281,6 +1311,7 @@
                 <a href="#servizi">Servizi</a>
                 <a href="#perche">Perché noi</a>
                 <a href="#officina">Officina Digitale</a>
+                <a href="presentazione-servizi/">Presentazione servizi</a>
                 <a href="https://angelomontini.com" target="_blank" rel="noopener">angelomontini.com ↗</a>
                 <a href="#footer">Contatti</a>
             </div>
