@@ -65,7 +65,7 @@ Serve a distinguere ciò che scrive una macchina da ciò che legge una persona.
    il sito escluso dalle fonti citabili.
 3. **02 · Referenze** — loghi reali dei committenti istituzionali + mappa dei clienti privati.
 4. **03 · Chi è** — consulente e sviluppatore nella stessa persona.
-5. **04 · Due attività** — Officina Digitale e LyberCode, collegamento dichiarato.
+5. **04 · Due attività** — Web Strategy (progetto avviato da Angelo Montini nel 2012) e LyberCode, collegamento dichiarato.
 6. **05 · Il metodo** — le cinque condizioni verificabili.
 7. **Elemento chiave** — *"Lo stesso paragrafo, letto due volte"*: a sinistra la prosa aziendale su
    fondo bianco, a destra ciò che una macchina estrae davvero. Una linea di scansione attraversa il
