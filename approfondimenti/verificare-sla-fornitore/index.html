@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Come verificare gli SLA dichiarati da un fornitore ICT | LyberCode</title>
+<meta name="description" content="Metodologia per verificare i livelli di servizio (SLA) rendicontati da un fornitore ICT: definizioni, formule di calcolo, esclusioni, fonti di misura indipendenti e campionamento dei ticket.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lybercode.com/approfondimenti/verificare-sla-fornitore/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LyberCode">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Come verificare gli SLA dichiarati da un fornitore ICT | LyberCode">
+<meta property="og:description" content="Metodologia per verificare i livelli di servizio (SLA) rendicontati da un fornitore ICT: definizioni, formule di calcolo, esclusioni, fonti di misura indipendenti e campionamento dei ticket.">
+<meta property="og:url" content="https://lybercode.com/approfondimenti/verificare-sla-fornitore/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../faviconz.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lybercode.com/"}, {"@type": "ListItem", "position": 2, "name": "Approfondimenti", "item": "https://lybercode.com/approfondimenti/"}, {"@type": "ListItem", "position": 3, "name": "Verificare gli SLA", "item": "https://lybercode.com/approfondimenti/verificare-sla-fornitore/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Come verificare gli SLA dichiarati da un fornitore", "inLanguage": "it", "datePublished": "2026-09-15", "author": {"@type": "Organization", "name": "LyberCode", "url": "https://lybercode.com/"}, "publisher": {"@type": "Organization", "name": "LyberCode"}, "mainEntityOfPage": "https://lybercode.com/approfondimenti/verificare-sla-fornitore/"}</script>
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../" aria-label="LyberCode, home"><img src="../../assets/mark.png" alt="" width="34" height="29"><span>LyberCode<small>Verifica e monitoraggio ICT</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+    <nav id="site-nav" class="nav open" aria-label="Principale"><ul><li><a href="../../monitoraggio-contratti-ict/">Monitoraggio ICT</a></li><li><a href="../../audit-servizi-digitali/">Audit</a></li><li><a href="../../accessibilita/">Accessibilità</a></li><li><a href="../../verifica-tecnica/">Verifica tecnica</a></li><li><a href="../../supporto-pa/">Supporto PA</a></li><li><a href="../../casi/">Casi</a></li><li><a href="../../approfondimenti/" aria-current="page">Approfondimenti</a></li><li><a href="../../lybercode/">LyberCode</a></li><li class="nav-cta"><a href="../../contatti/">Richiedi una valutazione</a></li></ul></nav>
+  </div>
+</header>
+<main id="contenuto" tabindex="-1">
+<article>
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Percorso"><ol><li><a href="../../">Home</a></li><li><a href="../../approfondimenti/">Approfondimenti</a></li><li aria-current="page">Verificare gli SLA</li></ol></nav>
+    <p class="article-meta">SLA · Metodologia · 15 settembre 2026</p>
+    <h1>Come verificare gli SLA dichiarati da un fornitore</h1>
+    <p class="lead">Il report dice 99,5%. Gli utenti dicono che il servizio "non va mai". Possono avere ragione entrambi. Ecco come capire quale numero descrive davvero il servizio.</p>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap prose">
+    <h2 style="margin-top:0">Un numero è vero solo rispetto a una definizione</h2>
+    <p>Quasi mai un fornitore rendiconta un valore falso. Molto più spesso rendiconta un valore corretto rispetto a una definizione diversa da quella che il committente ha in mente. La verifica degli SLA comincia quindi dalle definizioni, non dai numeri.</p>
+
+    <h2>Le cinque domande da fare su ogni SLA</h2>
+    <h3>1. Cosa si misura esattamente?</h3>
+    <p>"Disponibilità" può voler dire che il server risponde, che la home page si carica o che un cittadino riesce a completare una pratica. Sono tre misure diverse: un servizio può essere disponibile per la prima e indisponibile per la terza.</p>
+
+    <h3>2. Su quale periodo?</h3>
+    <p>Il 99,5% su base annua consente molte più ore di fermo concentrate in un solo mese rispetto al 99,5% su base mensile. Verificate che il periodo usato nel report sia quello del contratto.</p>
+
+    <h3>3. Cosa è escluso?</h3>
+    <p>Manutenzioni programmate, cause di forza maggiore, problemi "a carico di terzi". Le esclusioni sono legittime se previste dal contratto. Il problema nasce quando si allargano nel tempo senza che nessuno le contesti.</p>
+
+    <h3>4. Chi misura, e con cosa?</h3>
+    <p>Se la misura viene dagli strumenti del fornitore, chiedete almeno di poterla riprodurre. Meglio ancora, affiancate una fonte indipendente: una sonda esterna che verifica periodicamente il servizio dal punto di vista dell'utente.</p>
+
+    <h3>5. Quando parte e quando si ferma il cronometro?</h3>
+    <p>Per i tempi di presa in carico e risoluzione, conta capire chi apre il ticket, quando viene considerato "preso in carico" e se le sospensioni (in attesa di risposta del committente, per esempio) vengono usate correttamente.</p>
+
+    <h2>Verifica dei ticket: il campionamento</h2>
+    <p>Controllare tutti i ticket raramente è necessario. Un campione ragionato è spesso sufficiente a capire se il dato aggregato è attendibile:</p>
+    <ul>
+      <li>scegliete ticket di priorità diverse e di periodi diversi;</li>
+      <li>per ciascuno ricostruite la sequenza di stati con date e orari;</li>
+      <li>verificate la classificazione della priorità: un ticket declassato ha tempi più lunghi;</li>
+      <li>controllate l'uso delle sospensioni;</li>
+      <li>confrontate il tempo ricostruito con quello rendicontato.</li>
+    </ul>
+
+    <h2>Quando i numeri non tornano</h2>
+    <p>Uno scostamento tra dato rendicontato e dato verificato va documentato con precisione: quale indicatore, quale periodo, quale evidenza, quale clausola. Nella comunicazione al fornitore conviene separare due piani:</p>
+    <ol>
+      <li><strong>il metodo</strong>: se la misura del fornitore non segue la definizione contrattuale, va corretta per il futuro;</li>
+      <li><strong>il merito</strong>: se, con la misura corretta, la soglia non è rispettata, si attivano le azioni correttive e le conseguenze previste dal contratto.</li>
+    </ol>
+
+    <h2>Se il contratto è già firmato e gli SLA sono vaghi</h2>
+    <p>Succede spesso. Non tutto è perduto: si può concordare con il fornitore un documento operativo che chiarisca definizioni, formule e fonti, restando nei limiti del contratto. È anche il materiale migliore per scrivere SLA più solidi alla gara successiva.</p>
+
+    <p class="note" style="margin-top:36px">Le conseguenze contrattuali degli scostamenti, come l'applicazione di penali, sono decisioni del committente e dei suoi uffici competenti. Il monitoraggio fornisce le evidenze su cui prenderle.</p>
+    <p style="margin-top:28px"><a href="../../approfondimenti/piano-di-monitoraggio-contratto-ict/">Piano di monitoraggio: cosa deve contenere →</a></p>
+  </div>
+</section>
+</article>
+
+<section class="section dark cta-band" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Valutazione preliminare</p>
+      <h2 id="cta-title">Verifichiamo gli SLA del vostro fornitore</h2>
+      <p class="muted">Descriveteci il servizio o il contratto. Vi rispondiamo con una prima lettura del perimetro e con le verifiche che avrebbe senso fare. Nessun impegno.</p>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="../../contatti/">Richiedi una valutazione <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="tel:+390773061194">Parla con un consulente</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p style="color:#fff;font-weight:600;font-size:1.1rem;margin-bottom:8px">LyberCode</p>
+        <p>Verifica indipendente, monitoraggio dei contratti ICT, audit e accessibilità dei servizi digitali per Pubbliche Amministrazioni e organizzazioni strutturate.</p>
+        <p>Fornitore MEPA dal 2018. Sedi operative a Roma e Terracina.</p>
+      </div>
+      <div>
+        <h2>Servizi</h2>
+        <ul>
+          <li><a href="../../monitoraggio-contratti-ict/">Monitoraggio contratti ICT</a></li>
+          <li><a href="../../audit-servizi-digitali/">Audit servizi digitali</a></li>
+          <li><a href="../../accessibilita/">Accessibilità</a></li>
+          <li><a href="../../verifica-tecnica/">Verifica tecnica</a></li>
+          <li><a href="../../supporto-pa/">Supporto alla PA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Risorse</h2>
+        <ul>
+          <li><a href="../../casi/">Casi e progetti</a></li>
+          <li><a href="../../approfondimenti/">Approfondimenti</a></li>
+          <li><a href="../../lybercode/">Chi siamo</a></li>
+          <li><a href="../../contatti/">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contatti</h2>
+        <ul>
+          <li><a href="mailto:hello@lybercode.com">hello@lybercode.com</a></li>
+          <li><a href="tel:+390773061194">0773 061194</a> · Terracina</li>
+          <li><a href="tel:+390686169575">06 86 16 95 75</a> · Roma</li>
+          <li><a href="https://www.linkedin.com/company/lybercode/" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 LyberCode di Angelo Montini</span>
+      <span>P. IVA 11822551005</span>
+      <span>REA LT-331862</span>
+      <span>Viale Europa 216, 04019 Terracina (LT)</span>
+      <a href="../../privacy.html">Privacy</a>
+      <button type="button" class="cc-link" data-cc-open>Preferenze cookie</button>
+      <a href="https://angelomontini.com" rel="noopener">Angelo Montini, consulenza personale ↗</a>
+    </div>
+  </div>
+</footer>
+<script src="../../assets/consent.js"></script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>
