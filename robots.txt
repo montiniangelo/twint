@@ -14,7 +14,7 @@ User-agent: Perplexity-User
 Allow: /
 Disallow: /archivio/
 
-# Solo addestramento: bloccati (scelta tua)
+# Solo addestramento: bloccati
 User-agent: GPTBot
 User-agent: ClaudeBot
 User-agent: CCBot

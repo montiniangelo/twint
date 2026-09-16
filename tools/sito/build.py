@@ -5,7 +5,7 @@ Ogni frammento inizia con una riga  <!-- {json} -->  con i metadati,
 seguita dal contenuto di <main>. Il segnaposto {R} diventa il prefisso
 relativo verso la radice del sito.
 """
-import json, pathlib, re, sys, html
+import json, pathlib, re, sys, html, subprocess, datetime
 
 SRC = pathlib.Path(__file__).parent / 'src'
 OUT = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else '.')
@@ -111,7 +111,7 @@ def page(meta, body):
 <a class="skip" href="#contenuto">Vai al contenuto</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{R}" aria-label="LyberCode, home"><img src="{R}assets/mark.png" alt="" width="34" height="29"><span>LyberCode<small>Verifica e monitoraggio ICT</small></span></a>
+    <a class="brand" href="{R or './'}" aria-label="LyberCode, home"><img src="{R}assets/mark.png" alt="" width="34" height="29"><span>LyberCode<small>Verifica e monitoraggio ICT</small></span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
     <nav id="site-nav" class="nav open" aria-label="Principale"><ul>{''.join(items)}</ul></nav>
   </div>
@@ -189,6 +189,35 @@ def main():
             urls.append((re.sub(r'index\.html$', '', meta['path']), meta.get('priority', '0.7')))
         print('scritto', meta['path'])
     (pathlib.Path(__file__).parent / 'urls.json').write_text(json.dumps(urls))
+    write_sitemap(urls)
+
+
+def lastmod(*paths):
+    """Data dell'ultimo commit che ha toccato i file; oggi se modificati e non ancora committati."""
+    dirty = subprocess.run(['git', 'status', '--porcelain', '--', *paths], capture_output=True, text=True).stdout.strip()
+    if dirty:
+        return datetime.date.today().isoformat()
+    d = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', *paths], capture_output=True, text=True).stdout.strip()
+    return d or datetime.date.today().isoformat()
+
+
+# Pagine fuori dal generatore da includere nella sitemap: (percorso, file sorgente, priorità)
+EXTRA = [('presentazione-servizi/', 'presentazione-servizi/index.html', '0.5')]
+
+
+def write_sitemap(urls):
+    rows = []
+    for f in sorted(SRC.glob('*.html')):
+        meta = json.loads(re.match(r'\s*<!--\s*(\{.*?\})\s*-->', f.read_text(encoding='utf-8'), re.S).group(1))
+        if not meta.get('robots', 'index').startswith('index'):
+            continue
+        loc = re.sub(r'index\.html$', '', meta['path'])
+        rows.append((loc, lastmod(str(f)), meta.get('priority', '0.7')))
+    for loc, src, prio in EXTRA:
+        rows.append((loc, lastmod(src), prio))
+    body = ''.join(f'  <url><loc>{BASE}{loc}</loc><lastmod>{d}</lastmod><priority>{p}</priority></url>\n' for loc, d, p in rows)
+    (OUT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + body + '</urlset>\n', encoding='utf-8')
+    print('scritto sitemap.xml', len(rows), 'URL')
 
 
 if __name__ == '__main__':

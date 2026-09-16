@@ -16,4 +16,4 @@ python3 tools/sito/build.py .
 ```
 
 Stile e script condivisi: `assets/site.css`, `assets/site.js`.
-Dopo l'aggiunta di una pagina aggiornare `sitemap.xml`.
+`sitemap.xml` viene rigenerata dal build (lastmod = data dell'ultimo commit del sorgente). Le pagine fuori dal generatore vanno aggiunte a `EXTRA` in `build.py`.
